@@ -6,7 +6,7 @@
 Get to learn this grade's topics from various subjects, right in your pocket.
 
 >[!attention]
->This topics in this website is currently incomplete. To learn more, there will be a To-Do list of topics available in the subjects.
+>The topics in this website is currently incomplete. To learn more, there will be a To-Do list of topics available in the subjects.
 ## Logic & Knowlegde
 [[Math/Mathematics\|Mathematics]]
 [[Science/Science\|Science]]
