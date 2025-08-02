@@ -2,10 +2,19 @@
 {"dg-publish":true,"permalink":"/math/mathematics/"}
 ---
 
+# Mathematics
 Welcome to Mathematics!
+
+>[!todo]
+>- [ ] Quadratic Formula
+>- [ ] Completing the Square
+>- [ ] Zero Product Property
+>- [ ] Test for Factorability
+>- [ ] Factoring
 
 ## Topics
 [[Math/Quadratic Formula\|Quadratic Formula]]
-[[Completing the Square\|Completing the Square]]
-[[Test for Factorability\|Test for Factorability]]
-[[Factoring\|Factoring]]
+[[Math/Completing the Square\|Completing the Square]]
+[[Math/Zero Product Property\|Zero Product Property]]
+[[Math/Test for Factorability\|Test for Factorability]]
+[[Math/Factoring\|Factoring]]

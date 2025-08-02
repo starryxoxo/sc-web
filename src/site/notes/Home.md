@@ -3,11 +3,13 @@
 ---
 
 # Welcome to SC Web
-Get to learn this grade's topics from various subjects, right on your pocket.
+Get to learn this grade's topics from various subjects, right in your pocket.
 
+>[!attention]
+>This topics in this website is currently incomplete. To learn more, there will be a To-Do list of topics available in the subjects.
 ## Logic & Knowlegde
 [[Math/Mathematics\|Mathematics]]
-[[Science\|Science]]
+[[Science/Science\|Science]]
 [[Statistics\|Statistics]]
 [[TLE\|TLE]]
 • [[Computer\|Computer]]
@@ -21,8 +23,8 @@ Get to learn this grade's topics from various subjects, right on your pocket.
 • [[CEP\|CEP]]
 [[Filipino\|Filipino]]
 
-MAPEH
+## MAPEH
 • [[Music\|Music]]
 • [[Arts\|Arts]]
-• [[Physical Education\|PE]]
+• [[PE\|Physical Education]]
 • [[Health\|Health]]
