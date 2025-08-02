@@ -23,7 +23,11 @@ $$n = \frac {5000}{1+5000×0.03^2}$$
 $$n = \frac {5000}{1+5000×0.0009}$$
 $$5000×0.0009=4.5+1=5.5$$
 $$n = \frac {5000}{5.5}$$
-$$n = 909.0909$$ or simply, $909.10 = 909$. Whether the final answer will be rounded depends on the situation. It is recommended to round up to the nearest whole number.
+$$n = 909.0909$$
+
+or simply, $909.10 = 909$. 
+
+Whether the final answer will be rounded depends on the situation. It is recommended to round up to the nearest whole number.
 
 # Resources
 ***July 11, 2025***, Mrs. Marilyn O. Abas, .ppt
