@@ -2,6 +2,8 @@
 {"dg-publish":true,"permalink":"/slovin-s-formula/"}
 ---
 
+[[Home\|Home]]
+
 # Slovin's Formula
 
 The Slovin's Formula is a simple mathematical formula used to calculate the required sample size of a study.

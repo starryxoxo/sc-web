@@ -6,7 +6,7 @@
 
 >[!todo] 
 > - [ ] Central Measures of Tendency
-> - [ ] Slovin's Formula
+> - [x] Slovin's Formula
 > - [ ] Others
 
 ## Topics
