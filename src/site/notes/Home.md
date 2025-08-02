@@ -6,7 +6,7 @@
 Get to learn this grade's topics from various subjects, right on your pocket.
 
 ## Logic & Knowlegde
-[[Mathematics\|Mathematics]]
+[[Math/Mathematics\|Mathematics]]
 [[Science\|Science]]
 [[Statistics\|Statistics]]
 [[TLE\|TLE]]
