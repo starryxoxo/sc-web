@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/home/","tags":["gardenEntry"]}
 ---
 
-# Welcome to SC Portal
+# Welcome to SC Web
 Get to learn this grade's topics from various subjects, right on your pocket.
 
 ## Logic & Knowlegde
