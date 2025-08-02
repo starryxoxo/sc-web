@@ -7,23 +7,24 @@ Get to learn this grade's topics from various subjects, right in your pocket.
 
 >[!attention]
 >The topics in this website is currently incomplete. To learn more, there will be a To-Do list of topics available in the subjects.
-## Logic & Knowlegde
+
+# Logic & Knowlegde
 [[Math/Mathematics\|Mathematics]]
 [[Science/Science\|Science]]
 [[Statistics\|Statistics]]
 [[TLE\|TLE]]
 • [[Computer\|Computer]]
 
-## Social
+# Social
 [[ESP\|ESP]]
 [[AP - Economics\|AP - Economics]]
 
-## Languages
+# Languages
 [[English\|English]]
 • [[CEP\|CEP]]
 [[Filipino\|Filipino]]
 
-## MAPEH
+# MAPEH
 • [[Music\|Music]]
 • [[Arts\|Arts]]
 • [[PE\|Physical Education]]

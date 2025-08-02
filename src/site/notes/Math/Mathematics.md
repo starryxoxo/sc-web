@@ -2,6 +2,8 @@
 {"dg-publish":true,"permalink":"/math/mathematics/"}
 ---
 
+[[Home\|Home]]
+
 # Mathematics
 Welcome to Mathematics!
 
