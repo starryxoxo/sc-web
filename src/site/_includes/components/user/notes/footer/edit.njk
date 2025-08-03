@@ -1,0 +1,82 @@
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  // Helper: Determine repo file path based on current URL path
+  function getFilePathFromPathname() {
+    let pathname = window.location.pathname; // e.g. "/notes/my-note"
+
+    if (pathname === "/" || pathname === "") {
+      return "Home.md";
+    }
+
+    if (pathname.startsWith("/")) {
+      pathname = pathname.slice(1);
+    }
+
+    return pathname + ".md";
+  }
+
+  // Global function to handle saving edited content by sending to serverless PR API
+  window.handleContentSave = async function(updatedContent) {
+    const filePath = getFilePathFromPathname();
+
+    try {
+      const response = await fetch("/.netlify/functions/create-pr", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ updatedContent, filePath }),
+      });
+
+      if (!response.ok) throw new Error("Failed to create PR");
+
+      const data = await response.json();
+      alert("Pull request created: " + data.prUrl);
+    } catch (err) {
+      alert("Error creating PR: " + err.message);
+    }
+  };
+
+  // Editable UI logic for all .editable-container elements
+  document.querySelectorAll(".editable-container").forEach(container => {
+    const contentDiv = container.querySelector(".editable-content");
+    const editBtn = container.querySelector(".edit-btn");
+    const saveBtn = container.querySelector(".save-btn");
+    const cancelBtn = container.querySelector(".cancel-btn");
+
+    let originalContent = contentDiv.innerHTML;
+
+    editBtn.addEventListener("click", () => {
+      contentDiv.contentEditable = "true";
+      contentDiv.focus();
+
+      editBtn.style.display = "none";
+      saveBtn.style.display = "inline-block";
+      cancelBtn.style.display = "inline-block";
+
+      originalContent = contentDiv.innerHTML;
+    });
+
+    saveBtn.addEventListener("click", () => {
+      contentDiv.contentEditable = "false";
+
+      editBtn.style.display = "inline-block";
+      saveBtn.style.display = "none";
+      cancelBtn.style.display = "none";
+
+      const updatedContent = contentDiv.innerHTML;
+
+      if (window.handleContentSave) {
+        window.handleContentSave(updatedContent);
+      }
+    });
+
+    cancelBtn.addEventListener("click", () => {
+      contentDiv.innerHTML = originalContent;
+      contentDiv.contentEditable = "false";
+
+      editBtn.style.display = "inline-block";
+      saveBtn.style.display = "none";
+      cancelBtn.style.display = "none";
+    });
+  });
+});
+</script>
