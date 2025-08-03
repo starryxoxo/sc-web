@@ -11,7 +11,7 @@ Get to learn this grade's topics from various subjects, right in your pocket.
 # Logic & Knowlegde
 [[Math/Mathematics\|Mathematics]]
 [[Science/Science\|Science]]
-[[Statistics\|Statistics]]
+[[Statistics/Statistics\|Statistics]]
 [[TLE\|TLE]]
 • [[Computer\|Computer]]
 
