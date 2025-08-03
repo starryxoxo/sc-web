@@ -9,6 +9,7 @@
 
 <div class="editable-container" style="border:1px solid #ccc; padding:10px; max-width:600px; position: relative;">
   <div class="editable-content" tabindex="0" aria-label="Editable content" style="min-height:100px;">
+  
 # Slovin's Formula
 
 The Slovin's Formula is a simple mathematical formula used to calculate the required sample size of a study.
@@ -38,6 +39,7 @@ Whether the final answer will be rounded depends on the situation. It is recomme
 
 # Resources
 ***July 11, 2025***, Mrs. Marilyn O. Abas, .pptx
+
   </div>
   <button class="edit-btn" aria-label="Edit content" style="position:absolute; top:5px; right:5px; background:none; border:none; cursor:pointer; font-size:18px;">✏️</button>
   <button class="save-btn" style="display:none; margin-top:10px;">Save</button>
