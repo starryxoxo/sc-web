@@ -3,8 +3,8 @@
 const { Octokit } = require("@octokit/rest");
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN; // Set this securely in Netlify dashboard
-const OWNER = "your-github-username"; // Replace with your GitHub username/org
-const REPO = "your-repo-name"; // Replace with your repo name
+const OWNER = "starryxoxo"; // Replace with your GitHub username/org
+const REPO = "sc-web"; // Replace with your repo name
 const BASE_BRANCH = "main"; // Your default branch
 
 const octokit = new Octokit({ auth: GITHUB_TOKEN });
