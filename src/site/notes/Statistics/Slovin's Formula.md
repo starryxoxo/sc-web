@@ -32,7 +32,7 @@ or simply, $909.10 = 909$.
 Whether the final answer will be rounded depends on the situation. It is recommended to round up to the nearest whole number.
 
 # Resources
-***July 11, 2025***, Mrs. Marilyn O. Abas, .ppt
+***July 11, 2025***, Mrs. Marilyn O. Abas, .pptx
 
 
 
