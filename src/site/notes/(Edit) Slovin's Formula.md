@@ -1,14 +1,17 @@
 ---
-{"dg-publish":true,"permalink":"/statistics/slovin-s-formula/"}
+{"dg-publish":true,"permalink":"/edit-slovin-s-formula/"}
 ---
 
-[[Home\|Home]]
+[[Home\|Home]] • [[Contributor's Guide\|Contributor's Guide]]
+
+```
+[[Home]]
 
 # Slovin's Formula
 
 The Slovin's Formula is a simple mathematical formula used to calculate the required sample size of a study.
 
-$$ n = \frac {N}{1+Ne^2} $$
+$ n = \frac {N}{1+Ne^2} $
 Where $n$ is the sample size, $N$ is the total population size, and $e$ being the margin of error (expressed as a decimal).
 
 # Guide
@@ -19,13 +22,13 @@ What is the sample size required for a population of 5000 and the margin of erro
  • Third, we substitute our values to the variables in our formula.
 
 Our current equation is:
-$$ n = \frac {5000}{{1+5000} ×{3\%^2}}$$
+$ n = \frac {5000}{{1+5000} ×{3\%^2}}$
 Now, we simplify the equation.
-$$n = \frac {5000}{1+5000×0.03^2}$$
-$$n = \frac {5000}{1+5000×0.0009}$$
-$$5000×0.0009=4.5+1=5.5$$
-$$n = \frac {5000}{5.5}$$
-$$n = 909.0909$$
+$n = \frac {5000}{1+5000×0.03^2}$
+$n = \frac {5000}{1+5000×0.0009}$
+$5000×0.0009=4.5+1=5.5$
+$n = \frac {5000}{5.5}$
+$n = 909.0909$
 
 or simply, $909.10 = 909$. 
 
@@ -33,9 +36,6 @@ Whether the final answer will be rounded depends on the situation. It is recomme
 
 # Resources
 ***July 11, 2025***, Mrs. Marilyn O. Abas, .pptx
+```
 
-
-
->[!faq]- Contributor's Section
-Hello! This page is open for improvements. See the [[Contributor's Guide\|Contributor's Guide]] on how to propose changes to a topic. Please go to [[(Edit) Slovin's Formula\|(Edit) Slovin's Formula]].
 
