@@ -1,29 +1,12 @@
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  // Helper: Determine repo file path based on current URL path
-  function getFilePathFromPathname() {
-    let pathname = window.location.pathname; // e.g. "/notes/my-note"
-
-    if (pathname === "/" || pathname === "") {
-      return "Home.md";
-    }
-
-    if (pathname.startsWith("/")) {
-      pathname = pathname.slice(1);
-    }
-
-    return pathname + ".md";
-  }
-
   // Global function to handle saving edited content by sending to serverless PR API
   window.handleContentSave = async function(updatedContent) {
-    const filePath = getFilePathFromPathname();
-
     try {
       const response = await fetch("/.netlify/functions/create-pr", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ updatedContent, filePath }),
+        body: JSON.stringify({ updatedContent }), // no filePath, serverless function creates new file
       });
 
       if (!response.ok) throw new Error("Failed to create PR");
@@ -44,6 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let originalContent = contentDiv.innerHTML;
 
+    // Edit button click: enable editing mode
     editBtn.addEventListener("click", () => {
       contentDiv.contentEditable = "true";
       contentDiv.focus();
@@ -55,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
       originalContent = contentDiv.innerHTML;
     });
 
+    // Save button click: disable editing, send content
     saveBtn.addEventListener("click", () => {
       contentDiv.contentEditable = "false";
 
@@ -69,6 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
+    // Cancel button click: revert content and cancel editing
     cancelBtn.addEventListener("click", () => {
       contentDiv.innerHTML = originalContent;
       contentDiv.contentEditable = "false";
