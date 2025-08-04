@@ -1,12 +1,12 @@
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  // Global function to send edited content to serverless function to create a new PR with a new file
+  // Handle saving plain text, preserving paragraphs
   window.handleContentSave = async function(updatedContent) {
     try {
       const response = await fetch("/.netlify/functions/create-pr", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ updatedContent }),  // No filePath sent
+        body: JSON.stringify({ updatedContent }),
       });
 
       if (!response.ok) throw new Error("Failed to create PR");
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  // Editable UI logic — manages edit, save, and cancel buttons
+  // Editable UI logic
   document.querySelectorAll(".editable-container").forEach(container => {
     const contentDiv = container.querySelector(".editable-content");
     const editBtn = container.querySelector(".edit-btn");
@@ -38,6 +38,23 @@ document.addEventListener("DOMContentLoaded", () => {
       originalContent = contentDiv.innerHTML;
     });
 
+    // Preserve line breaks and output pure text
+    function getPlainTextWithLineBreaks(element) {
+      // If just text, handle simply
+      if (!element.children.length) return element.innerText.trim();
+
+      let text = '';
+      for (let node of element.childNodes) {
+        if (node.nodeType === Node.TEXT_NODE) {
+          text += node.textContent;
+        } else if (node.nodeType === Node.ELEMENT_NODE) {
+          text += '\n\n' + node.innerText;
+        }
+      }
+      // Cleanup: no triple newlines
+      return text.replace(/\n{3,}/g, '\n\n').trim();
+    }
+
     saveBtn.addEventListener("click", () => {
       contentDiv.contentEditable = "false";
 
@@ -45,7 +62,8 @@ document.addEventListener("DOMContentLoaded", () => {
       saveBtn.style.display = "none";
       cancelBtn.style.display = "none";
 
-      const updatedContent = contentDiv.innerHTML;
+      // Get cleaned pure text
+      const updatedContent = getPlainTextWithLineBreaks(contentDiv);
 
       if (window.handleContentSave) {
         window.handleContentSave(updatedContent);
