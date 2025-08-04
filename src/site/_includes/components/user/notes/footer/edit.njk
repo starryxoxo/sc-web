@@ -1,6 +1,8 @@
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  // Handle saving plain text, preserving paragraphs
+  // Throttle key for localStorage
+  const THROTTLE_KEY = "editSaveThrottleUntil";
+
   window.handleContentSave = async function(updatedContent) {
     try {
       const response = await fetch("/.netlify/functions/create-pr", {
@@ -12,13 +14,12 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!response.ok) throw new Error("Failed to edit this page.");
 
       const data = await response.json();
-      alert("Edit successfully made to pending changes, Wait two minutes to enable edits.");
+      alert("Edit successfully made to pending changes. Please wait for two minutes to enable edits.");
     } catch (err) {
       alert("Encountered an error editing this page.");
     }
   };
 
-  // Editable UI logic
   document.querySelectorAll(".editable-container").forEach(container => {
     const contentDiv = container.querySelector(".editable-content");
     const editBtn = container.querySelector(".edit-btn");
@@ -26,6 +27,27 @@ document.addEventListener("DOMContentLoaded", () => {
     const cancelBtn = container.querySelector(".cancel-btn");
 
     let originalContent = contentDiv.innerHTML;
+
+    // Check throttle on load
+    function checkThrottle() {
+      const throttleUntil = localStorage.getItem(THROTTLE_KEY);
+      const now = Date.now();
+
+      if (throttleUntil && now < parseInt(throttleUntil, 10)) {
+        saveBtn.disabled = true;
+        saveBtn.classList.add("throttled");
+        setTimeout(() => {
+          saveBtn.disabled = false;
+          saveBtn.classList.remove("throttled");
+          localStorage.removeItem(THROTTLE_KEY);
+        }, parseInt(throttleUntil, 10) - now);
+      } else {
+        saveBtn.disabled = false;
+        saveBtn.classList.remove("throttled");
+        localStorage.removeItem(THROTTLE_KEY);
+      }
+    }
+    checkThrottle();
 
     editBtn.addEventListener("click", () => {
       contentDiv.contentEditable = "true";
@@ -40,9 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Preserve line breaks and output pure text
     function getPlainTextWithLineBreaks(element) {
-      // If just text, handle simply
       if (!element.children.length) return element.innerText.trim();
-
       let text = '';
       for (let node of element.childNodes) {
         if (node.nodeType === Node.TEXT_NODE) {
@@ -51,29 +71,39 @@ document.addEventListener("DOMContentLoaded", () => {
           text += '\n\n' + node.innerText;
         }
       }
-      // Cleanup: no triple newlines
       return text.replace(/\n{3,}/g, '\n\n').trim();
     }
 
-    saveBtn.addEventListener("click", () => {
-      contentDiv.contentEditable = "false";
+    // Save button click logic: throttle with popup
+    saveBtn.addEventListener("click", (e) => {
+      if (saveBtn.disabled) {
+        // If throttled, show popup and prevent further action
+        alert("Edits disabled");
+        e.stopPropagation();
+        return;
+      }
 
+      contentDiv.contentEditable = "false";
       editBtn.style.display = "inline-block";
       saveBtn.style.display = "none";
       cancelBtn.style.display = "none";
 
-      // Get cleaned pure text
       const updatedContent = getPlainTextWithLineBreaks(contentDiv);
 
       if (window.handleContentSave) {
         window.handleContentSave(updatedContent);
       }
 
-      // Disable save button for 120 seconds (throttle)
+      // Set throttle in localStorage for 120 seconds
+      const throttleUntil = Date.now() + 120000;
+      localStorage.setItem(THROTTLE_KEY, throttleUntil.toString());
       saveBtn.disabled = true;
+      saveBtn.classList.add("throttled");
       setTimeout(() => {
         saveBtn.disabled = false;
-      }, 120000); // 120,000 ms = 120 seconds
+        saveBtn.classList.remove("throttled");
+        localStorage.removeItem(THROTTLE_KEY);
+      }, 120000);
     });
 
     cancelBtn.addEventListener("click", () => {
