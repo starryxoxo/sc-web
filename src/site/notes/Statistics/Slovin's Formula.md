@@ -37,5 +37,5 @@ Whether the final answer will be rounded depends on the situation. It is recomme
 
 
 >[!faq]- Contributor's Section
-Hello! This page is open for improvements. See the [[Contributor's Guide\|Contributor's Guide]] on how to propose changes to a topic. For edits, head to [[Statistics/(Edit) Slovin's Formula\|(Edit) Slovin's Formula]].
+Hello! This page is open for improvements. See the [[Misc/Contributor's Guide\|Contributor's Guide]] on how to propose changes to a topic. For edits, head to [[Statistics/(Edit) Slovin's Formula\|(Edit) Slovin's Formula]].
 

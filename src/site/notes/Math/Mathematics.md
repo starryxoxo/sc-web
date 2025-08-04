@@ -15,8 +15,8 @@ Welcome to Mathematics!
 >- [ ] Factoring
 
 ## Topics
-[[Math/Quadratic Formula\|Quadratic Formula]]
-[[Math/Completing the Square\|Completing the Square]]
-[[Math/Zero Product Property\|Zero Product Property]]
-[[Math/Test for Factorability\|Test for Factorability]]
-[[Math/Factoring\|Factoring]]
+[[Math/Math Q1/Quadratic Formula\|Quadratic Formula]]
+[[Math/Math Q1/Completing the Square\|Completing the Square]]
+[[Math/Math Q1/Zero Product Property\|Zero Product Property]]
+[[Math/Math Q1/Test for Factorability\|Test for Factorability]]
+[[Math/Math Q1/Factoring\|Factoring]]

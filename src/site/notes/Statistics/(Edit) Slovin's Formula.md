@@ -5,7 +5,7 @@
 [[Home\|Home]]
 
 >[!faq] What's this page?
->This page is to be used by contributors. If you'd like to contribute, please refer to the [[Contributor's Guide\|Contributor's Guide]].
+>This page is to be used by contributors. If you'd like to contribute, please refer to the [[Misc/Contributor's Guide\|Contributor's Guide]].
 
 <div class="editable-container" style="border:1px solid #ccc; padding:10px; max-width:600px; position: relative;">
   <div class="editable-content" tabindex="0" aria-label="Editable content" style="min-height:100px;">

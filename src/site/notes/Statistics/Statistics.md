@@ -2,6 +2,8 @@
 {"dg-publish":true,"permalink":"/statistics/statistics/"}
 ---
 
+[[Home\|Home]]
+
 # Statistics
 
 >[!todo] 
