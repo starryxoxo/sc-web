@@ -41,7 +41,7 @@ Whether the final answer will be rounded depends on the situation. It is recomme
 ***July 11, 2025***, Mrs. Marilyn O. Abas, .pptx
 
   </div>
-  <button class="edit-btn" aria-label="Edit content" style="position:absolute; top:5px; right:5px; background:none; border:none; cursor:pointer; font-size:18px;">✏️</button>
+  <button class="edit-btn" aria-label="Edit content" style="position:absolute; top:5px; right:5px; background:none; border:none; cursor:pointer; font-size:18px;">Edit</button>
   <button class="save-btn" style="display:none; margin-top:10px;">Save</button>
   <button class="cancel-btn" style="display:none; margin-top:10px;">Cancel</button>
 </div>
