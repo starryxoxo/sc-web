@@ -1,8 +1,8 @@
 const { Octokit } = require("@octokit/rest");
 
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN; // Your fine-grained PAT with repo permissions
-const OWNER = "starryxoxo"; // Replace with your GitHub username/org
-const REPO = "sc-web"; // Replace with your repo name
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN; // Set in Netlify env vars
+const OWNER = "starryxoxo";
+const REPO = "sc-web";
 const BASE_BRANCH = "main";
 
 const octokit = new Octokit({ auth: GITHUB_TOKEN });
@@ -33,10 +33,8 @@ exports.handler = async function(event) {
     });
     const baseCommitSha = refData.object.sha;
 
-    // Create unique new branch name
+    // New branch
     const newBranchName = `edit-${Date.now()}`;
-
-    // Create branch from base branch commit
     await octokit.git.createRef({
       owner: OWNER,
       repo: REPO,
@@ -44,22 +42,22 @@ exports.handler = async function(event) {
       sha: baseCommitSha,
     });
 
-    // Unique filename with timestamp, inside edits/ directory
+    // Unique filename in edits/ folder, safe for file paths
     const timestampSafe = new Date().toISOString().replace(/[:.]/g, "-");
     const newFilePath = `edits/edit-${timestampSafe}.md`;
 
-    // Create new file in new branch
+    // Create the new file in the new branch (as plain text)
     await octokit.repos.createOrUpdateFileContents({
       owner: OWNER,
       repo: REPO,
       path: newFilePath,
-      message: `Create new website edit ${timestampSafe}`,
+      message: `Create new edit via website at ${timestampSafe}`,
       content: Buffer.from(updatedContent, "utf8").toString("base64"),
       branch: newBranchName,
-      // no sha — new file
+      // no sha: new file!
     });
 
-    // Create pull request from new branch to base
+    // Create PR
     const { data: pr } = await octokit.pulls.create({
       owner: OWNER,
       repo: REPO,
