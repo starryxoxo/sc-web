@@ -9,12 +9,12 @@ document.addEventListener("DOMContentLoaded", () => {
         body: JSON.stringify({ updatedContent }),
       });
 
-      if (!response.ok) throw new Error("Failed to edits");
+      if (!response.ok) throw new Error("Failed to edit this page.");
 
       const data = await response.json();
-      alert("Edit successfully made to pending changes.");
+      alert("Edit successfully made to pending changes, Wait two minutes to enable edits.");
     } catch (err) {
-      alert("Error editing this page: " + err.message);
+      alert("Encountered an error editing this page.");
     }
   };
 
@@ -68,6 +68,12 @@ document.addEventListener("DOMContentLoaded", () => {
       if (window.handleContentSave) {
         window.handleContentSave(updatedContent);
       }
+
+      // Disable save button for 120 seconds (throttle)
+      saveBtn.disabled = true;
+      setTimeout(() => {
+        saveBtn.disabled = false;
+      }, 120000); // 120,000 ms = 120 seconds
     });
 
     cancelBtn.addEventListener("click", () => {
