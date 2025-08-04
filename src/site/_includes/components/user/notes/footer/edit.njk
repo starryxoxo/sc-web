@@ -1,12 +1,12 @@
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  // Global function to handle saving edited content by sending to serverless PR API
+  // Global function to send edited content to serverless function to create a new PR with a new file
   window.handleContentSave = async function(updatedContent) {
     try {
       const response = await fetch("/.netlify/functions/create-pr", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ updatedContent }), // no filePath, serverless function creates new file
+        body: JSON.stringify({ updatedContent }),  // No filePath sent
       });
 
       if (!response.ok) throw new Error("Failed to create PR");
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  // Editable UI logic for all .editable-container elements
+  // Editable UI logic — manages edit, save, and cancel buttons
   document.querySelectorAll(".editable-container").forEach(container => {
     const contentDiv = container.querySelector(".editable-content");
     const editBtn = container.querySelector(".edit-btn");
@@ -27,7 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let originalContent = contentDiv.innerHTML;
 
-    // Edit button click: enable editing mode
     editBtn.addEventListener("click", () => {
       contentDiv.contentEditable = "true";
       contentDiv.focus();
@@ -39,7 +38,6 @@ document.addEventListener("DOMContentLoaded", () => {
       originalContent = contentDiv.innerHTML;
     });
 
-    // Save button click: disable editing, send content
     saveBtn.addEventListener("click", () => {
       contentDiv.contentEditable = "false";
 
@@ -54,7 +52,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    // Cancel button click: revert content and cancel editing
     cancelBtn.addEventListener("click", () => {
       contentDiv.innerHTML = originalContent;
       contentDiv.contentEditable = "false";
