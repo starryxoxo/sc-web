@@ -9,12 +9,12 @@ document.addEventListener("DOMContentLoaded", () => {
         body: JSON.stringify({ updatedContent }),
       });
 
-      if (!response.ok) throw new Error("Failed to create PR");
+      if (!response.ok) throw new Error("Failed to edits");
 
       const data = await response.json();
-      alert("Pull request created: " + data.prUrl);
+      alert("Edit successfully made to pending changes.");
     } catch (err) {
-      alert("Error creating PR: " + err.message);
+      alert("Error editing this page: " + err.message);
     }
   };
 
