@@ -1,11 +1,9 @@
-// netlify/functions/create-pr.js
-
 const { Octokit } = require("@octokit/rest");
 
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN; // Set this securely in Netlify dashboard
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN; // Your fine-grained PAT with repo permissions
 const OWNER = "starryxoxo"; // Replace with your GitHub username/org
 const REPO = "sc-web"; // Replace with your repo name
-const BASE_BRANCH = "main"; // Your default branch
+const BASE_BRANCH = "main";
 
 const octokit = new Octokit({ auth: GITHUB_TOKEN });
 
@@ -18,12 +16,12 @@ exports.handler = async function(event) {
   }
 
   try {
-    const { updatedContent, filePath } = JSON.parse(event.body);
+    const { updatedContent } = JSON.parse(event.body);
 
-    if (!updatedContent || !filePath) {
+    if (!updatedContent) {
       return {
         statusCode: 400,
-        body: "Missing updatedContent or filePath in request body",
+        body: "Missing updatedContent in request body",
       };
     }
 
@@ -35,10 +33,10 @@ exports.handler = async function(event) {
     });
     const baseCommitSha = refData.object.sha;
 
-    // Create a new branch name with timestamp
+    // Create unique new branch name
     const newBranchName = `edit-${Date.now()}`;
 
-    // Create a new branch from the base branch commit
+    // Create branch from base branch commit
     await octokit.git.createRef({
       owner: OWNER,
       repo: REPO,
@@ -46,33 +44,29 @@ exports.handler = async function(event) {
       sha: baseCommitSha,
     });
 
-    // Get the current file version SHA to update
-    const { data: fileData } = await octokit.repos.getContent({
-      owner: OWNER,
-      repo: REPO,
-      path: filePath,
-      ref: BASE_BRANCH,
-    });
+    // Unique filename with timestamp, inside edits/ directory
+    const timestampSafe = new Date().toISOString().replace(/[:.]/g, "-");
+    const newFilePath = `edits/edit-${timestampSafe}.md`;
 
-    // Update the file content in the new branch
+    // Create new file in new branch
     await octokit.repos.createOrUpdateFileContents({
       owner: OWNER,
       repo: REPO,
-      path: filePath,
-      message: `Website edit via Netlify function PR`,
+      path: newFilePath,
+      message: `Create new website edit ${timestampSafe}`,
       content: Buffer.from(updatedContent, "utf8").toString("base64"),
       branch: newBranchName,
-      sha: fileData.sha,
+      // no sha — new file
     });
 
-    // Create Pull Request from new branch to base branch
+    // Create pull request from new branch to base
     const { data: pr } = await octokit.pulls.create({
       owner: OWNER,
       repo: REPO,
       title: `Website Edit - ${new Date().toISOString()}`,
       head: newBranchName,
       base: BASE_BRANCH,
-      body: "Automatic PR created from website edit",
+      body: "Automatically created PR from website edit",
     });
 
     return {
@@ -80,11 +74,10 @@ exports.handler = async function(event) {
       body: JSON.stringify({ prUrl: pr.html_url }),
     };
   } catch (error) {
-    console.error("Error in create-pr function:", error);
+    console.error("Error in create-pr:", error);
     return {
       statusCode: 500,
       body: `Server error: ${error.message}`,
     };
   }
 };
-                                  
