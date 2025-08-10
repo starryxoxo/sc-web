@@ -3,8 +3,10 @@
 ---
 
 
-# Welcome to SC Web
-Get to learn this grade's topics from various subjects, right in your pocket.
+# Welcome to SC Web.
+A refreshing way to learn, personalized only for SC.
+
+[[Bulletin Board\|Bulletin Board]] • [[Village Pump\|Village Pump]] • [[Misc/Contributor's Guide\|Contributor's Guide]]
 
 >[!attention]- This website is currently lacking in terms of written topics for viewing.
 >Contributions are highly welcome. Kindly send the topic you covered and have finished writing to the class president or via the [[Edit Request\|Edit Request]] page.
