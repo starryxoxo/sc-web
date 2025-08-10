@@ -6,8 +6,8 @@
 # Welcome to SC Web
 Get to learn this grade's topics from various subjects, right in your pocket.
 
->[!attention]
->The topics in this website is currently incomplete. To learn more, there will be a to-do list of topics available in the subjects.
+>[!attention]- This website is currently lacking in terms of written topics for viewing.
+>Contributions are highly welcome. Kindly send the topic you covered and have finished writing to the class president or via the [[Edit Request\|Edit Request]] page.
 
 # Logic & Knowlegde
 [[Math/Mathematics\|Mathematics]]
