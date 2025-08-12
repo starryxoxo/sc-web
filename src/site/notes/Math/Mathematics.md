@@ -20,3 +20,5 @@ Explore topics on Mathematics like never before! This time, with even more lette
 [[Math/Math Q1/Zero Product Property\|Zero Product Property]]
 [[Math/Math Q1/Test for Factorability\|Test for Factorability]]
 [[Math/Math Q1/Factoring\|Factoring]]
+
+[[Quadratic Equations\|Quadratic Equations]]
