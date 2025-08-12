@@ -10,6 +10,11 @@ where a, b, and c are real (or complex) constants with $$a \neq 0$$
 
 Quadratic equations are fundamental in algebra and arise in numerous mathematical models across physics, engineering, economics, and geometry.
 
+>[!info|normal] Overview
+>[Degree:: 2]
+>[Unknowns:: One variable (commonly x)]
+
+
 | Overview  |                                |
 | --------- | ------------------------------ |
 | Degree    | 2                              |
