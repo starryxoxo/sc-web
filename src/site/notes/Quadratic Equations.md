@@ -26,7 +26,7 @@ where a, b, and c are real (or complex) constants with $a \neq 0$
 
 # Solution methods
 
-## Factoring:
+• Factoring:
   • If the quadratic factors over the integers or rationals:
     $ax^2 + bx + c = a(x - r_1)(x - r_2)$
     Solutions: $x = r_1, \; x = r_2$
