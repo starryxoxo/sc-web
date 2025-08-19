@@ -9,6 +9,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>MLBB-style Victory Glow</title>
+
 <style>
   :root{
     --bg:#0a1220;
@@ -149,6 +150,7 @@
   /* helper: center & tiny subtitle */
   .sub{ margin-top:10px; opacity:.65; letter-spacing:.2em; font-size:clamp(10px,2.2vw,13px) }
 </style>
+
 </head>
 <body>
   <div class="banner">
@@ -156,9 +158,9 @@
     <div class="wing left"></div>
     <div class="wing right"></div>
 
-    <div class="victory">
-      VICTORY
-      <span class="shine" aria-hidden="true"></span>
+<div class="victory">
+  VICTORY
+    <span class="shine" aria-hidden="true"></span>
       <span class="beam"  aria-hidden="true"></span>
     </div>
     <div class="sub">MATCH RESULT</div>
