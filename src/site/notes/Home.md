@@ -11,6 +11,8 @@ A refreshing way to learn, personalized only for SC.
 >[!attention]- This website is currently lacking in terms of written topics for viewing.
 >Contributions are highly welcome. Kindly send the topic you covered and have finished writing to the class president or via the [[Edit Request\|Edit Request]] page.
 
+***
+
 ## Logic & Knowlegde
 [[Math/Mathematics\|Mathematics]]
 [[Science/Science\|Science]]
