@@ -4,6 +4,7 @@
 
 
 # Welcome to SC Web.
+<div style="font-variant: small-caps">early access</div>
 A refreshing way to learn, personalized only for SC.
 
 [[Bulletin Board\|Bulletin Board]] • [[Performance Tasks\|Performance Tasks]] • [[Misc/Contributor's Guide\|Contributor's Guide]]
