@@ -27,7 +27,6 @@ A refreshing way to learn, personalized only for SC.
 
 ## Languages
 [[lang/English\|English]]
-• [[lang/CEP\|CEP]]
 [[lang/Filipino\|Filipino]]
 
 ## MAPEH

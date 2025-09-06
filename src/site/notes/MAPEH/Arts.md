@@ -1,10 +1,9 @@
 ---
-{"dg-publish":true,"permalink":"/computer/computer/"}
+{"dg-publish":true,"permalink":"/mapeh/arts/"}
 ---
 
+[[Home\|Home]]
 
-[[Home\|Home]] • [[TLE/TLE\|TLE]]
-
-# Computer
+# Arts
 
 >[!todo]- This subject is still unavailable. Kindly follow the [[Misc/Contributor's Guide\|Contributor's Guide]] if you'd like to improve the site!

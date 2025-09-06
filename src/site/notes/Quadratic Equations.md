@@ -4,8 +4,10 @@
 
 [[Home\|Home]]
 
->[!Attention]- This is an experimental page.
->Topics may have been discussed but rely on official topics that have been covered.
+>[!check]- About topic
+> - [ ] **Maintained**
+> This topic is used for experiments. Content is not assured.
+> [[Misc/Topic Classification\|Learn more about how topics are classified]]
 
 # Quadratic Equation
 

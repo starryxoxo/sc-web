@@ -2,6 +2,14 @@
 {"dg-publish":true,"permalink":"/math/math-q1/quadratic-formula/"}
 ---
 
+
+[[Home\|Home]]
+
+>[!check]- About topic
+>  - [ ] **New**
+> This topic is missing information.
+> [[Misc/Topic Classification\|Learn more about how topics are classified]]
+
 # Quadratic Formula
 
 The quadratic formula is one of the formulas that is **used to solve quadratic equations**.

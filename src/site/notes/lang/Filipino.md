@@ -1,10 +1,10 @@
 ---
-{"dg-publish":true,"permalink":"/computer/computer/"}
+{"dg-publish":true,"permalink":"/lang/filipino/"}
 ---
 
 
-[[Home\|Home]] • [[TLE/TLE\|TLE]]
+[[Home\|Home]]
 
-# Computer
+# Filipino
 
 >[!todo]- This subject is still unavailable. Kindly follow the [[Misc/Contributor's Guide\|Contributor's Guide]] if you'd like to improve the site!
