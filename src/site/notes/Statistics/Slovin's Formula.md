@@ -2,7 +2,6 @@
 {"dg-publish":true,"permalink":"/statistics/slovin-s-formula/"}
 ---
 
-# Statistics
 
 [[Home\|Home]]
 
