@@ -5,6 +5,11 @@
 
 [[Home\|Home]]
 
+>[!check]- About topic
+>- [ ] **Verified**
+>This topic uses verified resources, but needs further clarifications and reformatting.
+>[[Misc/Topic Classification\|Learn more about how topics are classified]]
+
 # Slovin's Formula
 
 The Slovin's Formula is a simple mathematical formula used to calculate the required sample size of a study.
