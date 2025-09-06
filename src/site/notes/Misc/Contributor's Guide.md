@@ -7,7 +7,7 @@
 # Contributor's Guide
 This guide provides an overview of best practices to follow when editing pages on SC Web.
 
->[!info]- This page in a nutshell
+>[!hint]- This page in a nutshell
 >Avoid removing, vandalizing, misusing content. Follow the editing syntax, and don't spam edits in Edit Page.
 
 ## About Contributor's Section
