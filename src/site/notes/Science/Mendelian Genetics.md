@@ -11,7 +11,7 @@
 >[[Misc/Topic Classification\|Learn more about how topics are classified]]
 # Mendelian Genetics
 
-<div style="font-variant: small-caps; margin-bottom: -10px;">father of genetics</div>
+<div style="font-variant: small-caps; margin-bottom: -12px;">father of genetics</div>
 
 ## Gregor Mendel
 -> In **1866**, Gregor Johann Mendel, an **Austrian monk**, began experimenting with pea plants (Pisum sativum) to study how traits are inherited.
@@ -36,7 +36,7 @@ Mendel crossed pea plants with green seeds and yellow seeds to study inheritance
 | Genes           | A gene **controls** a specific trait.                                           |
 | Alleles         | Alleles are **different versions** of genes.                                    |
 | Dominant trait  | Traits that will **always show up** in an organism's appearance **if present**. |
-| Recessive Trait | Traits that appear **only when both alleles are recessive**.                    |
+| Recessive trait | Traits that appear **only when both alleles are recessive**.                    |
 
 ## Homozygous vs Heterozygous
 -> **Heterozygous** means **different alleles** (For example, Yy). A heterozygous genotype will always be a dominant trait, because it has a dominant allele.
