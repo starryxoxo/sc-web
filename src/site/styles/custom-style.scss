@@ -15,3 +15,26 @@ body {
 .markdown-rendered table {
   word-break: unset;
 }
+
+/* cool translucent glassy navbar */
+.navbar {
+  padding-left: 24px;
+  background-color: transparent;
+  backdrop-filter: blur(12px) saturate(120%);
+  -webkit-backdrop-filter: blur(12px) saturate(120%);
+  mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    black 30%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    black 30%,
+    transparent 100%
+  );
+  transition: backdrop-filter 0.4s;
+  padding-top: 0.5rem;
+  padding-bottom: 1.6rem;
+}
