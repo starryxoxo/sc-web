@@ -11,7 +11,7 @@
 >[[Misc/Topic Classification\|Learn more about how topics are classified]]
 # Mendelian Genetics
 
-<div style="font-variant: small-caps; margin-bottom: -12px;">father of genetics</div>
+<div style="font-variant: small-caps; margin-bottom: -18px;">father of genetics</div>
 
 ## Gregor Mendel
 -> In **1866**, Gregor Johann Mendel, an **Austrian monk**, began experimenting with pea plants (Pisum sativum) to study how traits are inherited.
