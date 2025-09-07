@@ -34,3 +34,5 @@ A refreshing way to learn, personalized only for SC.
 • [[MAPEH/Arts\|Arts]]
 • [[MAPEH/PE\|Physical Education]]
 • [[MAPEH/Health\|Health]]
+
+<small>v. 1.0.9-EA</small>
