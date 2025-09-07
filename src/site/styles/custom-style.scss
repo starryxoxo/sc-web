@@ -79,8 +79,8 @@ body {
 }
 
 .modern-modal-close {
-  position: relative;
-  top: 12px; right: 14px;
+  position: absolute;
+  top: 12px; right: 20px;
   font-size: 22px;
   color: white;
   cursor: pointer;
