@@ -12,9 +12,9 @@
 
 # Puting Kalapati Libutin Itong Sandaigdigan
 
-<div style="font-variant: small-caps;">tula</div>
+<div style="font-variant: small-caps; margin-bottom: -24px;">tula</div>
 
-Ang Puting Kalapati Libutin Itong Sandaigdigan ay isang tula ni Usman Awang. Kinikilala ng tula ang kapayapaang (puting kalapati) lumilibot sa buong mundo. [[#Ang Tula|Basahin ang tula]]
+Ang Puting Kalapati Libutin Itong Sandaigdigan ay isang tula ni Usman Awang. Kinikilala ng tula ang kapayapaang (puting kalapati) lumilibot sa buong mundo. [[##Ang Tula|Basahin ang tula]]
 
 ## Tungkol kay Usman Awang
 Ang tula ay isinulat ng isang Malaysian National Laureate, si Dr. Usman Awang.¹
