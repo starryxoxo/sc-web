@@ -6,7 +6,7 @@
 [[Home\|Home]]
 
 >[!check]- About
->**Non-topic**
+>- [ ] **Non-topic**
 >This page is not a school topic but a principle. See the information below.
 
 #  Topic Classification
@@ -18,7 +18,7 @@ Starting from the lowest,
 • The topic is new, unofficial, and may contain a lot of mistakes.
 2. New
 • The topic is new, but some mistakes have been corrected.
-3. Unofficial
+3. Unverified
 • The topic has resources and enough content but it is not verified.
 4.  Verified
 • The topic has valid and verified resources.

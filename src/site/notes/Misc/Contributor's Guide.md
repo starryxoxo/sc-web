@@ -6,7 +6,7 @@
 [[Home\|Home]]
 
 >[!check]- About
->**Non-topic**
+>- [ ] **Non-topic**
 >This page is not a school topic but a principle.
 >[[Misc/Topic Classification\|Learn more about how topics are classified]]
 
