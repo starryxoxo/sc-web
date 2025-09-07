@@ -2,7 +2,13 @@
 {"dg-publish":true,"permalink":"/misc/contributor-s-guide/"}
 ---
 
+
 [[Home\|Home]]
+
+>[!check]- About
+>**Non-topic**
+>This page is not a school topic but a principle.
+>[[Misc/Topic Classification\|Learn more about how topics are classified]]
 
 # Contributor's Guide
 This guide provides an overview of best practices to follow when editing pages on SC Web.
