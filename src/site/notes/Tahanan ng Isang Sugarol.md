@@ -16,7 +16,7 @@
 
 Akdang may sistematikong pagkakasunod-sunod ng mga pangyayari (banghay)
 
-Ang maikling kuwento na Tahanan ng Isang Sugarol ay galing Malaysia, **sinalin sa Filipino** ni **Rustica Carpio**.
+Ang maikling kuwento na Tahanan ng Isang Sugarol ay galing sa Malaysia, **sinalin sa Filipino** ni **Rustica Carpio**.
 
 | Mga tauhan                      |                                                        |
 | ------------------------------- | ------------------------------------------------------ |
@@ -28,23 +28,22 @@ Ang maikling kuwento na Tahanan ng Isang Sugarol ay galing Malaysia, **sinalin s
 | **Mga sugarol**                 | Kalaban ni Li Hua sa sugal                             |
 | **Asawa ng may-ari ng kapihan** | Tumulong kay Lian-chiao                                |
 
-|                            |                         |
-| -------------------------- | ----------------------- |
 | Mga tagpuan                |                         |
+| -------------------------- | ----------------------- |
 | **Sira-sirang bahay**      | Tahanan nina Lian-chiao |
 | **Hsiang Chi Coffee Shop** | Ang sugalan ni Li Hua   |
 
-|                                       |
-| ------------------------------------- |
 | Panahon                               |
+| ------------------------------------- |
 | **Takipsilim** / Dapit-hapon / Sunset |
 | **Gabi** / Puno ng kadiliman          |
+***
 
 >[!faq] Ano ang Domestic Violence?
 >- Ito ang **pananakit sa loob ng bahay**. Ayon sa NDHS o National Demographic & Health Survey, 15–49 taong gulang ang nakakaranas ng domestic violence.
 >- Ayon sa WHO, ang nga taong **biktima ng domestic violence** ay **nagkakaroon ng mental** o **psychological disorder**.
 
-
+***
 ## The Anti-Violence Against Women and their Children Act of 2004 (RA 9262)
 Itinatag noong Marso 24, 2004, itong batas na ito ay kinakasuhan at pinaparusahan ang anumang gawaing pisikal, sekswal, sikolohikal, o ekonomikal na pinsala sa mga babae at sa kanilang mga anak.
 
