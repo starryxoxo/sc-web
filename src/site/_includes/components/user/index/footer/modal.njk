@@ -1,0 +1,19 @@
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const modal = document.getElementById('firstVisitModal');
+  const closeBtn = document.getElementById('closeModal');
+  if (!localStorage.getItem('first-user')) {
+    modal.style.display = 'block';
+  }
+  closeBtn.onclick = function () {
+    modal.style.display = 'none';
+    localStorage.setItem('first-user', 'true');
+  };
+  window.onclick = function(event) {
+    if (event.target === modal) {
+      modal.style.display = 'none';
+      localStorage.setItem('first-user', 'true');
+    }
+  };
+});
+</script>
