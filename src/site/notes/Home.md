@@ -7,7 +7,7 @@
   <div class="modern-modal-content">
     <span id="closeModal" class="modern-modal-close">&times;</span>
     <h1>Welcome!</h1>
-    <p>This is SC Web and you've been invited to be an early access user. Expect bugs, and keep this website a secret.</p>
+    <p>This is SC Web and you've been invited to be an early access user. Expect bugs and keep this website a secret for now.</p>
   </div>
 </div>
 
