@@ -6,7 +6,7 @@
 [[Home\|Home]] • <a href="javascript:history.back()">Go Back</a>
 
 >[!check]- Tungkol sa Paksa
->- [ ] Bago | New
+>- [ ] **Bago** | **New**
 >Ang paksang ito ay hindi pa tapos.
 >[[Misc/Topic Classification\|Tingnan kung paano inaayos ang mga paksa]]
 
