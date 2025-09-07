@@ -7,7 +7,7 @@
 
 
 >[!check]- About
->- [ ] **Non-topic**
+>- [x] **Non-topic**
 >This page is not a school topic but a principle. See the information below.
 
 #  Topic Classification
@@ -37,5 +37,5 @@ Not in any specific order,
 • The page or topic is up for removal. The information may be outdated and requires reformatting.
 4. For Contribution
 • The page or topic requires contributions, may face deletion.
-5. Non-topic
+5. [x] Non-topic
 • The page is not a school topic, like this page.

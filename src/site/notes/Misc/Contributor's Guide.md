@@ -7,7 +7,7 @@
 
 
 >[!check]- About
->- [ ] **Non-topic**
+>- [x] **Non-topic**
 >This page is not a school topic but a principle.
 >[[Misc/Topic Classification\|Learn more about how topics are classified]]
 
