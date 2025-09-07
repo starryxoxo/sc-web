@@ -3,7 +3,7 @@
 ---
 
 
-[[Home\|Home]] • <a href="javascript:history.back()">Go Back</a>
+[[Home\|Home]] • [[lang/Filipino\|Filipino]] • <a href="javascript:history.back()">Go Back</a>
 
 >[!check]- Tungkol sa Paksa
 >- [ ] **Bago** | **New**
