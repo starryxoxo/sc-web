@@ -29,6 +29,7 @@ Some topics or pages may not fit into the categories above, so they are put into
 
 Not in any specific order,
 1. Maintained
+• This page or topic is maintained for system purposes and the content may not be officially covered or accurate.
 2. For Movement
 • The page or topic is up for movement, meaning, it will be moved to another link.
 3. For Removal
