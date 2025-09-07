@@ -3,6 +3,14 @@
 ---
 
 
+<div id="firstVisitModal" class="modern-modal">
+  <div class="modern-modal-content">
+    <span id="closeModal" class="modern-modal-close">&times;</span>
+    <h1>Welcome!</h1>
+    <p>This is SC Web. You've been invited to be an early access user! Expect bugs, and keep it a secret!</p>
+  </div>
+</div>
+
 # Welcome to SC Web.
 <div style="font-variant: small-caps">early access</div>
 A refreshing way to learn, personalized only for SC.
