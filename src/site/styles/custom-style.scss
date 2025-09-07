@@ -47,25 +47,19 @@ body {
 }
 
 .modern-modal {
-  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
   position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 12px;
+  left: 0; right: 0; bottom: 12px;
   width: 100%;
   z-index: 1000;
   background: transparent;
   pointer-events: none;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0; padding: 0;
 }
 
 .modern-modal-content {
-  width: 100%;
   max-width: 400px;
   min-width: 220px;
   background-color: transparent;
@@ -79,12 +73,13 @@ body {
   font-family: 'Inter Variable', sans-serif;
   animation: floatup 1s cubic-bezier(.4,2,.6,1) 1;
   box-sizing: border-box;
-  margin: 0 12px; /* Optional: adds a small gutter on tiny screens */
+  margin: 0 12px;
 }
 
-/* Optionally, tweak for very small screens */
 @media (max-width: 350px) {
   .modern-modal-content {
+    min-width: unset;
+    max-width: unset;
     width: 98vw;
     margin: 0 1vw;
     padding: 10px 4vw;
