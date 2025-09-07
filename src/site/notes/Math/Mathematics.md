@@ -2,7 +2,8 @@
 {"dg-publish":true,"permalink":"/math/mathematics/"}
 ---
 
-[[Home\|Home]]
+[[Home\|Home]] • <a href="javascript:history.back()">Go Back</a>
+
 
 # Mathematics
 Explore topics on Mathematics like never before! This time, with even more letters and less numbers...

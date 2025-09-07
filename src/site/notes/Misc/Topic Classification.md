@@ -3,7 +3,8 @@
 ---
 
 
-[[Home\|Home]]
+[[Home\|Home]] • <a href="javascript:history.back()">Go Back</a>
+
 
 >[!check]- About
 >- [ ] **Non-topic**
