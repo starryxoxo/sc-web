@@ -58,20 +58,30 @@ body {
 }
 
 .modern-modal-content {
-  margin-right: 12px;
-  margin-left: 12px;
-  max-width: 360px;
-  min-width: 220px;
+  margin-right: 3vw;
+  margin-left: 3vw;
+  width: clamp(220px, 90vw, 400px); /* min 220px, max 400px, responsive in between */
   background-color: transparent;
   backdrop-filter: blur(12px) saturate(120%);
   -webkit-backdrop-filter: blur(12px) saturate(120%);
-  border-radius: 24px;
+  border-radius: clamp(14px, 5vw, 24px);
   box-shadow: 0 8px 24px rgba(0,0,0,0.18), 0 1.5px 5px rgba(0,0,0,0.12);
-  padding: 28px 20px 20px 20px;
+  padding: clamp(18px, 5vw, 28px) clamp(14px, 5vw, 20px) clamp(12px, 4vw, 20px) clamp(14px, 5vw, 20px);
   pointer-events: all;
   position: relative;
   font-family: 'Inter Variable', sans-serif;
   animation: floatup 1s cubic-bezier(.4,2,.6,1) 1;
+  box-sizing: border-box;
+}
+
+/* Optionally, tweak for very small screens */
+@media (max-width: 350px) {
+  .modern-modal-content {
+    width: 98vw;
+    margin: 0 1vw;
+    padding: 10px 4vw;
+    border-radius: 10px;
+  }
 }
 
 @keyframes floatup {
