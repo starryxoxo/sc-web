@@ -11,7 +11,7 @@
 
 #  Topic Classification
 
- Topics are  classified to let readers know where the information of the topic comes from. Tap the **About topic**  or **About** section to learn more. There are multiple stages in which a topic goes through:
+ Topics are  classified to let readers know where the information of the topic comes from, and the stage of the topic. Tap the **About topic**  or **About** section to learn more. There are multiple stages in which a topic goes through:
 
 Starting from the lowest,
 1. Experimental
