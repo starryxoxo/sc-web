@@ -55,12 +55,14 @@ body {
   z-index: 1000;
   background: transparent;
   pointer-events: none;
+  /* Center child horizontally with flex */
+  display: flex;
+  justify-content: center; /* horizontal centering */
+  align-items: flex-end;   /* align to bottom */
 }
 
 .modern-modal-content {
-  margin-right: 3vw;
-  margin-left: 3vw;
-  width: clamp(220px, 90vw, 400px); /* min 220px, max 400px, responsive in between */
+  width: clamp(220px, 90vw, 400px);
   background-color: transparent;
   backdrop-filter: blur(12px) saturate(120%);
   -webkit-backdrop-filter: blur(12px) saturate(120%);
@@ -72,6 +74,7 @@ body {
   font-family: 'Inter Variable', sans-serif;
   animation: floatup 1s cubic-bezier(.4,2,.6,1) 1;
   box-sizing: border-box;
+  margin: 0; /* Remove left/right margin, flex handles centering */
 }
 
 /* Optionally, tweak for very small screens */
