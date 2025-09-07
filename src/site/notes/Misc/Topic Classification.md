@@ -31,11 +31,13 @@ Some topics or pages may not fit into the categories above, so they are put into
 Not in any specific order,
 1. Maintained
 • This page or topic is maintained for system purposes and the content may not be officially covered or accurate.
-2. For Movement
-• The page or topic is up for movement, meaning, it will be moved to another link.
-3. For Removal
+2. Merger
+• The page or topic is up for movement. It will be merged to another page.
+3. Part
+• The page or topic is up for separation. Two topics have developed enough content to be isolated.
+4. For Removal
 • The page or topic is up for removal. The information may be outdated and requires reformatting.
-4. For Contribution
+5. For Contribution
 • The page or topic requires contributions, may face deletion.
-5. [x] Non-topic
+6. [x] Non-topic
 • The page is not a school topic, like this page.
