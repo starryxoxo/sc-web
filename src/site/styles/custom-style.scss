@@ -82,7 +82,7 @@ body {
   position: absolute;
   top: 12px; right: 20px;
   font-size: 22px;
-  color: white;
+  color: var(--text-normal);
   cursor: pointer;
   transition: color 0.2s;
 }
