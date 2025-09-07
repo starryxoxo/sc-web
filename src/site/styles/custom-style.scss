@@ -44,3 +44,43 @@ body {
   font-family: "Inter Variable", sans-serif;
   font-size: inherit;
 }
+
+.modern-modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  left: 0; right: 0;
+  bottom: 12px;
+  width: 100%;
+  z-index: 1000;
+  background: transparent;
+  pointer-events: none;
+}
+
+.modern-modal-content {
+  margin: 0 auto;
+  max-width: 360px;
+  min-width: 220px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18), 0 1.5px 5px rgba(0,0,0,0.12);
+  padding: 28px 20px 20px 20px;
+  pointer-events: all;
+  position: relative;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  animation: floatup 0.4s cubic-bezier(.4,2,.6,1) 1;
+}
+
+@keyframes floatup {
+  from { transform: translateY(60px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+
+.modern-modal-close {
+  position: absolute;
+  top: 12px; right: 14px;
+  font-size: 22px;
+  color: #aaa;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.modern-modal-close:hover { color: #333; }
