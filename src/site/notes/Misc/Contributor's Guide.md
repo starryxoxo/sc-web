@@ -13,8 +13,8 @@
 # Contributor's Guide
 This guide provides an overview of best practices to follow when editing pages on SC Web.
 
->[!abstract]- This page in a nutshell
->Avoid removing, vandalizing, misusing content. Follow the editing syntax, and don't spam edits in Edit Page.
+>[!example]- This page in a nutshell
+>Avoid removing, vandalizing, and misusing content. Follow the editing syntax and don't spam edits with Edit Page.
 
 ***
 
