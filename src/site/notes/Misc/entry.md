@@ -22,7 +22,7 @@
             color: var(--text-normal);
         }
         .password-container {
-            width: clamp(320px, 90vw, 400px);
+            max-width: 220px
             background: rgba(255, 255, 255, 0.08);
             backdrop-filter: blur(12px) saturate(120%);
             -webkit-backdrop-filter: blur(12px) saturate(120%);
@@ -32,7 +32,7 @@
             border: 1px solid rgba(255, 255, 255, 0.15);
         }
         .password-title {
-            font-size: 1.5rem;
+            font-size: 1em;
             font-weight: 600;
             text-align: center;
             margin-bottom: 32px;
