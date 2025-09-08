@@ -15,7 +15,7 @@
 <div style="font-variant: small-caps">early access</div>
 A refreshing way to learn, personalized only for SC.
 
-[[Bulletin Board\|Bulletin Board]] • [[Performance Tasks\|Performance Tasks]] • [[Misc/Contributor's Guide\|Contributor's Guide]]
+[[Bulletin Board\|Bulletin Board]] • [[Misc/Contributor's Guide\|Contributor's Guide]]
 
 >[!attention]- This website is currently lacking in terms of written topics for viewing.
 >Contributions are highly welcomed. Kindly send the topic you covered and have finished writing to the class president or via the [[Edit Request\|Edit Request]] page.

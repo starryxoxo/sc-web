@@ -25,7 +25,7 @@ Ang tula ay isinulat ng isang Malaysian National Laureate, si Dr. Usman Awang.¹
 | Nagsimula ng Karera            | 1946                                                                                                                                                   |
 | Samahan                        | 1. Henerasyon ng 1950<br>2. Marikit na Bituin sa Langit ng Panulaang Malayo                                                                            |
 | Kinilala                       | 1983, bilang poet laureate ng Malaysia                                                                                                                 |
-| Pinanganak                     | -                                                                                                                                                      |
+| Pinanganak                     | Johore, Malaysia                                                                                                                                       |
 | Pumanaw                        | Nobyembre 29, 2001                                                                                                                                     |
 
 
