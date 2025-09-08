@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/science/science/"}
 ---
 
-[[Home\|Home]]
+[[Home\|Home]] • <a href="javascript:history.back()">Go Back</a>
 
 # Science
 
@@ -13,5 +13,5 @@
 
 ## Topics
 [[Science/Mendelian Genetics\|Mendelian Genetics]]
-[[Respiratory System\|Respiratory System]]
+[[Science/Respiratory System\|Respiratory System]]
 [[Science/Circulatory System\|Circulatory System]]

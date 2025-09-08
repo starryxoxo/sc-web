@@ -35,7 +35,7 @@ A refreshing way to learn, personalized only for SC.
 
 ## Languages
 [[lang/English\|English]]
-[[lang/Filipino\|Filipino]]
+[[Filipino/Filipino\|Filipino]]
 
 ## MAPEH
 • [[MAPEH/Music\|Music]]

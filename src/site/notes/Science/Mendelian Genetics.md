@@ -3,7 +3,7 @@
 ---
 
 
-[[Home\|Home]]
+[[Home\|Home]] • [[Science/Science\|Science]] • <a href="javascript:history.back()">Go Back</a>
 
 >[!check]- About topic
 >- [X] **Official**
@@ -27,10 +27,11 @@ Heredity is the **transfer** or **passing of traits from parents to offspring** 
 
 ***
 
-|                 |                                                                                 |
+| About           |                                                                                 |
 | --------------- | ------------------------------------------------------------------------------- |
 | Genes           | A gene **controls** a specific trait.                                           |
 | Alleles         | Alleles are **different versions** of genes.                                    |
+| Trait           | A physical characteristic.                                                      |
 | Dominant trait  | Traits that will **always show up** in an organism's appearance **if present**. |
 | Recessive trait | Traits that appear **only when both alleles are recessive**.                    |
 
