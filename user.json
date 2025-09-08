@@ -1,0 +1,18 @@
+{
+  "masterPIN": "9262",
+  "users": [
+    {
+      "AuthName": "Lukas",
+      "ID": "B-5"
+    },
+    {
+      "AuthName": "LA",
+      "ID": "B-1"
+    },
+    {
+      "AuthName": "Matthew",
+      "ID": "B-2"
+    }
+    // Add more authorized users here
+  ]
+}
