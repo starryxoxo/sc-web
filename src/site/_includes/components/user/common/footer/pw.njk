@@ -19,19 +19,25 @@ function saveAuthData(name, pin) {
 function loadAuthData() {
   const auth = localStorage.getItem(LOGIN_STORAGE_KEY);
   const pinData = localStorage.getItem(PIN_STORAGE_KEY);
-  if (!auth || !pinData) return null;
+  const now = new Date();
+
+  if (!auth || !pinData) {
+    // No auth or pin info: redirect immediately
+    window.location.href = "/entry/"; // Your auth page URL
+    return null;
+  }
 
   const authObj = JSON.parse(auth);
   const pinObj = JSON.parse(pinData);
-  const now = new Date();
 
   if (now.getTime() - pinObj.timestamp > pinExpiryDays * 24 * 60 * 60 * 1000) {
-    // PIN expired, clear storage and redirect to login page for re-authentication
+    // PIN expired: clear storage & redirect
     localStorage.removeItem(LOGIN_STORAGE_KEY);
     localStorage.removeItem(PIN_STORAGE_KEY);
-    window.location.href = "/entry/"; // Replace with actual login page URL
+    window.location.href = "/entry/";
     return null;
   }
+
   return { name: authObj.name, pin: pinObj.pin };
 }
 
@@ -81,19 +87,6 @@ async function authenticate() {
   return true;
 }
 
-function personalizeWelcome(name) {
-  const nameDiv = document.querySelector(".AuthName");
-  if (nameDiv) {
-    nameDiv.textContent = name;
-  }
-  // Optionally hide login inputs after successful login
-  const loginContainer = document.getElementById("login-container");
-  if (loginContainer) loginContainer.style.display = "none";
-}
-
-document.getElementById("loginBtn").addEventListener("click", authenticate);
-
-// On page load, check if already logged in and valid, else redirect handled in loadAuthData
 window.addEventListener("DOMContentLoaded", () => {
   const auth = loadAuthData();
   if (auth) {
