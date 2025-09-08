@@ -1,6 +1,9 @@
 <script>
 const container = document.querySelector('.flashcard-container');
 const cards = Array.from(container.querySelectorAll('.flashcard'));
+
+cards.sort(() => Math.random() - 0.5);
+
 const prevBtn = document.querySelector('.flashcard-prev');
 const nextBtn = document.querySelector('.flashcard-next');
 
