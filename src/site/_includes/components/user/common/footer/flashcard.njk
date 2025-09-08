@@ -1,0 +1,40 @@
+<script>
+const container = document.querySelector('.flashcard-container');
+const cards = Array.from(container.querySelectorAll('.flashcard'));
+const prevBtn = container.querySelector('.flashcard-prev');
+const nextBtn = container.querySelector('.flashcard-next');
+
+let idx = 0;
+
+function showCard(i) {
+  cards.forEach((c, j) => {
+    c.style.display = i === j ? 'flex' : 'none';
+    c.classList.remove('revealed');
+  });
+}
+showCard(idx);
+
+cards.forEach(card => {
+  card.addEventListener('click', () => card.classList.toggle('revealed'));
+});
+
+prevBtn.addEventListener('click', () => {
+  idx = (idx - 1 + cards.length) % cards.length;
+  showCard(idx);
+});
+nextBtn.addEventListener('click', () => {
+  idx = (idx + 1) % cards.length;
+  showCard(idx);
+});
+
+// Swipe support
+let startX = 0;
+cards.forEach(card => {
+  card.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+  card.addEventListener('touchend', e => {
+    let endX = e.changedTouches[0].clientX;
+    if (endX - startX > 50) prevBtn.click();
+    else if (startX - endX > 50) nextBtn.click();
+  });
+});
+</script>
