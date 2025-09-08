@@ -115,7 +115,7 @@ window.addEventListener("DOMContentLoaded", () => {
 function personalizeWelcome(name) {
   const nameDiv = document.querySelector(".AuthName");
   if (nameDiv) {
-    nameDiv.textContent = `Welcome, ${name}!`; // Add welcome message or just the name
+    nameDiv.textContent = `${name}!`; // Add welcome message or just the name
   }
 
   // Optionally hide login inputs if on login page and logged in (should redirect away though)
