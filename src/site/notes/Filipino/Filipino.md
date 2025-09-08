@@ -6,7 +6,10 @@
 [[Home\|Home]]
 
 # Filipino
-Magandang araw o gabi, mambabasa.
+
+<div style="font-variant: small-caps; margin-bottom: -18px;">mon, tue, wed, thu</div>
+
+Magandang umaga, araw o gabi, mambabasa.
 
 >[!todo]- Itong asignatura ay may kulang na mga paksa. Makikisundan ng [[Misc/Contributor's Guide\|Gabay para sa Pag-ambag]] kung gusto mong umunlad ang website.
 > **WIP** Tahanan ng Isang Sugarol
