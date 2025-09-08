@@ -355,7 +355,7 @@
                 
                 // Simulate redirect after 1.5 seconds
                 setTimeout(() => {
-                    window.location.href = '/home/';
+                    window.location.href = 'https://scweb9.netlify.app/home/';
                 }, 1500);
                 
             } else {
