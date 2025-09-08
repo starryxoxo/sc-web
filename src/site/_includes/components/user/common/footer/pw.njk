@@ -93,8 +93,33 @@ async function authenticate() {
 
 window.addEventListener("DOMContentLoaded", () => {
   const auth = loadAuthData();
+  const loginPath = "/entry/";
+  const homePath = "/"; // or your target logged-in landing page
+
   if (auth) {
+    // If authenticated and currently on login page, redirect to homepage
+    if (window.location.pathname === loginPath) {
+      window.location.href = homePath;
+      return;
+    }
+    // Else personalize welcome on authenticated pages
     personalizeWelcome(auth.name);
+  } else {
+    // If not authenticated and not on login page, redirect to login
+    if (window.location.pathname !== loginPath) {
+      window.location.href = loginPath;
+    }
   }
 });
+
+function personalizeWelcome(name) {
+  const nameDiv = document.querySelector(".AuthName");
+  if (nameDiv) {
+    nameDiv.textContent = `Welcome, ${name}!`; // Add welcome message or just the name
+  }
+
+  // Optionally hide login inputs if on login page and logged in (should redirect away though)
+  const loginContainer = document.getElementById("login-container");
+  if (loginContainer) loginContainer.style.display = "none";
+}
 </script>
