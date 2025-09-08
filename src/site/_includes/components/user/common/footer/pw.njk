@@ -1,0 +1,102 @@
+<script>
+const JSON_LINK = "https://scweb9.netlify.app/user.json"; // URL returning { masterPIN: "...", users: [...] }
+
+const LOGIN_STORAGE_KEY = "authData";
+const PIN_STORAGE_KEY = "authPinData";
+
+const pinExpiryDays = 30;
+
+function saveAuthData(name, pin) {
+  const now = new Date();
+  const pinData = {
+    pin,
+    timestamp: now.getTime()
+  };
+  localStorage.setItem(LOGIN_STORAGE_KEY, JSON.stringify({ name }));
+  localStorage.setItem(PIN_STORAGE_KEY, JSON.stringify(pinData));
+}
+
+function loadAuthData() {
+  const auth = localStorage.getItem(LOGIN_STORAGE_KEY);
+  const pinData = localStorage.getItem(PIN_STORAGE_KEY);
+  if (!auth || !pinData) return null;
+
+  const authObj = JSON.parse(auth);
+  const pinObj = JSON.parse(pinData);
+  const now = new Date();
+
+  if (now.getTime() - pinObj.timestamp > pinExpiryDays * 24 * 60 * 60 * 1000) {
+    // PIN expired, clear storage and redirect to login page for re-authentication
+    localStorage.removeItem(LOGIN_STORAGE_KEY);
+    localStorage.removeItem(PIN_STORAGE_KEY);
+    window.location.href = "/entry/"; // Replace with actual login page URL
+    return null;
+  }
+  return { name: authObj.name, pin: pinObj.pin };
+}
+
+async function fetchAuthData() {
+  try {
+    const res = await fetch(JSON_LINK);
+    if (!res.ok) throw new Error("Failed to fetch auth data.");
+    return await res.json(); // expecting { masterPIN: "...", users: [{ AuthName, ID }, ...] }
+  } catch (e) {
+    console.error(e);
+    return null;
+  }
+}
+
+async function authenticate() {
+  const nameInput = document.getElementById("authName").value.trim();
+  const idInput = document.getElementById("authID").value.trim();
+  const pinInput = document.getElementById("authPIN").value.trim();
+
+  const authData = await fetchAuthData();
+  if (!authData) {
+    alert("Unable to fetch authentication data.");
+    return false;
+  }
+
+  if (pinInput !== authData.masterPIN) {
+    alert("Incorrect PIN.");
+    return false;
+  }
+
+  const isAuthorized = authData.users.some(
+    item => item.AuthName.toLowerCase() === nameInput.toLowerCase() &&
+            item.ID.toLowerCase() === idInput.toLowerCase()
+  );
+
+  if (!isAuthorized) {
+    alert("Name and ID not authorized.");
+    return false;
+  }
+
+  saveAuthData(nameInput, pinInput);
+  personalizeWelcome(nameInput);
+
+  // Redirect after successful login
+  window.location.href = "/"; // Replace with your landing/target page
+
+  return true;
+}
+
+function personalizeWelcome(name) {
+  const nameDiv = document.querySelector(".AuthName");
+  if (nameDiv) {
+    nameDiv.textContent = name;
+  }
+  // Optionally hide login inputs after successful login
+  const loginContainer = document.getElementById("login-container");
+  if (loginContainer) loginContainer.style.display = "none";
+}
+
+document.getElementById("loginBtn").addEventListener("click", authenticate);
+
+// On page load, check if already logged in and valid, else redirect handled in loadAuthData
+window.addEventListener("DOMContentLoaded", () => {
+  const auth = loadAuthData();
+  if (auth) {
+    personalizeWelcome(auth.name);
+  }
+});
