@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/filipino/filipino/"}
+{"dg-publish":true,"dg-permalink":"filipino","permalink":"/filipino/"}
 ---
 
 
