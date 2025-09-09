@@ -6,13 +6,13 @@ const PIN_STORAGE_KEY = "authPinData";
 
 const pinExpiryDays = 30;
 
-function saveAuthData(name, pin) {
+function saveAuthData(name, pin, id) {
   const now = new Date();
   const pinData = {
     pin,
     timestamp: now.getTime()
   };
-  localStorage.setItem(LOGIN_STORAGE_KEY, JSON.stringify({ name }));
+  localStorage.setItem(LOGIN_STORAGE_KEY, JSON.stringify({ name, id }));
   localStorage.setItem(PIN_STORAGE_KEY, JSON.stringify(pinData));
 }
 
@@ -23,7 +23,6 @@ function loadAuthData() {
   const loginPath = "/entry/";
 
   if (!auth || !pinData) {
-    // Prevent endless redirect loop by checking current URL
     if (window.location.pathname !== loginPath) {
       window.location.href = loginPath;
     }
@@ -32,6 +31,7 @@ function loadAuthData() {
 
   const authObj = JSON.parse(auth);
   const pinObj = JSON.parse(pinData);
+  const savedID = authObj?.id;
 
   if (now.getTime() - pinObj.timestamp > pinExpiryDays * 24 * 60 * 60 * 1000) {
     localStorage.removeItem(LOGIN_STORAGE_KEY);
@@ -42,8 +42,9 @@ function loadAuthData() {
     return null;
   }
 
-  return { name: authObj.name, pin: pinObj.pin };
+  return { name: authObj.name, pin: pinObj.pin, id: savedID };
 }
+
 
 async function fetchAuthData() {
   try {
@@ -82,7 +83,7 @@ async function authenticate() {
     return false;
   }
 
-  saveAuthData(nameInput, pinInput);
+  saveAuthData(nameInput, pinInput, idInput);
   personalizeWelcome(nameInput);
 
   // Redirect after successful login
