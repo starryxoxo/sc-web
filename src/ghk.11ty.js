@@ -1,5 +1,5 @@
 // ghk.11ty.js
-const users = require(".../.../_data/user.json");
+const users = require(".../.../.../user.json");
 
 module.exports = {
   permalink: "/ghk.json",
