@@ -152,18 +152,25 @@ window.addEventListener("DOMContentLoaded", async () => {
 });
 
 // Verification:
-const authVerificationInterval = setInterval(async () => {
-  const storedAuth = (function() {
+console.log("Starting periodic auth verification every 12 seconds");
+
+const originalAuthVerificationInterval = authVerificationInterval;
+
+setInterval(async () => {
+  console.log("Periodic auth check triggered");
+  const storedAuth = (function () {
     const auth = localStorage.getItem(LOGIN_STORAGE_KEY);
     const pinData = localStorage.getItem(PIN_STORAGE_KEY);
     if (!auth || !pinData) return null;
     const authObj = JSON.parse(auth);
     const pinObj = JSON.parse(pinData);
+    console.log("Loaded from localStorage:", authObj, pinObj);
     return { name: authObj.name, id: authObj.id, pin: pinObj.pin };
   })();
 
   if (!storedAuth) {
-    clearInterval(authVerificationInterval);  // stop checking if no auth
+    console.warn("No storedAuth found, clearing interval");
+    clearInterval(originalAuthVerificationInterval);
     return;
   }
 
@@ -172,22 +179,35 @@ const authVerificationInterval = setInterval(async () => {
     if (!response.ok) throw new Error("Failed to fetch user.json");
     const authData = await response.json();
 
+    console.log("Fetched authData:", authData);
+
     const matchedUser = authData.users.find(
-      user =>
+      (user) =>
         user.AuthName.toLowerCase() === storedAuth.name.toLowerCase() &&
         user.ID.toLowerCase() === (storedAuth.id || "").toLowerCase()
     );
 
+    if (!matchedUser) {
+      console.warn(
+        `User not found: Name=${storedAuth.name}, ID=${storedAuth.id}`
+      );
+    }
+    if (storedAuth.pin !== authData.masterPIN) {
+      console.warn(
+        `PIN mismatch: Stored PIN=${storedAuth.pin}, Master PIN=${authData.masterPIN}`
+      );
+    }
     if (!matchedUser || storedAuth.pin !== authData.masterPIN) {
+      console.info("Invalid auth data, clearing storage and redirecting");
       localStorage.removeItem(LOGIN_STORAGE_KEY);
       localStorage.removeItem(PIN_STORAGE_KEY);
-      clearInterval(authVerificationInterval); // stop the interval after clearing
+      clearInterval(originalAuthVerificationInterval);
       if (window.location.pathname !== "/entry/") {
         window.location.href = "/entry/";
       }
     }
   } catch (error) {
-    console.error("Error verifying auth data in periodic check", error);
+    console.error("Error during periodic auth verification:", error);
   }
 }, 12000);
 </script>
