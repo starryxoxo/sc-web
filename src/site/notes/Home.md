@@ -11,7 +11,7 @@
   </div>
 </div>
 
-# Welcome to SC Web, <span class="AuthName">!</span>!
+# Welcome to SC Web, <span class="AuthName"></span>!
 <div style="font-variant: small-caps">early access</div>
 A refreshing way to learn, personalized only for SC.
 
