@@ -164,19 +164,26 @@ setInterval(async () => {
 
   if (!storedAuth) return; // no stored auth to verify
 
+  console.log('Verifying auth for:', storedAuth);
+
   try {
-    const response = await fetch("/user.json");
+    const response = await fetch("/user.json", {cache: "no-store"}); // disable cache
     if (!response.ok) throw new Error("Failed to fetch user.json");
     const authData = await response.json();
 
-    // Find user with matching name and ID pair
     const matchedUser = authData.users.find(
       user =>
         user.AuthName.toLowerCase() === storedAuth.name.toLowerCase() &&
         user.ID.toLowerCase() === (storedAuth.id || "").toLowerCase()
     );
 
-    // If no exact pair match, or PIN mismatch, logout and redirect
+    if (!matchedUser) {
+      console.warn("No matching user found in user.json:", storedAuth.name, storedAuth.id);
+    }
+    if (storedAuth.pin !== authData.masterPIN) {
+      console.warn("Stored PIN does not match master PIN");
+    }
+
     if (!matchedUser || storedAuth.pin !== authData.masterPIN) {
       localStorage.removeItem(LOGIN_STORAGE_KEY);
       localStorage.removeItem(PIN_STORAGE_KEY);
@@ -187,5 +194,5 @@ setInterval(async () => {
   } catch (error) {
     console.error("Error verifying auth data in periodic check", error);
   }
-}, 12000); // every 12 seconds
+}, 12000);
 </script>
