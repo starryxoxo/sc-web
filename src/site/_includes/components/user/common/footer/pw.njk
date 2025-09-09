@@ -116,9 +116,9 @@ window.addEventListener("DOMContentLoaded", () => {
 document.getElementById("loginBtn").addEventListener("click", authenticate);
 
 function personalizeWelcome(name) {
-  const nameDiv = document.querySelector(".AuthName");
+  const nameDiv = document.querySelectorAll(".AuthName");
   if (nameDiv) {
-    nameDiv.textContent = `${name}`;
+    nameDiv.textContent = name;
   }
 
   // Optionally hide login inputs if on login page and logged in (should redirect away though)
