@@ -127,7 +127,7 @@ window.addEventListener("DOMContentLoaded", async () => {
   if (!storedAuth) return; // already handled or not logged in
 
   try {
-    const response = await fetch("/user.json");
+    const response = await fetch("/ghk.json");
     if (!response.ok) throw new Error("Failed to fetch auth");
     const authData = await response.json();
 
