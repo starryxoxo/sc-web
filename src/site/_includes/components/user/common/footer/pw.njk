@@ -124,4 +124,29 @@ function personalizeWelcome(name) {
   const loginContainer = document.getElementById("login-container");
   if (loginContainer) loginContainer.style.display = "none";
 }
+
+window.addEventListener("DOMContentLoaded", async () => {
+  const storedAuth = loadAuthData();
+  if (!storedAuth) return; // already handled or not logged in
+
+  try {
+    const response = await fetch("/user.json");
+    if (!response.ok) throw new Error("Failed to fetch user.json");
+    const authData = await response.json();
+
+    const matchedUser = authData.users.find(
+      user => user.AuthName.toLowerCase() === storedAuth.name.toLowerCase()
+    );
+
+    if (!matchedUser || storedAuth.pin !== authData.masterPIN) {
+      localStorage.removeItem(LOGIN_STORAGE_KEY);
+      localStorage.removeItem(PIN_STORAGE_KEY);
+      if (window.location.pathname !== "/entry/") {
+        window.location.href = "/entry/";
+      }
+    }
+  } catch (error) {
+    console.error("Error verifying auth data with user.json", error);
+  }
+});
 </script>
