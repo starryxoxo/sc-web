@@ -6,13 +6,13 @@
 # SC Web
 
 >[!faq]- What is this?
->Use one of your names for the Name field, ID is your class code (B-1, G-12...), and the PIN is the same for everyone.
->**The PIN will expire after 30 days and you'll need to reenter this form again.**
+>Use one of your names for the Name field, ID is your unique code, and the PIN is the should be same for everyone.
+>**Please remember your unique code just in case the website logs you out.**
 
 
 <div id="login-container">
-  <input type="text" id="authName" class="auth-input" placeholder="Enter Name" />
-  <input type="text" id="authID" class="auth-input" placeholder="Enter ID (e.g. B-1)" />
+  <input type="text" id="authName" class="auth-input" placeholder="Enter Name or Nickname" />
+  <input type="text" id="authID" class="auth-input" placeholder="Enter ID or unique code" />
   <input type="password" id="authPIN" class="auth-input" placeholder="Enter PIN" />
   <button id="loginBtn">Start</button>
 </div>
