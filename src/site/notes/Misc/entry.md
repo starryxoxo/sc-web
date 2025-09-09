@@ -16,3 +16,5 @@
   <input type="password" id="authPIN" class="auth-input" placeholder="Enter PIN" />
   <button id="loginBtn">Start</button>
 </div>
+
+<small>v. 1.0.11-EA</small>
