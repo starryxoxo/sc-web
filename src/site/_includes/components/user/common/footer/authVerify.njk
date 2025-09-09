@@ -1,10 +1,19 @@
 <script>
+// authVerification.js
+const JSON_LINK = "/user.json"; // Path to your user JSON
+const LOGIN_STORAGE_KEY = "authData";
+const PIN_STORAGE_KEY = "authPinData";
+
+// Clear existing interval if any (helps avoid duplicates on reload)
+if (window.authVerificationInterval) {
+  clearInterval(window.authVerificationInterval);
+}
+
 console.log("Starting periodic auth verification every 12 seconds");
 
-const originalAuthVerificationInterval = authVerificationInterval;
-
-setInterval(async () => {
+window.authVerificationInterval = setInterval(async () => {
   console.log("Periodic auth check triggered");
+
   const storedAuth = (function () {
     const auth = localStorage.getItem(LOGIN_STORAGE_KEY);
     const pinData = localStorage.getItem(PIN_STORAGE_KEY);
@@ -17,12 +26,12 @@ setInterval(async () => {
 
   if (!storedAuth) {
     console.warn("No storedAuth found, clearing interval");
-    clearInterval(originalAuthVerificationInterval);
+    clearInterval(window.authVerificationInterval);
     return;
   }
 
   try {
-    const response = await fetch("/user.json", { cache: "no-store" }); // disable cache
+    const response = await fetch(JSON_LINK, { cache: "no-store" }); // Disable cache
     if (!response.ok) throw new Error("Failed to fetch user.json");
     const authData = await response.json();
 
@@ -48,7 +57,7 @@ setInterval(async () => {
       console.info("Invalid auth data, clearing storage and redirecting");
       localStorage.removeItem(LOGIN_STORAGE_KEY);
       localStorage.removeItem(PIN_STORAGE_KEY);
-      clearInterval(originalAuthVerificationInterval);
+      clearInterval(window.authVerificationInterval);
       if (window.location.pathname !== "/entry/") {
         window.location.href = "/entry/";
       }
