@@ -121,11 +121,10 @@ function personalizeWelcome(name) {
     div.textContent = name;
   });
 }
-
-  // Optionally hide login inputs if on login page and logged in (should redirect away though)
+  window.addEventListener("DOMContentLoaded", () => {
   const loginContainer = document.getElementById("login-container");
   if (loginContainer) loginContainer.style.display = "none";
-}
+});
 
 window.addEventListener("DOMContentLoaded", async () => {
   const storedAuth = loadAuthData();
