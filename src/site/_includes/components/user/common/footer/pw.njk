@@ -115,9 +115,9 @@ window.addEventListener("DOMContentLoaded", () => {
 
 document.getElementById("loginBtn").addEventListener("click", authenticate);
 
-function personalizeWelcome(auth.name) {
+function personalizeWelcome(name) {
   const nameDiv = document.querySelectorAll(".AuthName");
-  nameDivs.forEach((div) => {
+  nameDiv.forEach((div) => {
     div.textContent = name;
   }
 
