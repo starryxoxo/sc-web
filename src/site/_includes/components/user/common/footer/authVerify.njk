@@ -1,6 +1,6 @@
 <script>
 // authVerification.js
-const JSON_LINK = "/user.json"; // Path to your user JSON
+const JSON_LIST = "/user.json"; // Path to your user JSON
 const LOGIN_STORAGE_KEY = "authData";
 const PIN_STORAGE_KEY = "authPinData";
 
@@ -31,7 +31,7 @@ window.authVerificationInterval = setInterval(async () => {
   }
 
   try {
-    const response = await fetch(JSON_LINK, { cache: "no-store" }); // Disable cache
+    const response = await fetch(JSON_LIST, { cache: "no-store" }); // Disable cache
     if (!response.ok) throw new Error("Failed to fetch user.json");
     const authData = await response.json();
 
