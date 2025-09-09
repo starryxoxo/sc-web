@@ -151,8 +151,8 @@ window.addEventListener("DOMContentLoaded", async () => {
   }
 });
 
-// Verification
-async function verifyAuth() {
+// Verification:
+setInterval(async () => {
   const storedAuth = (function() {
     const auth = localStorage.getItem(LOGIN_STORAGE_KEY);
     const pinData = localStorage.getItem(PIN_STORAGE_KEY);
@@ -169,11 +169,14 @@ async function verifyAuth() {
     if (!response.ok) throw new Error("Failed to fetch user.json");
     const authData = await response.json();
 
+    // Find user with matching name and ID pair
     const matchedUser = authData.users.find(
-      user => user.AuthName.toLowerCase() === storedAuth.name.toLowerCase() &&
-              user.ID.toLowerCase() === (storedAuth.id || '').toLowerCase()
+      user =>
+        user.AuthName.toLowerCase() === storedAuth.name.toLowerCase() &&
+        user.ID.toLowerCase() === (storedAuth.id || "").toLowerCase()
     );
 
+    // If no exact pair match, or PIN mismatch, logout and redirect
     if (!matchedUser || storedAuth.pin !== authData.masterPIN) {
       localStorage.removeItem(LOGIN_STORAGE_KEY);
       localStorage.removeItem(PIN_STORAGE_KEY);
@@ -182,19 +185,7 @@ async function verifyAuth() {
       }
     }
   } catch (error) {
-    console.error("Error verifying auth data in check", error);
+    console.error("Error verifying auth data in periodic check", error);
   }
-}
-
-// Run once after landing on "/" to verify immediately
-window.addEventListener("load", () => {
-  if (window.location.pathname === "/") {
-    verifyAuth();
-  }
-});
-
-// Run periodically every 12 seconds
-setInterval(() => {
-  verifyAuth();
-}, 12000);
+}, 12000); // every 12 seconds
 </script>
