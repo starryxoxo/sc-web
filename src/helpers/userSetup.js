@@ -9,5 +9,13 @@ function userEleventySetup(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("user.json");
 }
 
+module.exports = function(eleventyConfig) {
+  return {
+    dir: {
+      output: "_site"  // or another folder name like "dist"
+    }
+  };
+};
+
 exports.userMarkdownSetup = userMarkdownSetup;
 exports.userEleventySetup = userEleventySetup;
