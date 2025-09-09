@@ -152,7 +152,7 @@ window.addEventListener("DOMContentLoaded", async () => {
 });
 
 // Verification:
-setInterval(async () => {
+const authVerificationInterval = setInterval(async () => {
   const storedAuth = (function() {
     const auth = localStorage.getItem(LOGIN_STORAGE_KEY);
     const pinData = localStorage.getItem(PIN_STORAGE_KEY);
@@ -162,12 +162,13 @@ setInterval(async () => {
     return { name: authObj.name, id: authObj.id, pin: pinObj.pin };
   })();
 
-  if (!storedAuth) return; // no stored auth to verify
-
-  console.log('Verifying auth for:', storedAuth);
+  if (!storedAuth) {
+    clearInterval(authVerificationInterval);  // stop checking if no auth
+    return;
+  }
 
   try {
-    const response = await fetch("/user.json", {cache: "no-store"}); // disable cache
+    const response = await fetch("/user.json", { cache: "no-store" }); // disable cache
     if (!response.ok) throw new Error("Failed to fetch user.json");
     const authData = await response.json();
 
@@ -177,16 +178,10 @@ setInterval(async () => {
         user.ID.toLowerCase() === (storedAuth.id || "").toLowerCase()
     );
 
-    if (!matchedUser) {
-      console.warn("No matching user found in user.json:", storedAuth.name, storedAuth.id);
-    }
-    if (storedAuth.pin !== authData.masterPIN) {
-      console.warn("Stored PIN does not match master PIN");
-    }
-
     if (!matchedUser || storedAuth.pin !== authData.masterPIN) {
       localStorage.removeItem(LOGIN_STORAGE_KEY);
       localStorage.removeItem(PIN_STORAGE_KEY);
+      clearInterval(authVerificationInterval); // stop the interval after clearing
       if (window.location.pathname !== "/entry/") {
         window.location.href = "/entry/";
       }
