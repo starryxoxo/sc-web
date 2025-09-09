@@ -51,14 +51,24 @@ module.exports = {
     }
   },
   render: function(data) {
-    const url = data.page.url || "";
-    const query = new URLSearchParams(url.split("?")[1]);
-    const key = query.get("key");
+    try {
+      // data.page.url might be just "/ghk.json" - check if there's a query string
+      const fullUrl = data.page.url || "";
+      const urlParts = fullUrl.split("?");
+      if (urlParts.length < 2) {
+        return JSON.stringify({ error: "Access denied" }, null, 2);
+      }
+      const queryString = urlParts[1];
+      const query = new URLSearchParams(queryString);
+      const key = query.get("key");
 
-    if (key === data.secret) {
-      return JSON.stringify(data.usersData.users, null, 2);
-    } else {
-      return JSON.stringify({ error: "Access denied" }, null, 2);
+      if (key === data.secret) {
+        return JSON.stringify(data.usersData.users, null, 2);
+      } else {
+        return JSON.stringify({ error: "Access denied" }, null, 2);
+      }
+    } catch (e) {
+      return JSON.stringify({ error: "Invalid request" }, null, 2);
     }
   }
 };
