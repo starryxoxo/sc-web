@@ -112,6 +112,8 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+document.getElementById("loginBtn").addEventListener("click", authenticate);
+
 function personalizeWelcome(name) {
   const nameDiv = document.querySelector(".AuthName");
   if (nameDiv) {
