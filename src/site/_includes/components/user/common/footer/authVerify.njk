@@ -1,6 +1,6 @@
 <script>
 // authVerification.js
-const JSON_LIST = "/user.json"; // Path to your user JSON
+const JSON_LIST = "/ghk.json"; // Path to your user JSON
 const LOGIN_STORAGE_K = "authData";
 const PIN_STORAGE_K = "authPinData";
 
@@ -9,7 +9,7 @@ if (window.authVerificationInterval) {
   clearInterval(window.authVerificationInterval);
 }
 
-console.log("Starting periodic auth verification every 12 seconds");
+console.log("Starting periodic auth verification every 2 seconds");
 
 window.authVerificationInterval = setInterval(async () => {
   console.log("Periodic auth check triggered");
@@ -32,7 +32,7 @@ window.authVerificationInterval = setInterval(async () => {
 
   try {
     const response = await fetch(JSON_LIST, { cache: "no-store" }); // Disable cache
-    if (!response.ok) throw new Error("Failed to fetch user.json");
+    if (!response.ok) throw new Error("Failed to fetch auth");
     const authData = await response.json();
 
     console.log("Fetched authData:", authData);
