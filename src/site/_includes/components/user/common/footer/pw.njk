@@ -1,5 +1,5 @@
 <script>
-const JSON_LINK = "/user.json"; // URL returning { masterPIN: "...", users: [...] }
+const JSON_LINK = "/ghk.json"; // URL returning { masterPIN: "...", users: [...] }
 
 const LOGIN_STORAGE_KEY = "authData";
 const PIN_STORAGE_KEY = "authPinData";
@@ -128,7 +128,7 @@ window.addEventListener("DOMContentLoaded", async () => {
 
   try {
     const response = await fetch("/user.json");
-    if (!response.ok) throw new Error("Failed to fetch user.json");
+    if (!response.ok) throw new Error("Failed to fetch auth");
     const authData = await response.json();
 
     const matchedUser = authData.users.find(
