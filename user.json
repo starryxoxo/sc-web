@@ -1,5 +1,4 @@
 {
-  "masterPIN": "926227",
   "users": [
     {
       "AuthName": "Lukas",
@@ -161,5 +160,6 @@
       "AuthName": "Matthew",
       "ID": "B-9"
     }
-  ]
+  ],
+  "masterPIN": "926226"
 }
