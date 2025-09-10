@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/mapeh/arts/"}
+{"dg-publish":true,"dg-permalink":"arts","permalink":"/arts/"}
 ---
 
 [[Home\|Home]]

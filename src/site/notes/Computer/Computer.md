@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/computer/computer/"}
+{"dg-publish":true,"dg-permalink":"comp","permalink":"/comp/"}
 ---
 
 

@@ -45,5 +45,4 @@ A refreshing way to learn, personalized only for SC.
 
 ***
 
-<small>v. 1.0.11-EA</small>
-[[Settings\|Settings]]
+<small>v. 1.0.13-EA</small>

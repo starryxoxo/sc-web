@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/mapeh/pe/"}
+{"dg-publish":true,"dg-permalink":"pe","permalink":"/pe/"}
 ---
 
 [[Home\|Home]]

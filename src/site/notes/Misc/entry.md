@@ -44,4 +44,4 @@ Blue words like [[Misc/entry\|this]] is a link. Tap the link to go to the page.
   <button id="loginBtn">Start</button>
 </div>
 
-<small>v. 1.0.11-EA</small>
+<small>v. 1.0.13-EA</small>

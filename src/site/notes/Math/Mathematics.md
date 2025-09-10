@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/math/mathematics/"}
+{"dg-publish":true,"dg-permalink":"math","permalink":"/math/"}
 ---
 
 [[Home\|Home]] • <a href="javascript:history.back()">Go Back</a>

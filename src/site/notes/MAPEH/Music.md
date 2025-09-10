@@ -1,11 +1,9 @@
 ---
-{"dg-publish":true,"dg-permalink":"english","permalink":"/english/"}
+{"dg-publish":true,"dg-permalink":"music","permalink":"/music/"}
 ---
 
 [[Home\|Home]]
 
-# English
-
-<div style="font-variant: small-caps; margin-bottom: -18px;">mon, wed, thu, fri</div>
+# Music
 
 >[!todo]- This subject is still unavailable. Kindly follow the [[Misc/Contributor's Guide\|Contributor's Guide]] if you'd like to improve the site!

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/ap/ap-economics/"}
+{"dg-publish":true,"dg-permalink":"ap","permalink":"/ap/"}
 ---
 
 [[Home\|Home]]

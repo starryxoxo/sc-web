@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/mapeh/health/"}
+{"dg-publish":true,"dg-permalink":"health","permalink":"/health/"}
 ---
 
 [[Home\|Home]]
