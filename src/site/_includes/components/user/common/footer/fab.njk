@@ -1,25 +1,73 @@
 <script>
-  const fab = document.getElementById('fab');
-  const toggle = document.getElementById('fabToggle');
-  const links = fab.querySelectorAll('.fab-links a');
+const fab = document.getElementById('fab');
+const links = fab.querySelectorAll('.fab-links a');
 
-  toggle.addEventListener('click', () => {
-    fab.classList.toggle('expanded');
-    const expanded = fab.classList.contains('expanded');
-    toggle.setAttribute('aria-expanded', expanded);
+// Highlight the active link based on URL path
+function highlightActiveLink() {
+  const currentPath = window.location.pathname;
+  links.forEach(link => {
+    const linkPath = new URL(link.href, window.location.origin).pathname;
+    if (linkPath === currentPath) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
   });
+}
 
-  function highlightActiveLink() {
-    const currentPath = window.location.pathname;
-    links.forEach(link => {
-      const linkPath = new URL(link.href, window.location.origin).pathname;
-      if (linkPath === currentPath) {
-        link.classList.add('active');
-      } else {
-        link.classList.remove('active');
-      }
-    });
+highlightActiveLink();
+
+let fadeTimeout;
+let lastScrollY = window.scrollY;
+let isFabVisible = true;
+
+// Fade out FAB
+function fadeOutFab() {
+  if (isFabVisible) {
+    fab.style.opacity = 0;
+    isFabVisible = false;
   }
+}
 
-  window.addEventListener('DOMContentLoaded', highlightActiveLink);
+// Fade in FAB
+function fadeInFab() {
+  if (!isFabVisible) {
+    fab.style.opacity = 1;
+    isFabVisible = true;
+  }
+}
+
+// Reset fade timer
+function resetFadeTimer() {
+  clearTimeout(fadeTimeout);
+  fadeInFab();
+  fadeTimeout = setTimeout(() => {
+    fadeOutFab();
+  }, 4000); // 4 seconds of inactivity fades the FAB
+}
+
+// Detect scroll direction and fade FAB accordingly
+function onScroll() {
+  const currentScroll = window.scrollY;
+  if (currentScroll < lastScrollY) {
+    fadeInFab(); // User scrolls up, show FAB
+  } else if (currentScroll > lastScrollY) {
+    fadeOutFab(); // User scrolls down, hide FAB
+  }
+  lastScrollY = currentScroll;
+  resetFadeTimer();
+}
+
+// Detect user activity to reset fade timer
+function onUserActivity() {
+  resetFadeTimer();
+}
+
+window.addEventListener('scroll', onScroll, { passive: true });
+window.addEventListener('mousemove', onUserActivity);
+window.addEventListener('keydown', onUserActivity);
+window.addEventListener('touchstart', onUserActivity);
+
+// Start the fade timer on load
+resetFadeTimer();
 </script>
