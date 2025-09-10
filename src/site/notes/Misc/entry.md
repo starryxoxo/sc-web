@@ -7,7 +7,7 @@
 
 Before starting, here's a guide to using the website:
 
->[!faq]- You can tap the banner to expand its content.
+>[!faq]- You can tap this banner to expand its content.
 >You see this? That's great! More content is visible when you expand expandable banners.
 
 >[!info] These banners don't expand. Banners tell they're expandable if they have the arrow-like icon on the right.
