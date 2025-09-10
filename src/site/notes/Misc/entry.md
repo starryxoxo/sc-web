@@ -22,7 +22,7 @@ Blue words like [[Misc/entry\|this]] is a link. Tap the link to go to the page.
     </div>
     <div class="flashcard" tabindex="1">
       <div class="flashcard-question">Did you swipe? There will be more features in the future, so stay tuned for updates! :)</div>
-      <div class="flashcard-answer">You can continue filling up the form to continue.</div>
+      <div class="flashcard-answer">You can continue filling up the form to access SC Web. Have fun!</div>
     </div>
   </div>
   <div class="flashcard-buttons">
