@@ -40,7 +40,7 @@ Blue words like [[Misc/entry\|this]] is a link. Tap the link to go to the page.
 <div id="login-container">
   <input type="text" id="authName" class="auth-input" placeholder="Enter Name or Nickname" />
   <input type="password" id="authID" class="auth-input" placeholder="Enter ID or unique code" />
-  <input type="password" id="authPIN" class="auth-input" placeholder="Enter PIN" />
+  <input type="text" id="authPIN" class="auth-input" placeholder="Enter PIN" />
   <button id="loginBtn">Start</button>
 </div>
 
