@@ -246,9 +246,9 @@ input.auth-input {
   -webkit-backdrop-filter: blur(12px) saturate(120%);
   color: inherit;
   font: inherit;
-  border-radius: 1.5rem;
+  border-radius: 50px;
   cursor: pointer;
-  padding: 0.5rem 0.75rem;
+  padding: 1rem;
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -271,8 +271,6 @@ input.auth-input {
   border: none;
   color: inherit;
   font: inherit;
-  padding: 0.3rem 0.6rem;
-  border-radius: 1.5rem;
   cursor: pointer;
   flex-shrink: 0;
   transition: background-color 0.3s ease;
