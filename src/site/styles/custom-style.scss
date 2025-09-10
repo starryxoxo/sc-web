@@ -248,9 +248,10 @@ input.auth-input {
   font: inherit;
   border-radius: 1.5rem;
   cursor: default;
-  padding: 0.5rem 1rem;
+  padding: 0.3rem 0.6rem;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.75rem;
   box-sizing: border-box;
   overflow-x: auto;
@@ -269,7 +270,7 @@ input.auth-input {
 }
 
 .fab-links a {
-  color: inherit;
+  color: var(--text-normal);
   text-decoration: none;
   padding: 0.4rem 1rem;
   border-radius: 1.5rem;
@@ -287,5 +288,4 @@ input.auth-input {
 .fab-links a.active {
   background-color: rgba(255 255 255 / 0.55);
   font-weight: 700;
-  color: #fff; /* optional highlight color */
 }
