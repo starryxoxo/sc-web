@@ -1,9 +1,25 @@
 <script>
-const fab = document.getElementById('fab');
-const toggle = document.getElementById('fabToggle');
+  const fab = document.getElementById('fab');
+  const toggle = document.getElementById('fabToggle');
+  const links = fab.querySelectorAll('.fab-links a');
 
-toggle.addEventListener('click', () => {
-  fab.classList.toggle('expanded');
-  toggle.setAttribute('aria-expanded', fab.classList.contains('expanded'));
-});
+  toggle.addEventListener('click', () => {
+    fab.classList.toggle('expanded');
+    const expanded = fab.classList.contains('expanded');
+    toggle.setAttribute('aria-expanded', expanded);
+  });
+
+  function highlightActiveLink() {
+    const currentPath = window.location.pathname;
+    links.forEach(link => {
+      const linkPath = new URL(link.href, window.location.origin).pathname;
+      if (linkPath === currentPath) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  }
+
+  window.addEventListener('DOMContentLoaded', highlightActiveLink);
 </script>
