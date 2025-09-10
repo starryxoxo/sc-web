@@ -1,0 +1,9 @@
+<script>
+const fab = document.getElementById('fab');
+const toggle = document.getElementById('fabToggle');
+
+toggle.addEventListener('click', () => {
+  fab.classList.toggle('expanded');
+  toggle.setAttribute('aria-expanded', fab.classList.contains('expanded'));
+});
+</script>
