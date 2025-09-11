@@ -6,7 +6,7 @@
 [[Home\|Home]] • [[Science/Science\|Science]] • <a href="javascript:history.back()">Go Back</a>
 
 >[!check]- About topic
->- [X] **Official**
+>- [X] **Official** | Incomplete
 >This topic is from a verified source. Check the resource section for more details.
 >[[Misc/Topic Classification\|Learn more about how topics are classified]]
 # Mendelian Genetics
