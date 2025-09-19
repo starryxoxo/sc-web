@@ -46,4 +46,4 @@ A refreshing way to learn, personalized only for SC.
 ***
 
 <small>v. 1.0.13-EA</small>
-<small>Early access. Features and cosmetics are subject to change</small>
+<small style="line-height: 8px;">Early access. Features and cosmetics are subject to change</small>
