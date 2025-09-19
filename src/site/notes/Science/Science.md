@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/science/science/"}
+{"dg-publish":true,"dg-permalink":"science","permalink":"/science/"}
 ---
 
 [[Home\|Home]] • <a href="javascript:history.back()">Go Back</a>

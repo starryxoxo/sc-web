@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/statistics/statistics/"}
+{"dg-publish":true,"dg-permalink":"stats","permalink":"/stats/"}
 ---
 
 [[Home\|Home]]

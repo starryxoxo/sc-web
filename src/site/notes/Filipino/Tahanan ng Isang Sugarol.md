@@ -41,7 +41,7 @@ Ang maikling kuwento na Tahanan ng Isang Sugarol ay galing sa Malaysia, **sinali
 
 >[!faq] Ano ang Domestic Violence?
 >- Ito ang **pananakit sa loob ng bahay**. Ayon sa NDHS o National Demographic & Health Survey, 15–49 taong gulang ang nakakaranas ng domestic violence.
->- Ayon sa WHO, ang nga taong **biktima ng domestic violence** ay **nagkakaroon ng mental** o **psychological disorder**.
+>- Ayon sa WHO, ang mga taong **biktima ng domestic violence** ay **nagkakaroon ng mental** o **psychological disorder**.
 
 ***
 ## The Anti-Violence Against Women and their Children Act of 2004 (RA 9262)
