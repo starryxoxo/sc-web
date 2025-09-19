@@ -288,3 +288,54 @@ input.auth-input {
 .fab-links a.active {
   font-weight: 700;
 }
+
+.card-scroll {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  gap: 1.5rem;
+  padding: 1rem;
+  scroll-behavior: smooth; /* CSS smooth scrolling for browsers */
+  -webkit-overflow-scrolling: touch;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  min-width: 265px;
+  max-width: 320px;
+  background: var(--card-color, #f2f2f2);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px 0 rgba(65,7,112,0.12);
+  padding: 1.2rem 1rem;
+  text-decoration: none;
+  color: #221722;
+  position: relative;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+.card:hover, .card:focus {
+  box-shadow: 0 6px 32px rgba(65,7,112,0.20);
+}
+
+.card-title {
+  font-size: 1.22rem;
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+  color: inherit;
+}
+
+.card-desc {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #553377;
+  opacity: 0.88;
+}
+
+/* Hide scrollbar for aesthetic, optional */
+.card-scroll::-webkit-scrollbar {
+  display: none;
+}
+.card-scroll {
+  scrollbar-width: none;
+}
