@@ -12,7 +12,7 @@ A refreshing way to learn, personalized only for SC.
 
 <div class="card-scroll">
   <a href="/math" class="card" style="--card-color:#C1E1C1;">
-    <div class="card-title">Mathematics</div>
+    <h1 class="card-title">Mathematics</h1>
     <div class="card-desc">
       Delve deeper into the world of numbers and integers.
     </div>
