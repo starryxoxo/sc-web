@@ -330,24 +330,6 @@ input.auth-input {
     margin-bottom: 1rem;
 }
 
-.link {
-    font-size: 21px;
-}
-
-.text {
-    font-size: 17px;
-    font-weight: 300;
-}
-
-.black-text {
-    color: black;
-}
-
-.white-text {
-    color: white;
-}
-
-.card-link div {
-  color: inherit; /* This will make the div text color inherit from the parent, not the link color */
-  text-decoration: none; /* Remove underline if any */
+p {
+  color: --var(--text-normal);
 }
