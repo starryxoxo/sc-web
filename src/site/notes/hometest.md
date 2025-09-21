@@ -20,3 +20,15 @@ A refreshing way to learn, personalized only for SC.
             </article>
     </div>
 </div>
+
+<div class="position">
+  <h2 class="title-context">Start learning. <span>Like never before.</span></h1>
+  <div class="container">
+    <a href="/science" class="card-link">
+      <article class="card">
+          <h3 class="title">LOGIC & KNOWLEDGE</h3>
+          <p>Get to know the world in the lens of science: a book full of knowledge and facts.</p>
+      </article>
+    </a>
+  </div>
+</div>
