@@ -330,6 +330,7 @@ input.auth-input {
     margin-bottom: 1rem;
 }
 
-p {
+.card-link p {
   color: --var(--text-normal);
+  text-decoration: none;
 }
