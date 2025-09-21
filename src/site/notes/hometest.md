@@ -22,7 +22,7 @@ A refreshing way to learn, personalized only for SC.
 </div>
 
 <div class="position">
-  <h2 class="title-context">Start learning. <span>Like never before.</span></h1>
+  <h2 class="title-context">Start learning. <span>Like never before.</span></h2>
   <div class="container">
     <a href="/science" class="card-link">
       <article class="card">
