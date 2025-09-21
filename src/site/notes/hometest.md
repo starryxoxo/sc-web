@@ -26,8 +26,8 @@ A refreshing way to learn, personalized only for SC.
   <div class="container">
     <a href="/science" class="card-link">
       <article class="card">
-          <h3 class="title">LOGIC & KNOWLEDGE</h3>
-          <p>Get to know the world in the lens of science: a book full of knowledge and facts.</p>
+          <div style="font-variant: small-caps;">logic and knowledge</div>
+          <div>Get to know the world in the lens of science: a book full of knowledge and facts.</div>
       </article>
     </a>
   </div>
