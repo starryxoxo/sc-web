@@ -7,7 +7,7 @@
 
 # Settings
 
-## Theme
-<button id="mode-toggle">Dark/Light Mode</button>
+<p style="font-variant: small-caps; margin-bottom: -12px;">theme</p>
+<button id="mode-toggl">Dark/Light Mode</button>
 
 More settings soon...
