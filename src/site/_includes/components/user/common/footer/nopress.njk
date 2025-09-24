@@ -1,120 +1,70 @@
 <small>Copyright © SC Web</small>
 
 <script>
-const cards = document.querySelectorAll('.card');
-let currentIndex = 0;
+document.addEventListener('DOMContentLoaded', () => {
+  const container = document.querySelector('.container');
+  let cards = Array.from(container.querySelectorAll('.card'));
+  let currentIndex = 0;
 
-function showCard(newIndex, direction) {
-  if (newIndex < 0) newIndex = cards.length - 1;
-  if (newIndex >= cards.length) newIndex = 0;
-
-  // Current active card
-  const currentCard = cards[currentIndex];
-  // New card to show
-  const newCard = cards[newIndex];
-
-  // Animate current card exit
-  if (direction === 'next') {
-    currentCard.classList.remove('active');
-    currentCard.classList.add('exit-left');
-  } else {
-    currentCard.classList.remove('active');
-    currentCard.classList.add('exit-right');
+  // Fisher-Yates shuffle
+  function shuffleCards(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
   }
 
-  // Prepare new card entrance
-  newCard.classList.remove('exit-left', 'exit-right');
-  newCard.style.left = (direction === 'next') ? '100%' : '-100%';
-  // Force reflow for animation
-  void newCard.offsetWidth;
-
-  newCard.classList.add('active');
-  newCard.style.left = '0';
-
-  // Remove exit class after animation duration
-  setTimeout(() => {
-    currentCard.classList.remove('exit-left', 'exit-right');
-  }, 300);
-
-  currentIndex = newIndex;
-}
-
-document.querySelector('.card-next').addEventListener('click', () => {
-  showCard(currentIndex + 1, 'next');
-});
-
-document.querySelector('.card-prev').addEventListener('click', () => {
-  showCard(currentIndex - 1, 'prev');
-});
-
-const container = document.querySelector('.container');
-let cards = Array.from(container.querySelectorAll('.card'));
-let currentIndex = 0;
-
-// Shuffle cards on page load
-function shuffleCards(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
+  function renderShuffledCards() {
+    const shuffled = shuffleCards(cards);
+    container.innerHTML = '';
+    shuffled.forEach(card => {
+      card.classList.remove('active', 'exit-left', 'exit-right');
+      card.style.left = '100%';
+      container.appendChild(card);
+    });
+    cards = Array.from(container.querySelectorAll('.card'));
+    cards[0].classList.add('active');
+    cards[0].style.left = '0';
+    currentIndex = 0;
   }
-  return array;
-}
 
-function renderShuffledCards() {
-  const shuffled = shuffleCards(cards);
-  // Remove existing cards from container
-  container.innerHTML = '';
-  // Append shuffled cards
-  shuffled.forEach((card, index) => {
-    card.classList.remove('active', 'exit-left', 'exit-right');
-    card.style.left = '100%';
-    container.appendChild(card);
+  function showCard(newIndex, direction) {
+    if (newIndex < 0) newIndex = cards.length - 1;
+    if (newIndex >= cards.length) newIndex = 0;
+
+    const currentCard = cards[currentIndex];
+    const newCard = cards[newIndex];
+
+    if (direction === 'next') {
+      currentCard.classList.remove('active');
+      currentCard.classList.add('exit-left');
+    } else {
+      currentCard.classList.remove('active');
+      currentCard.classList.add('exit-right');
+    }
+
+    newCard.classList.remove('exit-left', 'exit-right');
+    newCard.style.left = direction === 'next' ? '100%' : '-100%';
+    void newCard.offsetWidth;
+    newCard.classList.add('active');
+    newCard.style.left = '0';
+
+    setTimeout(() => {
+      currentCard.classList.remove('exit-left', 'exit-right');
+    }, 300);
+
+    currentIndex = newIndex;
+  }
+
+  document.querySelector('.card-next').addEventListener('click', () => {
+    showCard(currentIndex + 1, 'next');
   });
-  // Reset cards variable to new order
-  cards = Array.from(container.querySelectorAll('.card'));
-  // Show the first card active
-  cards[0].classList.add('active');
-  cards[0].style.left = '0';
-  currentIndex = 0;
-}
 
-function showCard(newIndex, direction) {
-  if (newIndex < 0) newIndex = cards.length - 1;
-  if (newIndex >= cards.length) newIndex = 0;
+  document.querySelector('.card-prev').addEventListener('click', () => {
+    showCard(currentIndex - 1, 'prev');
+  });
 
-  const currentCard = cards[currentIndex];
-  const newCard = cards[newIndex];
-
-  if (direction === 'next') {
-    currentCard.classList.remove('active');
-    currentCard.classList.add('exit-left');
-  } else {
-    currentCard.classList.remove('active');
-    currentCard.classList.add('exit-right');
-  }
-
-  newCard.classList.remove('exit-left', 'exit-right');
-  newCard.style.left = (direction === 'next') ? '100%' : '-100%';
-  void newCard.offsetWidth;
-
-  newCard.classList.add('active');
-  newCard.style.left = '0';
-
-  setTimeout(() => {
-    currentCard.classList.remove('exit-left', 'exit-right');
-  }, 300);
-
-  currentIndex = newIndex;
-}
-
-document.querySelector('.card-next').addEventListener('click', () => {
-  showCard(currentIndex + 1, 'next');
+  renderShuffledCards();
 });
-
-document.querySelector('.card-prev').addEventListener('click', () => {
-  showCard(currentIndex - 1, 'prev');
-});
-
-// Shuffle and render cards on DOM ready
-document.addEventListener('DOMContentLoaded', renderShuffledCards);
 </script>
