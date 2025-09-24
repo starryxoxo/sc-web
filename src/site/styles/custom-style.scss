@@ -314,6 +314,8 @@ input.auth-input {
     display: none;
 }
 
+
+
 .card {
     position: relative;
     flex: 0 0 min(18rem);
@@ -323,6 +325,7 @@ input.auth-input {
     border: none;
     border-radius: 18px;
     box-shadow: none;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 p.white-text {
