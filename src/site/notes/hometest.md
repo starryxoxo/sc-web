@@ -13,11 +13,21 @@ A refreshing way to learn, personalized only for SC.
         <div class="container">
             <article class="card">
                 <section class="body white-text">
-                    <p class="title">logic & knowledge</h3>
+                    <h3 class="title">logic and knowledge</h3>
                     <a href="/science" style="display: none;">Science</a>
-                    <h2> Science </h2>
+                    <h2>Science</h2>
                     <p>Get to know the world in the lens of science: a book full of knowledge and facts.</p>
+                </section>
+            </article>
+            <article class="card">
+                <section class="body white-text">
+                    <h3 class="title">logic and knowledge</h3>
+                    <a href="/math" style="display: none;">Mathematics</a>
+                    <h2>Mathematics</h2>
+                    <p>Enhance your critical thinking and problem-solving skills with Math.</p>
                 </section>
             </article>
     </div>
 </div>
+
+***
