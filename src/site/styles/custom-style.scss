@@ -308,6 +308,7 @@ input.auth-input {
     overflow-x: auto; /* Creamos un div scrollable de forma horizontal */
     scrollbar-width: none;
     padding: 1.5rem 0; 
+    gap: 12px;
 }
 
 .grid::-webkit-scrollbar {
