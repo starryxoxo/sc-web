@@ -322,24 +322,10 @@ input.auth-input {
     height: 450px;
     overflow: hidden;
     margin: 0px;
-    border: none;
+    border: 1px solid var(--text-normal);
     border-radius: 18px;
     box-shadow: none;
     background-color: transparent;
-    backdrop-filter: blur(12px) saturate(120%);
-    -webkit-backdrop-filter: blur(12px) saturate(120%);
-    mask-image: linear-gradient(
-    to bottom,
-    black 0%,
-    black 30%,
-    transparent 100%
-  );
-    -webkit-mask-image: linear-gradient(
-    to bottom,
-    black 0%,
-    black 30%,
-    transparent 100%
-  );
 }
 
 p.white-text {
