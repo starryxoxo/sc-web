@@ -1,7 +1,7 @@
 <script>
-const container = document.querySelector('.container');
+const cardcontainer = document.querySelector('.container');
 
-container.addEventListener('click', (event) => {
+cardcontainer.addEventListener('click', (event) => {
   const card = event.target.closest('.card');
   if (card) {
     const anchor = card.querySelector('a');
