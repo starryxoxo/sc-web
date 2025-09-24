@@ -32,6 +32,6 @@ A refreshing way to learn, personalized only for SC.
 </div>
 
 <div class="flashcard-buttons">
-    <button class="flashcard-prev">&#8592;</button>
-    <button class="flashcard-next">&#8594;</button>
+    <button class="card-prev">&#8592;</button>
+    <button class="card-next">&#8594;</button>
   </div>
