@@ -322,10 +322,8 @@ input.auth-input {
     height: 450px;
     overflow: hidden;
     margin: 0px;
-    border: 2px solid #6e6e73;
     border-radius: 24px;
-    box-shadow: none;
-    background-color: transparent;
+    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 p.white-text {
