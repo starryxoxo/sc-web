@@ -316,13 +316,17 @@ input.auth-input {
 
 .card {
     position: relative;
-    flex: 0 0 300px;
+    flex: 0 0 min(18rem);
     height: 450px;
     overflow: hidden;
     margin: 0px;
+    border: none;
     border-radius: 18px;
     box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.08);
 }
+
+p.white-text {
+    font-size: 0.8rem;
 
 .title {
     font-variant: small-caps;
