@@ -29,9 +29,8 @@ A refreshing way to learn, personalized only for SC.
                 </section>
             </article>
     </div>
-</div>
-
 <div class="flashcard-buttons">
     <button class="card-prev">&#8592;</button>
     <button class="card-next">&#8594;</button>
+  </div>
   </div>
