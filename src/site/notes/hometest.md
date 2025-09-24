@@ -16,7 +16,7 @@ A refreshing way to learn, personalized only for SC.
                 <section class="body white-text">
                     <p class="title" style="font-variant: small-caps;">logic and knowledge</p>
                     <a href="/science" style="display: none;">Science</a>
-                    <h2 style="margin-bottom: -8px;">Science</h2>
+                    <h2 style="margin-bottom: -12px;">Science</h2>
                     <p>Get to know the world in the lens of science: a book full of knowledge and facts.</p>
                 </section>
             </article>
@@ -24,7 +24,7 @@ A refreshing way to learn, personalized only for SC.
                 <section class="body white-text">
                     <p class="title" style="font-variant: small-caps;">logic and knowledge</p>
                     <a href="/math" style="display: none;">Mathematics</a>
-                    <h2 style="margin-bottom: -8px;">Mathematics</h2>
+                    <h2 style="margin-bottom: -12px;">Mathematics</h2>
                     <p>Enhance your critical thinking and problem-solving skills with Math.</p>
                 </section>
             </article>
