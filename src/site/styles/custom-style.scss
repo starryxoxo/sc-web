@@ -305,8 +305,9 @@ input.auth-input {
 
 .container {
     display: flex;
-    overflow-x: auto; /* Creamos un div scrollable de forma horizontal */
+    overflow-x: auto;
     scrollbar-width: none;
+    scroll-snap-type: x mandatory;
     padding: 1.5rem 0; 
     gap: 12px;
 }
