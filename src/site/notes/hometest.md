@@ -12,7 +12,7 @@ A refreshing way to learn, personalized only for SC.
 <div class="position">
         <h2 class="title-context">Start learning. <span>Like never before.</span></h2>
         <div class="container">
-            <article class="card" id="card-1">
+            <article class="card">
                 <section class="body white-text">
                     <p class="title" style="font-variant: small-caps;">logic and knowledge</p>
                     <a href="/science" style="display: none;">Science</a>
@@ -20,7 +20,7 @@ A refreshing way to learn, personalized only for SC.
                     <p>Get to know the world in the lens of science: a book full of knowledge and facts.</p>
                 </section>
             </article>
-            <article class="card" id="card-2">
+            <article class="card">
                 <section class="body white-text">
                     <p class="title" style="font-variant: small-caps;">logic and knowledge</p>
                     <a href="/math" style="display: none;">Mathematics</a>
@@ -28,9 +28,13 @@ A refreshing way to learn, personalized only for SC.
                     <p>Enhance your critical thinking and problem-solving skills with Math.</p>
                 </section>
             </article>
+            <article class="card">
+                <section class="body white-text">
+                    <p class="title" style="font-variant: small-caps;">logic and knowledge</p>
+                    <a href="/stats" style="display: none;">Statistics</a>
+                    <h2 style="margin-bottom: -12px;">Statistics</h2>
+                    <p>Master your probability and pattern-finding.</p>
+                </section>
+            </article>
     </div>
-<div class="flashcard-buttons">
-    <button class="card-prev">&#8592;</button>
-    <button class="card-next">&#8594;</button>
-  </div>
   </div>
