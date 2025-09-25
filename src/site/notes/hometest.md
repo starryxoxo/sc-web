@@ -39,11 +39,11 @@ A refreshing way to learn, personalized only for SC.
                     <b style="right: 30px; position: absolute; bottom: 15px; font-size: 2.5rem;">&#8594;</b>
                 </section>
             </article>
-            
-        <div class="flashcard-buttons">
+    </div>
+    
+    <div class="flashcard-buttons">
         <button onclick="prevCard()" class="flashcard-prev">&#8592;</button>
         <button onclick="nextCard()" class="flashcard-next">&#8594;</button>
         </div>
         
-    </div>
   </div>
