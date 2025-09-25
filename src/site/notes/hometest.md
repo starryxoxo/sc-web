@@ -42,8 +42,8 @@ A refreshing way to learn, personalized only for SC.
     </div>
     
     <div class="flashcard-buttons">
-        <button onclick="prevCard()" class="flashcard-prev">&#8592;</button>
-        <button onclick="nextCard()" class="flashcard-next">&#8594;</button>
+        <button onclick="prevCard()">&#8592;</button>
+        <button onclick="nextCard()">&#8594;</button>
         </div>
         
   </div>
