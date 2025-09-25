@@ -317,7 +317,7 @@ input.auth-input {
     display: none;
 }
 
-@mixin scroll-button-base {
+%scroll-button-base {
   background-color: transparent;
   backdrop-filter: blur(12px) saturate(120%);
   border-radius: 50%;
@@ -325,12 +325,12 @@ input.auth-input {
 
 .container::scroll-button(right) {
   content: '\2192'
-  @include scroll-button-base;
+  @extend scroll-button-base;
 }
 
 .container::scroll-button(left) {
   content: '\2190'
-  @include scroll-button-base;
+  @extend scroll-button-base;
 }
 
 .container::scroll-button(left):disabled, .container::scroll-button(left):disabled {
