@@ -36,7 +36,7 @@ A refreshing way to learn, personalized only for SC.
                     <a href="/stats" style="display: none;">Statistics</a>
                     <h2 style="margin-bottom: -12px;">Statistics</h2>
                     <p>Master your probability and pattern-finding.</p>
-                    <b style="right: 0; position: relative; bottom: 12px; font-size: 2.5rem;">&#8594;</b>
+                    <b style="right: 0; position: absolute; bottom: 12px; font-size: 2.5rem;">&#8594;</b>
                 </section>
             </article>
     </div>
