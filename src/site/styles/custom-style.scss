@@ -307,7 +307,7 @@ input.auth-input {
     display: flex;
     overflow-x: auto;
     scrollbar-width: none;
-    scroll-snap-type: x mandatory;
+    scroll-snap-type: both mandatory;
     padding: 1.5rem 0; 
     gap: 12px;
 }
