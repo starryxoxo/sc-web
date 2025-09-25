@@ -1,1 +1,22 @@
 <small>Copyright © SC Web</small>
+
+<script>
+  const cards = document.querySelectorAll('.card');
+  let currentIndex = 0;
+
+  function showCard(index) {
+    cards.forEach((card, i) => {
+      card.style.display = i === index ? 'block' : 'none';
+    });
+  }
+
+  function prevCard() {
+    currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+    showCard(currentIndex);
+  }
+
+  function nextCard() {
+    currentIndex = (currentIndex + 1) % cards.length;
+    showCard(currentIndex);
+  }
+</script>
