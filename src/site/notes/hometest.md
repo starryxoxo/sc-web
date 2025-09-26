@@ -12,7 +12,7 @@ A refreshing way to learn, personalized only for SC.
 <div class="position">
         <h2 class="title-context">Start learning. <span>Like never before.</span></h2>
         <div class="container">
-            <article class="card" id="card1">
+            <article class="card">
                 <section class="body white-text">
                     <p class="title" style="font-variant: small-caps;">logic and knowledge</p>
                     <a href="/science" style="display: none;">Science</a>
@@ -21,7 +21,7 @@ A refreshing way to learn, personalized only for SC.
                     <b style="right: 30px; position: absolute; bottom: 15px; font-size: 2.5rem;">&#8594;</b>
                 </section>
             </article>
-            <article class="card" id="card2">
+            <article class="card">
                 <section class="body white-text">
                     <p class="title" style="font-variant: small-caps;">logic and knowledge</p>
                     <a href="/math" style="display: none;">Mathematics</a>
@@ -30,7 +30,7 @@ A refreshing way to learn, personalized only for SC.
                     <b style="right: 30px; position: absolute; bottom: 15px; font-size: 2.5rem;">&#8594;</b>
                 </section>
             </article>
-            <article class="card" id="card3">
+            <article class="card">
                 <section class="body white-text">
                     <p class="title" style="font-variant: small-caps;">logic and knowledge</p>
                     <a href="/stats" style="display: none;">Statistics</a>
