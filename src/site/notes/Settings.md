@@ -10,4 +10,8 @@
 <p style="font-variant: small-caps; margin-bottom: 0px;">theme</p>
 <button id="mode-toggle">Dark/Light Mode</button>
 
+<p style="font-variant: small-caps; margin-bottom: 0px;">user</p>
+<button onclick="localStorage.removeItem('name')">Log out</button>
+
+
 More settings soon...
