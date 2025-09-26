@@ -237,6 +237,17 @@ input.auth-input {
   margin-bottom: 1rem;
 }
 
+.fab-wrapper
+  position: fixed;
+  bottom: 12px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  pointer-events: none; /* optional */
+  z-index: 9999;
+}
+
 .fab-container {
   position: relative;
   bottom: 12px;
