@@ -337,6 +337,7 @@ input.auth-input {
 
 .container::scroll-button(left) {
   content: 'Prev';
+  margin-right: 12px;
   @extend %scroll-button-base;
 }
 
