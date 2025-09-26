@@ -240,8 +240,6 @@ input.auth-input {
 .fab-container {
   position: fixed;
   bottom: 12px;
-  left: 50%;
-  transform: translateX(-50%);
   background-color: rgba(255 255 255 / 0.15);
   backdrop-filter: blur(12px) saturate(200%);
   -webkit-backdrop-filter: blur(12px) saturate(200%);
@@ -252,7 +250,7 @@ input.auth-input {
   padding: 0.2rem 0.4rem;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 0.75rem;
   box-sizing: border-box;
   overflow-x: auto;
