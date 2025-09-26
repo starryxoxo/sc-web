@@ -331,12 +331,12 @@ input.auth-input {
 }
 
 .container::scroll-button(right) {
-  content: '\2192';
+  content: 'Next';
   @extend %scroll-button-base;
 }
 
 .container::scroll-button(left) {
-  content: '\2190';
+  content: 'Prev';
   @extend %scroll-button-base;
 }
 
