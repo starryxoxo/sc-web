@@ -359,11 +359,13 @@ input.auth-input {
     transition: transform 0.5s ease, margin-left 0.5s ease, margin-right 0.5s ease;
 }
 
-.card:hover {
-   transform: scale(1.05);
-   margin-left: 12px;
-   margin-right: 12px;
-   transition: transform 0.5s, margin-left 0.5s ease, margin-right 0.5s ease;
+@media (min-width: 900px) {
+  .card:hover {
+    transform: scale(1.05);
+    margin-left: 12px;
+    margin-right: 12px;
+    transition: transform 0.5s, margin-left 0.5s ease, margin-right 0.5s ease;
+  }
 }
 
 /* .card h2, .card b, .AuthName { background: linear-gradient(90deg, #AEC171, #B6D6BC); background-clip: text; -webkit-background-clip: text;  color: transparent; -webkit-text-fill-color: transparent; text-fill-color: transparent; } */
