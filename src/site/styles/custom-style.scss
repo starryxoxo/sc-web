@@ -354,10 +354,14 @@ input.auth-input {
     scroll-snap-align: start;
 }
 
-.card h2 {
+.card h2,
+.card b {
   background: linear-gradient(90deg, #AEC171, #B6D6BC);
+  background-clip: text;
   -webkit-background-clip: text;
+  color: transparent;
   -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
 }
 
 p.white-text {
