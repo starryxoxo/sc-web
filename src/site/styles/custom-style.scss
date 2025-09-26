@@ -328,19 +328,22 @@ input.auth-input {
   user-select: none;
 }
 
-.container::scroll-button(right) {
-  content: 'Next';
-  @extend %scroll-button-base;
-}
+@media (min-width: 1024px) {
+  .container::scroll-button(right) {
+    content: 'Next';
+    @extend %scroll-button-base;
+  }
 
-.container::scroll-button(left) {
-  content: 'Prev';
-  margin-right: 12px;
-  @extend %scroll-button-base;
-}
+  .container::scroll-button(left) {
+    content: 'Prev';
+    margin-right: 12px;
+    @extend %scroll-button-base;
+  }
 
-.container::scroll-button(left):disabled, .container::scroll-button(right):disabled {
-  opacity: 0.5;
+  .container::scroll-button(left):disabled,
+  .container::scroll-button(right):disabled {
+    opacity: 0.5;
+  }
 }
 
 .card {
