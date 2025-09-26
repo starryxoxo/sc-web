@@ -1,22 +1,22 @@
 <small>Copyright © SC Web</small>
 
 <script>
-  const cards = document.querySelectorAll('.card');
-  let currentIndex = 0;
+  // Function to shuffle elements inside a container
+function shuffleCards(containerSelector) {
+  const container = document.querySelector(containerSelector);
+  if (!container) return;
 
-  function showCard(index) {
-    cards.forEach((card, i) => {
-      card.style.display = i === index ? 'block' : 'none';
-    });
+  const cards = Array.from(container.querySelectorAll('article.card'));
+  for (let i = cards.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    // Swap cards[i] and cards[j]
+    container.insertBefore(cards[j], cards[i]);
+    // Swap positions in the array too
+    [cards[i], cards[j]] = [cards[j], cards[i]];
   }
+}
 
-  function prevCard() {
-    currentIndex = (currentIndex - 1 + cards.length) % cards.length;
-    showCard(currentIndex);
-  }
+// Call shuffleCards on your container
+shuffleCards('.container');
 
-  function nextCard() {
-    currentIndex = (currentIndex + 1) % cards.length;
-    showCard(currentIndex);
-  }
 </script>
