@@ -358,7 +358,8 @@ input.auth-input {
 }
 
 .card h2,
-.card b {
+.card b,
+.AuthName {
   background: linear-gradient(90deg, #AEC171, #B6D6BC);
   background-clip: text;
   -webkit-background-clip: text;
