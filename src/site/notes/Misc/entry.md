@@ -38,12 +38,11 @@ Blue words like [[Misc/entry\|this]] is a link. Tap the link to go to the page.
 >Use your name of nickname for the Name field. ID is your unique code, then input the PIN sent in the group chat. It is the same for everyone.
 >**Please remember your unique code just in case the website logs you out.**
 
-
-<div id="login-container">
+<form onsubmit="event.preventDefault(); document.getElementById('loginBtn').click();">
   <input type="text" id="authName" class="auth-input" placeholder="Enter Name or Nickname" />
   <input type="password" id="authID" class="auth-input" placeholder="Enter ID or unique code" />
   <input type="text" id="authPIN" class="auth-input" placeholder="Enter PIN" />
-  <button id="loginBtn">Start</button>
-</div>
+  <button id="loginBtn" type="submit">Start</button>
+</form>
 
 <small>v. 1.0.13-EA</small>
