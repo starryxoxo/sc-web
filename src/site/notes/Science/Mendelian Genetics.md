@@ -6,7 +6,7 @@
 [[Home\|Home]] • [[Science/Science\|Science]] • <a href="javascript:history.back()">Go Back</a>
 
 >[!check]- About topic
->- [X] **Official** | Incomplete
+>- [ ] **Verified** | Incomplete
 >This topic is from a verified source. Check the resource section for more details.
 >[[Misc/Topic Classification\|Learn more about how topics are classified]]
 # Mendelian Genetics
@@ -39,11 +39,11 @@ Heredity is the **transfer** or **passing of traits from parents to offspring** 
 -> **Heterozygous** means **different alleles** (For example, Yy). A heterozygous genotype will always be a dominant trait, because it has a dominant allele.
 -> **Homozygous** means **same alleles** (For example, YY, yy). A homozygous genotype can be both dominant and recessive, depending on the allele.
 
->[!info]- What's the difference between genotype and phenotype?
+>[!check]- What's the difference between genotype and phenotype?
 >## Genotype
-A genotype is **an organism's genetic makeup**, and the combination of alleles it has for a trait. **Represents the genes** (letters).
+>A genotype is **an organism's genetic makeup**, and the combination of alleles it has for a trait. **Represents the genes** (letters).
 >## Phenotype
-A phenotype is **the physical characteristic** that results from the genotype.
+>A phenotype is **the physical characteristic** that results from the genotype.
 
 
 ## Laws of Heredity
