@@ -368,15 +368,7 @@ input.auth-input {
   }
 }
 
-/* b, .card h2, .card b, .AuthName { background: linear-gradient(90deg, #AEC171, #B6D6BC); background-clip: text; -webkit-background-clip: text;  color: transparent; -webkit-text-fill-color: transparent; text-fill-color: transparent; } */
-
-b, strong {
-  background: linear-gradient(90deg, #AEC171, #B6D6BC);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-}
+/* .card h2, .card b, .AuthName { background: linear-gradient(90deg, #AEC171, #B6D6BC); background-clip: text; -webkit-background-clip: text;  color: transparent; -webkit-text-fill-color: transparent; text-fill-color: transparent; } */
 
 p.white-text {
     font-size: 0.8rem;
