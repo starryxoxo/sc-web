@@ -23,6 +23,6 @@
 <article class="topic">
   <section class="body white-text">
   <a href="/mendelian-genetics"></a>
-  <p>Medelian Genetics</p>
+  <h6>Medelian Genetics</h6>
   </section>
 </article>
