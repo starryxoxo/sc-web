@@ -1,111 +1,11 @@
 <script>
-function makeTableCellsClickable() {
-  document.querySelectorAll('table').forEach(table => {
-    const rows = Array.from(table.rows);
-    if (rows.length === 0) return;
-    const colCount = Math.max(...rows.map(r => r.cells.length));
-
-    // Single-column table: per-row logic
-    if (colCount === 1) {
-      for (let row of rows) {
-        const cell = row.cells[0];
-        if (cell) {
-          const link = cell.querySelector('a[href]');
-          if (!link) continue;
-          if (!cell.classList.contains('cell-link-activated')) {
-            cell.classList.add('cell-link-activated');
-            cell.style.cursor = 'pointer';
-            cell.addEventListener('click', function(e) {
-              if (!e.target.closest('a')) {
-                if (link.target === '_blank') {
-                  window.open(link.href, '_blank');
-                } else {
-                  window.location = link.href;
-                }
-              }
-            });
-          }
-          const img = cell.querySelector('img');
-          if (img && !img.classList.contains('img-link-activated')) {
-            img.classList.add('img-link-activated');
-            img.style.cursor = 'pointer';
-            img.addEventListener('click', function(e) {
-              if (!img.closest('a')) {
-                if (link.target === '_blank') {
-                  window.open(link.href, '_blank');
-                } else {
-                  window.location = link.href;
-                }
-              }
-            });
-          }
-        }
-      }
-    } else {
-      // Multi-column table: per-column logic
-      for (let col = 0; col < colCount; col++) {
-        let columnLink = null;
-        for (let row of rows) {
-          const cell = row.cells[col];
-          if (cell) {
-            const link = cell.querySelector('a[href]');
-            if (link) {
-              columnLink = link;
-              break;
-            }
-          }
-        }
-        if (!columnLink) continue;
-        for (let row of rows) {
-          const cell = row.cells[col];
-          if (cell) {
-            if (!cell.classList.contains('cell-link-activated')) {
-              cell.classList.add('cell-link-activated');
-              cell.style.cursor = 'pointer';
-              cell.addEventListener('click', function(e) {
-                if (!e.target.closest('a')) {
-                  if (columnLink.target === '_blank') {
-                    window.open(columnLink.href, '_blank');
-                  } else {
-                    window.location = columnLink.href;
-                  }
-                }
-              });
-            }
-            const img = cell.querySelector('img');
-            if (img && !img.classList.contains('img-link-activated')) {
-              img.classList.add('img-link-activated');
-              img.style.cursor = 'pointer';
-              img.addEventListener('click', function(e) {
-                if (!img.closest('a')) {
-                  if (columnLink.target === '_blank') {
-                    window.open(columnLink.href, '_blank');
-                  } else {
-                    window.location = columnLink.href;
-                  }
-                }
-              });
-            }
-          }
-        }
-      }
-    }
-  });
-}
-
-// Debounced version for observer
-const debouncedMakeTableCellsClickable = debounce(makeTableCellsClickable, 100);
-
-// MutationObserver watches for table changes
-const observer = new MutationObserver(() => {
-  debouncedMakeTableCellsClickable();
+document.querySelectorAll('td').forEach(td => {
+  const link = td.querySelector('a[href]');
+  if (link) {
+    td.style.cursor = 'pointer'; // show pointer cursor on hover
+    td.addEventListener('click', () => {
+      window.location.href = link.href;
+    });
+  }
 });
-
-observer.observe(document.body, {
-  childList: true,
-  subtree: true
-});
-
-// Initial run
-makeTableCellsClickable();
 </script>
