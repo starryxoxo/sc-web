@@ -20,12 +20,9 @@
 
 ## Topics
 
-<div class="topic-container">
-            <article class="topic">
-                <section class="body white-text">
-                    <a href="/mendelian-genetics/" style="display: none;">Mendelian Genetics</a>
-                    <h2 style="margin-bottom: -12px;">Mendelian Genetics</h2>
-                    <p>In 1866, Gregor Mendel...</p>
-                </section>
-            </article>
-            </div>
+
+|                           Topics                            |
+| :---------------------------------------------------------: |
+|   [[Science/Mendelian Genetics\|Mendelian Genetics]] <br>In 1866, Gregor Mendel, a...   |
+|    [[Science/Respiratory System\|Respiratory System]] <br>The respiratory system...     |
+| [[Science/Circulatory System\|Circulatory System]] <br> The circulatory system, also... |
