@@ -370,6 +370,16 @@ input.auth-input {
 
 /* b, .card h2, .card b, .AuthName { background: linear-gradient(90deg, #AEC171, #B6D6BC); background-clip: text; -webkit-background-clip: text;  color: transparent; -webkit-text-fill-color: transparent; text-fill-color: transparent; } */
 
+.topic-container {
+    display: flex;
+    overflow-y: auto;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    padding: 1.5rem 0; 
+    gap: 12px;
+}
+
 .topic {
     cursor: pointer;
     position: relative;
