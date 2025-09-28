@@ -60,7 +60,7 @@ This law says that a trait is passed independently, as long as the genes are on 
 
 | Related                                                                          |
 | :------------------------------------------------------------------------------- |
-| [[Non-Mendelian Genetics\|Non-Mendelian Genetics]]<br>Study of inheritance not covered by Gregor Mendel. |
+| [[Science/Non-Mendelian Genetics\|Non-Mendelian Genetics]]<br>Study of inheritance not covered by Gregor Mendel. |
 
 
 # Resources
