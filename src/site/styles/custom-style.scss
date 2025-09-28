@@ -368,7 +368,17 @@ input.auth-input {
   }
 }
 
-/* .card h2, .card b, .AuthName { background: linear-gradient(90deg, #AEC171, #B6D6BC); background-clip: text; -webkit-background-clip: text;  color: transparent; -webkit-text-fill-color: transparent; text-fill-color: transparent; } */
+/* b, .card h2, .card b, .AuthName { background: linear-gradient(90deg, #AEC171, #B6D6BC); background-clip: text; -webkit-background-clip: text;  color: transparent; -webkit-text-fill-color: transparent; text-fill-color: transparent; } */
+
+.topic {
+    position: relative;
+    min-width: 100%;
+    height: min-content;
+    overflow: hidden;
+    margin: 0px;
+    border-radius: 24px;
+    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.08);
+}
 
 p.white-text {
     font-size: 0.8rem;
