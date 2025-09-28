@@ -372,6 +372,7 @@ input.auth-input {
 
 .topic-container {
     display: flex;
+    flex-direction: column;
     overflow-y: auto;
     scrollbar-width: none;
     scroll-behavior: smooth;
@@ -383,7 +384,7 @@ input.auth-input {
 .topic {
     cursor: pointer;
     position: relative;
-    flex: 0 0 min(18rem);
+    min-width: 100%
     height: min-content;
     overflow: hidden;
     margin: 0px;
