@@ -17,7 +17,7 @@ A refreshing way to learn, personalized only for SC.
                     <p class="title" style="font-variant: small-caps;">logic and knowledge</p>
                     <a href="/science" style="display: none;">Science</a>
                     <h2 style="margin-bottom: -12px;">Science</h2>
-                    <p>Get to know the world in the lens of science: a book full of knowledge and facts.</p>
+                    <p>A book full of knowledge and facts.</p>
                     <b style="right: 30px; position: absolute; bottom: 15px; font-size: 3.5rem;">&#8594;</b>
                 </section>
             </article>

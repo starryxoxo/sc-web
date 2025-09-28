@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/science/mendelian-genetics/"}
+{"dg-publish":true,"dg-permalink":"mendelian-genetics","permalink":"/mendelian-genetics/"}
 ---
 
 
@@ -48,14 +48,20 @@ Heredity is the **transfer** or **passing of traits from parents to offspring** 
 
 ## Laws of Heredity
 
-### 1. Law of Dominance
+**Law of Dominance**
 This law suggests that if two alleles are present in a gene, *one will become dominant* and the other will be recessive. **The dominant allele masks the effect of the recessive allele**.
 
-### 2. Law of Segregation
+**Law of Segregation**
 This law states that an organism has each two alleles, **one from each parent**.
 
-### 3. Law of Independent Assortment
+**Law of Independent Assortment**
 This law says that a trait is passed independently, as long as the genes are on different chromosomes.
+
+
+| Related                                                                          |
+| :------------------------------------------------------------------------------- |
+| [[Non-Mendelian Genetics\|Non-Mendelian Genetics]]<br>Study of inheritance not covered by Gregor Mendel. |
+
 
 # Resources
 **August 22, 2025**, Science Note 4: Genetics, .pdf, Ms. Carmela Carpio
