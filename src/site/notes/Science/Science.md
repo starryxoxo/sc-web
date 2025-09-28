@@ -20,9 +20,12 @@
 
 ## Topics
 
-<article class="topic">
-  <section class="body white-text">
-  <a href="/mendelian-genetics"></a>
-  <h6>Medelian Genetics</h6>
-  </section>
-</article>
+<div class="topic-container">
+            <article class="topic">
+                <section class="body white-text">
+                    <a href="/mendelian-genetics/" style="display: none;">Mendelian Genetics</a>
+                    <h2 style="margin-bottom: -12px;">Mendelian Genetics</h2>
+                    <p>In 1866, Gregor Mendel...</p>
+                </section>
+            </article>
+            </div>
