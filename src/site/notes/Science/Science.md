@@ -17,3 +17,12 @@
 [[Science/Mendelian Genetics\|Mendelian Genetics]]
 [[Science/Respiratory System\|Respiratory System]]
 [[Science/Circulatory System\|Circulatory System]]
+
+## Topics
+
+<article class="topic">
+  <section class="body white-text">
+  <a href="/mendelian-genetics"></a>
+  <p>Medelian Genetics</p>
+  </section>
+</article>
