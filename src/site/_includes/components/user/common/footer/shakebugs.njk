@@ -9,24 +9,23 @@
 
   window.Shake = Shake;
 
-const onFeedback = () => {
-document.getElementById('feedbackBtn').addEventListener('click', () => {
+const feedbackBtn = () => {
   const title = new ShakeTitle('title', 'Title', '', true);
   const description = new ShakeTextInput('description', 'Description', '', true);
   const relatedText = new ShakeTextInput('relatedText', 'Enter article text, then place asterisks for recommended change', '', true);
   const pickerItems = [
     new ShakePickerItem('contribution', 'Contribution'),
-  ];
+    ];
   const picker = new ShakePicker('type', 'Type', pickerItems);
   const shakeForm = new ShakeForm([title, description, relatedText, picker]);
+  
+    Shake.config.shakeForm = shakeForm;
+    Shake.show();
+}
 
-  Shake.config.shakeForm = shakeForm;
-  Shake.show(); // Show form on button click
-});
 
   // Start Shake with your API key - replace with your real key
   Shake.start('atsRstFZq7z5fw4fpWm3NWPgnWJuo1vlylFHbOxxCzD0RdbqviTQlqe');
 
-  // Attach handler after page load to feedback button
-  document.getElementById('feedbackBtn').addEventListener('click', onFeedback);
+ 
 </script>
