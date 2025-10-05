@@ -1,11 +1,53 @@
 <script type="module">
     import Shake from 'https://cdn.jsdelivr.net/npm/@shakebugs/browser@latest/+esm'
     window.Shake = Shake;
-    window.Shake.start('atsRstFZq7z5fw4fpWm3NWPgnWJuo1vlylFHbOxxCzD0RdbqviTQlqe');
 </script>
 
 <script>
   document.getElementById('feedbackBtn').addEventListener('click', () => {
     window.Shake.open();
   });
+</script>
+
+<script>
+// Import Shake from CDN if needed and initialize
+// import Shake from 'https://cdn.jsdelivr.net/npm/@shakebugs/browser@latest/+esm';
+// window.Shake = Shake;
+
+const title = new Shake.Title('Title', 'Title', '', true);
+const description = new Shake.TextInput('Description', 'Description', '', true);
+const relatedText = new Shake.TextInput('Article text', 'Enter article text, then place asterisks for recommended change', '', true);
+
+const pickerItems = [
+  new Shake.PickerItem('Bug', 'Bug'),
+  new Shake.PickerItem('Contribution', 'Contribution'),
+  new Shake.PickerItem('Suggestion', 'Suggestion'),
+  new Shake.PickerItem('Question', 'Question')
+];
+
+const picker = new Shake.Picker('Type', 'Type', pickerItems);
+
+function buildForm(selectedValue) {
+  let components = [picker];  // picker is always visible
+
+  if (selectedValue === 'Contribution') {
+    components.push(title, relatedText);
+  } else {
+    components.push(title, description);
+  }
+
+  const form = new Shake.Form(components);
+  window.Shake.setForm(form);
+}
+
+// Initialize with default (assume "Contribution" or otherwise)
+buildForm('Contribution');
+
+// If SDK supports picker change event
+picker.onChange = (value) => {
+  buildForm(value);
+};
+
+// Start Shake with your API key
+window.Shake.start('atsRstFZq7z5fw4fpWm3NWPgnWJuo1vlylFHbOxxCzD0RdbqviTQlqe');
 </script>
