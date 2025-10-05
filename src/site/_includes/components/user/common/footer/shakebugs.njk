@@ -1,25 +1,38 @@
 <script type="module">
-  import Shake from 'https://cdn.jsdelivr.net/npm/@shakebugs/browser@latest/+esm';
+  import Shake, {
+    ShakeTitle,
+    ShakeTextInput,
+    ShakePicker,
+    ShakePickerItem,
+    ShakeForm
+  } from 'https://cdn.jsdelivr.net/npm/@shakebugs/browser@latest/+esm';
+
   window.Shake = Shake;
 
-const onFeedback = () => {
-  const title = new Shake.Title('Title', 'Title', '', true);
-  const description = new Shake.TextInput('Description', 'Description', '', true);
-  const relatedText = new Shake.TextInput('Article text', 'Enter article text, then place asterisks for recommended change', '', true);
+  const onFeedback = () => {
+    const title = new ShakeTitle('title', 'Title', '', true);
+    const description = new ShakeTextInput('description', 'Description', '', true);
+    const relatedText = new ShakeTextInput('relatedText', 'Enter article text, then place asterisks for recommended change', '', true);
 
-  const pickerItems = [
-    new Shake.PickerItem('Contribution', 'Contribution'),
-  ];
+    const pickerItems = [
+      new ShakePickerItem('contribution', 'Contribution'),
+    ];
 
-  const picker = new Shake.Picker('Type', 'Type', pickerItems);
+    const picker = new ShakePicker('type', 'Type', pickerItems);
 
-  Shake.config.shakeForm = shakeForm;
-  Shake.show();
-}
+    // Create the ShakeForm object with all components
+    const shakeForm = new ShakeForm([title, description, relatedText, picker]);
 
-  // Start Shake with your API key
+    // Assign the form to Shake SDK configuration
+    Shake.config.shakeForm = shakeForm;
+
+    // Show the Shake feedback form modal
+    Shake.show();
+  };
+
+  // Start Shake with your API key - replace with your real key
   Shake.start('atsRstFZq7z5fw4fpWm3NWPgnWJuo1vlylFHbOxxCzD0RdbqviTQlqe');
 
-  // Attach click event after page load
+  // Attach handler after page load to feedback button
   document.getElementById('feedbackBtn').addEventListener('click', onFeedback);
 </script>
