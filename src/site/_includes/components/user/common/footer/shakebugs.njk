@@ -2,6 +2,7 @@
   import Shake from 'https://cdn.jsdelivr.net/npm/@shakebugs/browser@latest/+esm';
   window.Shake = Shake;
 
+const onFeedback = () => {
   const title = new Shake.Title('Title', 'Title', '', true);
   const description = new Shake.TextInput('Description', 'Description', '', true);
   const relatedText = new Shake.TextInput('Article text', 'Enter article text, then place asterisks for recommended change', '', true);
@@ -19,12 +20,12 @@
   };
 
   buildForm();
+}
 
   // Start Shake with your API key
   Shake.start('atsRstFZq7z5fw4fpWm3NWPgnWJuo1vlylFHbOxxCzD0RdbqviTQlqe');
 
   // Attach click event after page load
-  document.getElementById('feedbackBtn').addEventListener('click', () => {
-    Shake.open();
+  document.getElementById('feedbackBtn').addEventListener('click', onFeedback);
   });
 </script>
