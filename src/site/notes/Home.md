@@ -44,6 +44,7 @@ A refreshing way to learn, personalized only for SC.
 • [[MAPEH/Health\|Health]]
 
 ***
+<button id="feedbackBtn">Send Feedback</button>
 
 <small>v. 1.0.13-EA</small>
 <small style="line-height: 8px;">Early access. Features and cosmetics are subject to change.</small>
