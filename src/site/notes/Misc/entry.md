@@ -3,6 +3,13 @@
 ---
 
 
+<details>
+<summary>
+Why am I seeing this page?
+</summary>
+Access to this website is available only for those who have been authorized to enter. You'll get an invitation if you have been selected for Early Access. Once Early Access is finished, it will be available for everyone alongside their credentials essential for logging in.
+</details>
+
 # SC Web
 
 Before starting, here's a guide to using the website:
