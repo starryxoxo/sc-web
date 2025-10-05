@@ -4,10 +4,6 @@
 </script>
 
 <script>
-// Import Shake from CDN if needed and initialize
-// import Shake from 'https://cdn.jsdelivr.net/npm/@shakebugs/browser@latest/+esm';
-// window.Shake = Shake;
-
 const feedbackBtn = () => {
   const title = new Shake.Title('Title', 'Title', '', true);
   const description = new Shake.TextInput('Description', 'Description', '', true);
@@ -19,7 +15,10 @@ const feedbackBtn = () => {
 
   const picker = new Shake.Picker('Type', 'Type', pickerItems);
 
- document.getElementById('feedbackBtn').addEventListener('click', () => {
+  document.getElementById('feedbackBtn').addEventListener('click', () => {
     window.Shake.open();
   });
+}; // closing brace for feedbackBtn
+
+feedbackBtn(); // call the function to attach the handler
 </script>
