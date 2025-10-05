@@ -13,13 +13,8 @@ const onFeedback = () => {
 
   const picker = new Shake.Picker('Type', 'Type', pickerItems);
 
-  const buildForm = () => {
-    const components = [picker, title, relatedText];
-    const form = new Shake.Form(components);
-    Shake.setForm(form);
-  };
-
-  buildForm();
+  Shake.config.shakeForm = shakeForm;
+  Shake.show();
 }
 
   // Start Shake with your API key
