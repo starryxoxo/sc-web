@@ -1,10 +1,7 @@
 <script type="module">
-    import Shake from 'https://cdn.jsdelivr.net/npm/@shakebugs/browser@latest/+esm'
-    window.Shake = Shake;
-</script>
+  import Shake from 'https://cdn.jsdelivr.net/npm/@shakebugs/browser@latest/+esm';
+  window.Shake = Shake;
 
-<script>
-const feedbackBtn = () => {
   const title = new Shake.Title('Title', 'Title', '', true);
   const description = new Shake.TextInput('Description', 'Description', '', true);
   const relatedText = new Shake.TextInput('Article text', 'Enter article text, then place asterisks for recommended change', '', true);
@@ -15,10 +12,19 @@ const feedbackBtn = () => {
 
   const picker = new Shake.Picker('Type', 'Type', pickerItems);
 
-  document.getElementById('feedbackBtn').addEventListener('click', () => {
-    window.Shake.open();
-  });
-}; // closing brace for feedbackBtn
+  const buildForm = () => {
+    const components = [picker, title, relatedText];
+    const form = new Shake.Form(components);
+    Shake.setForm(form);
+  };
 
-feedbackBtn(); // call the function to attach the handler
+  buildForm();
+
+  // Start Shake with your API key
+  Shake.start('atsRstFZq7z5fw4fpWm3NWPgnWJuo1vlylFHbOxxCzD0RdbqviTQlqe');
+
+  // Attach click event after page load
+  document.getElementById('feedbackBtn').addEventListener('click', () => {
+    Shake.open();
+  });
 </script>
