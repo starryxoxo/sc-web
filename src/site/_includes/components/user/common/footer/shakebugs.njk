@@ -4,12 +4,6 @@
 </script>
 
 <script>
-  document.getElementById('feedbackBtn').addEventListener('click', () => {
-    window.Shake.open();
-  });
-</script>
-
-<script>
 // Import Shake from CDN if needed and initialize
 // import Shake from 'https://cdn.jsdelivr.net/npm/@shakebugs/browser@latest/+esm';
 // window.Shake = Shake;
@@ -50,4 +44,8 @@ picker.onChange = (value) => {
 
 // Start Shake with your API key
 window.Shake.start('atsRstFZq7z5fw4fpWm3NWPgnWJuo1vlylFHbOxxCzD0RdbqviTQlqe');
+
+ document.getElementById('feedbackBtn').addEventListener('click', () => {
+    window.Shake.open();
+  });
 </script>
