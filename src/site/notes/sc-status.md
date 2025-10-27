@@ -16,16 +16,16 @@ SC Web is a private, exclusive website build only for Essians.
 | **Website**     | **Operational** |
 | **Server**      | **Operational** |
 
-| System                 | Status                                                                                                                   |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| Verification - Login   | Operational                                                                                                              |
-| Verification - Website | Operational                                                                                                              |
-| Validity               | Operational                                                                                                              |
-| ID                     | Operational                                                                                                              |
-| PIN                    | Operational                                                                                                              |
-| Name                   | Operational                                                                                                              |
-| Topic Classification   | Operational                                                                                                              |
-| Topics                 | Operational                                                                                                              |
-| Testing                | <red>Not Operational</red><br><yellow>Partially Down</yellow><br><orange>Unstable</orange><br><green>Operational</green> |
+| System                 | Status      |
+| ---------------------- | ----------- |
+| Verification - Login   | Operational |
+| Verification - Website | Operational |
+| Validity               | Operational |
+| ID                     | Operational |
+| PIN                    | Operational |
+| Name                   | Operational |
+| Topic Classification   | Operational |
+| Topics                 | Operational |
+| Theme                  | Operational |
 
 ## Downtime History
