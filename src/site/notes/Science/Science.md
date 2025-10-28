@@ -13,7 +13,9 @@
 > - [ ] Respiratory System
 > - [ ] Circulatory System
 
-## Topics
-[[Science/Mendelian Genetics\|Mendelian Genetics]]
-[[Science/Respiratory System\|Respiratory System]]
-[[Science/Circulatory System\|Circulatory System]]
+| Topics                                                                                                              |
+| :------------------------------------------------------------------------------------------------------------------ |
+| [[Science/Mendelian Genetics\|Mendelian Genetics]] <br>In 1866, Gregor Mendel, an Austrian monk, studied pea plants to learn about inheritance. |
+| [[Science/Respiratory System\|Respiratory System]]<br>The respiratory system...                                                                 |
+| [[Science/Circulatory System\|Circulatory System]]<br> The circulatory system, also...                                                          |
+| More topics soon...                                                                                                 |

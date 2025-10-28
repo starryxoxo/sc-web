@@ -13,6 +13,7 @@
 > - [x] Slovin's Formula
 > - [ ] Others
 
-## Topics
-[[Statistics/Central Measures of Tendency\|Central Measures of Tendency]]
-[[Statistics/Slovin's Formula\|Slovin's Formula]]
+| Topics                                                                                      |
+| ------------------------------------------------------------------------------------------- |
+| [[Statistics/Central Measures of Tendency\|Central Measures of Tendency]]<br>The central measures of tendency is...                  |
+| [[Statistics/Slovin's Formula\|Slovin's Formula]]<br>A mathematical equation used to calculate the required sample size. |

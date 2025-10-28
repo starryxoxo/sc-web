@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/tle/tle/"}
+{"dg-publish":true,"dg-permalink":"tle","permalink":"/tle/"}
 ---
 
 [[Home\|Home]]

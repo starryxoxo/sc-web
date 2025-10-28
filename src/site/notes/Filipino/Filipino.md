@@ -16,8 +16,9 @@ Magandang umaga, araw o gabi, mambabasa.
 > **WIP** Timawa
 > **WIP** Puting Kalapati Libutin Itong Sandaigdigan 
 
-
-## Topics
-[[Filipino/Puting Kalapati Libutin Itong Sandaigdigan\|Puting Kalapati Libutin Itong Sandaigdigan]]
-[[Timawa\|Timawa]]
-[[Filipino/Tahanan ng Isang Sugarol\|Tahanan ng Isang Sugarol]]
+| Topics                                                                       |
+| ---------------------------------------------------------------------------- |
+| [[Filipino/Puting Kalapati Libutin Itong Sandaigdigan\|Puting Kalapati Libutin Itong Sandaigdigan]]<br>Isang tula ni Usman Awang. |
+| [[Timawa\|Timawa]]<br>Ang Timawa ay...                                               |
+| [[Filipino/Tahanan ng Isang Sugarol\|Tahanan ng Isang Sugarol]]<br>Isang maikling kuwento mula sa Malaysia      |
+| Marami pa sa susunod na panahon...                                           |
