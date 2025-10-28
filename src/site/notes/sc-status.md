@@ -8,6 +8,8 @@
 **About this site**
 SC Web is a private, exclusive website build only for Essians.
 
+<green>All systems operational.</green>
+
 | System          | Status          |
 | --------------- | --------------- |
 | Login           | Operational     |
