@@ -3,6 +3,17 @@
 ---
 
 
+<details>
+<summary>
+Why are you here?
+</summary>
+• If you've logged in before, it could be that your account has been suspended. Contact the president about the issue.<br>
+• If you've logged in before, it could be that we're having some problems with verification. Please contact the president regarding the issue.<br>
+• If for some reason, that website is logging you out or forcing you to this page, someone may be using your account. Contact the president regarding this issue.<br>
+• It could be that the website is currently experiencing problems.
+</details>
+<br>
+
 # SC Web
 
 Before starting, here's a guide to using the website:
