@@ -50,6 +50,7 @@ A refreshing way to learn, personalized only for SC.
                     <b style="right: 30px; position: absolute; bottom: 15px; font-size: 3.5rem;">&#8594;</b>
                 </section>
             </article>
+            </div>
     </div>
 <br>
 
