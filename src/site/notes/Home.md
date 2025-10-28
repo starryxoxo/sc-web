@@ -152,3 +152,5 @@ A refreshing way to learn, personalized only for SC.
                 </section>
                 </article>
 </div>
+
+[[sc-status\|SC Web Status]] • v 1.0.14
