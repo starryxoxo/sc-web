@@ -66,7 +66,7 @@ A refreshing way to learn, personalized only for SC.
                 </article>
                 <article class="card">
                 <section class="body white-text">
-                    <p class="title" style="font-variant: small-caps;">MAPEH</p>
+                    <p class="title" style="font-variant: small-caps;">mapeh</p>
                     <a href="/arts" style="display: none;">Arts</a>
                     <h2 style="margin-bottom: -12px;">Arts</h2>
                     <p>Human, culture, skill, creative</p>
