@@ -1,11 +1,18 @@
 <script>
 function isStableBrowser() {
-  // Example simple check for browsers by user agent (can be refined)
   const ua = navigator.userAgent;
-  return /Chrome|Firefox|Safari|Edge/.test(ua) && !/WebView/.test(ua);
+  // Check if user agent contains any stable browser identifiers
+  const stableBrowsers = ["Chrome", "Firefox", "Safari", "Edge", "Edg", "OPR", "Brave"];
+  // OPR (Opera), Edg (new Edge), Brave added for more coverage
+  for (const browser of stableBrowsers) {
+    if (ua.includes(browser)) {
+      return true;
+    }
+  }
+  return false; // Not any stable browser listed
 }
 
 if (!isStableBrowser()) {
-  alert("For the best experience, please use a stable modern browser like Chrome, Firefox, Safari, or Edge.");
+  alert("For the best experience, please use a stable modern browser like Chrome, Firefox, Safari, Brave, or Edge.");
 }
 </script>
