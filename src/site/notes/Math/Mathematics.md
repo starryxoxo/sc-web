@@ -18,9 +18,11 @@ Explore topics on Mathematics like never before! This time, with even more lette
 >- [ ] Test for Factorability
 >- [ ] Factoring
 
-## Topics
-[[Math/Math Q1/Quadratic Formula\|Quadratic Formula]]
-[[Math/Math Q1/Completing the Square\|Completing the Square]]
-[[Math/Math Q1/Zero Product Property\|Zero Product Property]]
-[[Math/Math Q1/Test for Factorability\|Test for Factorability]]
-[[Math/Math Q1/Factoring\|Factoring]]
+
+| Topics                                                                                                  |
+| ------------------------------------------------------------------------------------------------------- |
+| [[Math/Math Q1/Quadratic Formula\|Quadratic Formula]] <br>Formula used to solve quadratic equations.                                    |
+| [[Math/Math Q1/Completing the Square\|Completing the Square]] <br>Method in solving quadratic equations...                                  |
+| [[Math/Math Q1/Zero Product Property\|Zero Product Property]] <br>Mathematical property where a number multiplied by zero returns a zero... |
+| [[Math/Math Q1/Test for Factorability\|Test for Factorability]] <br>Method to check if an equation is factorable...                          |
+| [[Math/Math Q1/Factoring\|Factoring]]  (Quadratic Equation)<br>Process of rewriting an equation...                              |
