@@ -419,3 +419,7 @@ yellow { color: yellow; }
 .external-link {
   text-decoration: none;
 }
+
+internal-link.is-unresolved {
+  opacity: 0.5;
+}
