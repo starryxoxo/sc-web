@@ -2,6 +2,7 @@
 {"dg-publish":true,"permalink":"/class-schedule/"}
 ---
 
+<a href="javascript:history.back()">Go Back</a>
 # Class Schedule
 
 
@@ -18,4 +19,4 @@
 | 2:00–3:00   | English  | Filipino | AP       | Filipino | Science  |
 |             |          |          |          |          |          |
 | 3:20–4:20   | Science  | MAPEH    | Trigo    | Science  | Computer |
-| 4:20–5:20   | ESP      | Trigo    | Science  | English  | Computer |
+| 4:20–5:20   | ESP      | Trigo    | Science  | English  | AP       |

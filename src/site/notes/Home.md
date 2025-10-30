@@ -11,6 +11,10 @@
   </div>
 </div>
 
+| Heads Up!                                                                                                                                                                                                              |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| SC Web is moving to [this website](https://sc-web-blls.onrender.com). It's a **huge** move forward for SC Web. The Netlify website will be up until December 5, 2025. Rest assured, your credentials will be the same. |
+
 # Welcome to SC Web, <span class="AuthName"></span>!
 
 A refreshing way to learn, personalized only for SC.
