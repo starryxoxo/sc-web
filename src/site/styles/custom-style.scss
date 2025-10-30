@@ -420,6 +420,8 @@ yellow { color: yellow; }
   text-decoration: none;
 }
 
-internal-link.is-unresolved {
-  opacity: 0.5;
+.theme-dark {
+  internal-link.is-unresolved {
+    color: #c1b471;
+  }
 }
