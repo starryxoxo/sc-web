@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/home/","tags":["gardenEntry"]}
+{"dg-publish":true,"permalink":"/home/"}
 ---
 
 
@@ -14,12 +14,13 @@
 | Heads Up!                                                                                                                                                                                                              |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | SC Web is moving to [this website](https://sc-web-blls.onrender.com). It's a **huge** move forward for SC Web. The Netlify website will be up until December 5, 2025. Rest assured, your credentials will be the same. |
+| We're making this change to make SC Web more efficient and more cost-effective. Thank you for your support!                                                                                                            |
 
 # Welcome to SC Web, <span class="AuthName"></span>!
 
 A refreshing way to learn, personalized only for SC.
 
-[[Bulletin Board\|Bulletin Board]] • [[Misc/Contributor's Guide\|Contributor's Guide]] • [[Class Schedule\|Class Schedule]] • [[Contributions Center\|Contributions Center]]
+[[Misc/Bulletin Board\|Bulletin Board]] • [[Misc/Contributor's Guide\|Contributor's Guide]] • [[Class Schedule\|Class Schedule]] • [[Misc/Contributions Center\|Contributions Center]]
 
 >[!attention]- This website is currently lacking in terms of written topics for viewing.
 >Contributions are highly welcomed. Kindly send the topic you covered and have finished writing to the class president.
