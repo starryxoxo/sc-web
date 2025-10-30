@@ -11,7 +11,7 @@
 <button id="mode-toggle">Dark/Light Mode</button>
 
 <p style="font-variant: small-caps; margin-bottom: 0px;">user  • <span style="color: var(--color-orange);">danger zone</span></p>
-<button onclick="localStorage.removeItem('authData')" style="color: red;">Log out</button>
-
+<button onclick="localStorage.removeItem('authData')" style="color: red;">Log out</button><br>
+You can log out anytime if you're having issues with the website. The info you need to log in stays the same. You can request to change your name or ID by messaging the president.
 
 More settings soon...

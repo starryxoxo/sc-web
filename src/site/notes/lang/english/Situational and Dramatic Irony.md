@@ -16,8 +16,10 @@
 
 Irony is a literary and rhetorical device used to show contrast between the stated and what is reality.
 
->[!faq] Situational Irony
->When the exact opposite of what is expected happens
+| Situational Irony |
+| --- |
+| When the exact opposite of what is expected happens |
 
->[!faq] Dramatic Irony
->When the audience knows something the characters are not aware of.
+| Dramatic Irony |
+| --- |
+| When the audience knows something the characters are not aware of. |
