@@ -11,10 +11,10 @@
   </div>
 </div>
 
-| Heads Up!                                                                                                                                                                                                              |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| SC Web is moving to [this website](https://sc-web-blls.onrender.com). It's a **huge** move forward for SC Web. The Netlify website will be up until December 5, 2025. Rest assured, your credentials will be the same. |
-| We're making this change to make SC Web more efficient and more cost-effective. Thank you for your support!                                                                                                            |
+| Heads Up!                                                                                                                                                                                                             |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| SC Web is moving to [this domain](https://sc-web-blls.onrender.com). It's a **huge** move forward for SC Web. The Netlify website will be up until December 5, 2025. Rest assured, your credentials will be the same. |
+| We're making this change to make SC Web more efficient and more cost-effective. Thank you for your support!                                                                                                           |
 
 # Welcome to SC Web, <span class="AuthName"></span>!
 
