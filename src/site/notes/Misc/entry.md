@@ -59,7 +59,7 @@ Blue words like [[Misc/entry\|this]] is a link. Tap the link to go to the page.
   <input type="text" id="authName" style="width: 100%; padding: 25px; margin-bottom: 10px;" class="auth-input" placeholder="Enter Name or Nickname" />
   <input type="password" id="authID" style="width: 100%; padding: 25px; margin-bottom: 10px;" class="auth-input" placeholder="Enter ID or unique code" />
   <input type="text" id="authPIN" class="auth-input" style="width: 100%; padding: 25px; margin-bottom: 10px;" placeholder="Enter PIN" />
-  <button id="loginBtn" type="submit" style="padding: 36px; font-size: 1.3rem; border-radius: 12px; width: 100%;">Start</button>
+  <button id="loginBtn" type="submit" style="padding: 36px; font-size: 1.3rem; border-radius: 16px; width: 100%;">Start</button>
 </form>
 
 <small>v. 1.0.14</small>
