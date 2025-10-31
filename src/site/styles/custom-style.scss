@@ -419,7 +419,9 @@ yellow { color: yellow; }
 .external-link {
   text-decoration: none;
 }
-  
-.internal-link.is-unresolved {
-  color: #00FFFF;
+
+.theme-dark {
+  .internal-link.is-unresolved {
+    color: #00FFFF;
+  }
 }
