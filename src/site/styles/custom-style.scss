@@ -420,7 +420,7 @@ yellow { color: yellow; }
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
+.theme-dark {
   .internal-link.is-unresolved {
     color: #80bfe0;
   }
