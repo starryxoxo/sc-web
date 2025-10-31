@@ -1,34 +1,40 @@
 <script>
  // To make up for long loading times
-document.addEventListener('DOMContentLoaded', () => {
-  const maxLoadTime = 5000; // 5 seconds threshold
-  const loadingMessage = "It seems we're having some time troubles. Try refreshing the webpage.";
-
+(() => {
+  const maxLoadTime = 4000; // 5 seconds threshold
   const startTime = performance.timing.navigationStart;
+  let messageElem = null;
 
-  window.onload = () => {
-    const loadTime = Date.now() - startTime;
+  // Check elapsed loading time every 500ms
+  const intervalId = setInterval(() => {
+    const elapsed = Date.now() - startTime;
+    if (elapsed > maxLoadTime && !messageElem) {
+      messageElem = document.createElement('div');
+      Object.assign(messageElem.style, {
+        position: 'fixed',
+        top: '0',
+        left: '0',
+        width: '100%',
+        padding: '1em',
+        backgroundColor: '#f8d7da',
+        color: '#721c24',
+        fontSize: '1.2rem',
+        textAlign: 'center',
+        zIndex: '9999',
+      });
+      messageElem.textContent = "It seems we're having some time troubles. Try refreshing the webpage.";
+      document.body.appendChild(messageElem);
 
-    if (loadTime > maxLoadTime) {
-      // Assuming you have an element on your loading screen to show messages
-      const loadingScreen = document.getElementById('loading-message');
-      if (loadingScreen) {
-        loadingScreen.textContent = loadingMessage;
-      } else {
-        // Or create and show a message dynamically
-        const messageElem = document.createElement('div');
-        messageElem.style.position = 'fixed';
-        messageElem.style.top = '0';
-        messageElem.style.width = '100%';
-        messageElem.style.backgroundColor = '#f8d7da';
-        messageElem.style.color = '#721c24';
-        messageElem.style.padding = '10px';
-        messageElem.style.textAlign = 'center';
-        messageElem.style.zIndex = '1000';
-        messageElem.textContent = loadingMessage;
-        document.body.appendChild(messageElem);
-      }
+      clearInterval(intervalId); // stop further checks once message is shown
     }
-  };
-});
+  }, 200);
+
+  // When the page fully loads, remove the message if it was shown
+  window.addEventListener('load', () => {
+    if (messageElem && messageElem.parentNode) {
+      messageElem.parentNode.removeChild(messageElem);
+    }
+    clearInterval(intervalId);
+  });
+})();
 </script>
