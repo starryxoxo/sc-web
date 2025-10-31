@@ -8,7 +8,7 @@
 >[!check]- About Topic
 >- [ ] **New**
 >This topic is new and is missing information.
->**English, page, 13**
+>**English, page 13**
 >- [x] **Looking for improvements**
 >This topic needs improvements.
 

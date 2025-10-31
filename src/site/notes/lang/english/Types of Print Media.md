@@ -26,7 +26,7 @@ Unbound prints that contain text and images. Typically, they are folded into **f
 ---
 
 ## Newspaper
-Used to get different kinds of information. They are **published for** the **general public** and are a **credible source** of news and **information**. Some sections include national, global, or present hard news. Its publishes **opinion pieces** written by columnists or the newspaper's official stand on an issue. Published either **daily** or **weekly**.
+Used to get different kinds of information. They are **published for** the **general public** and are a **credible source** of news and **information**. Some sections include national, global, or present hard news. It publishes **opinion pieces** written by columnists or the newspaper's official stand on an issue. Published either **daily** or **weekly**.
 
 ---
 
