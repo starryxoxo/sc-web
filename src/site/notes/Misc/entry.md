@@ -14,7 +14,7 @@ What brings me here?
 </details>
 <br>
 
-# SC Web
+# SC Web Guide
 
 Before starting, here's a guide to using the website:
 
@@ -24,6 +24,12 @@ Before starting, here's a guide to using the website:
 >[!info] These banners don't expand. Banners tell they're expandable if they have the arrow-like icon on the right.
 
 Blue words like [[Misc/entry\|this]] is a link. Tap the link to go to the page.
+
+
+| In case of such,                                                         |
+| ------------------------------------------------------------------------ |
+| You can also click boxes (tables) as a whole to go to a [[Misc/entry\|link]]. |
+
 
 <div class="flashcard-wrapper">
   <div class="flashcard-container">
@@ -50,10 +56,10 @@ Blue words like [[Misc/entry\|this]] is a link. Tap the link to go to the page.
 >**Please remember your unique code just in case the website logs you out.**
 
 <form onsubmit="event.preventDefault(); document.getElementById('loginBtn').click();">
-  <input type="text" id="authName" class="auth-input" placeholder="Enter Name or Nickname" />
-  <input type="password" id="authID" class="auth-input" placeholder="Enter ID or unique code" />
-  <input type="text" id="authPIN" class="auth-input" placeholder="Enter PIN" />
-  <button id="loginBtn" type="submit">Start</button>
+  <input type="text" id="authName" style="width: 100%; padding: 25px; margin-bottom: 10px;" class="auth-input" placeholder="Enter Name or Nickname" />
+  <input type="password" id="authID" style="width: 100%; padding: 25px; margin-bottom: 10px;" class="auth-input" placeholder="Enter ID or unique code" />
+  <input type="text" id="authPIN" class="auth-input" style="width: 100%; padding: 25px; margin-bottom: 10px;" placeholder="Enter PIN" />
+  <button id="loginBtn" type="submit" style="width: 100%; padding: 35px; margin-bottom: 10px; font-size: 1.2rem; border-radius: 12px;">Start</button>
 </form>
 
 <small>v. 1.0.14</small>
