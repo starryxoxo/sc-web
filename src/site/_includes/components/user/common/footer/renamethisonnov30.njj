@@ -1,0 +1,22 @@
+<script>
+(() => {
+  const oldDomainPrefix = "scweb9.netlify.app";
+  if (window.location.hostname.startsWith(oldDomainPrefix)) {
+    const messageElem = document.createElement('div');
+    Object.assign(messageElem.style, {
+      position: 'fixed',
+      top: '0',
+      left: '0',
+      width: '100%',
+      padding: '1em',
+      backgroundColor: '#f8d7da',
+      color: '#721c24',
+      fontSize: '1.2rem',
+      textAlign: 'center',
+      zIndex: '9999',
+    });
+    messageElem.textContent = "You are still using the legacy version. Switch to https://sc-web-blls.onrender.com/ for the latest updates. The legacy version will be out of service starting December 5.";
+    document.body.appendChild(messageElem);
+  }
+})();
+</script>
