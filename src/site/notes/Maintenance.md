@@ -7,7 +7,7 @@
 
 
 
-| SC Web periodically undergoes maintenance mode during 10:01PM to 8:59AM. What this means for you:                         |
+| SC Web periodically undergoes maintenance mode from 10:01PM to 8:59AM. What this means for you:                           |
 | ------------------------------------------------------------------------------------------------------------------------- |
 | **Slower loading times** <br>The website can load for ~15 seconds to 1 minute.                                            |
 | **After the website is loaded**, all requests (meaning **for other users**), it will be **faster**.                       |
