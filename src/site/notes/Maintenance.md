@@ -13,3 +13,5 @@
 | SC Web is **not perfect**. Loading times can still slow down even if **not during maintenance mode**.                     |
 | If you're using the [legacy version](https://scweb9.netlify.app/), you will **not** be affected by the slow loading time. |
 | Make sure to visit [SC Web Status](https://scstat.cronitorstatus.com) for the latest updates.                             |
+![SC Web Render](https://cronitor.io/badges/aeYG3Z/production/aVp0XZf-36sel83X8PrxYrpwHns.svg)
+![SC Web](https://cronitor.io/badges/pC6Gbd/production/h0Oheiw1f7jnnpOB4dApPK2EFfM.svg)
