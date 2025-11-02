@@ -31,3 +31,25 @@
 
   // REMOVED: When the page fully loads, remove the message if it was shown
 </script>
+<script>
+(() => {
+  const oldDomainPrefix = "sc-web-blls.onrender.com";
+  if (window.location.hostname.startsWith(oldDomainPrefix)) {
+    const messageElem = document.createElement('div');
+    Object.assign(messageElem.style, {
+      position: 'fixed',
+      top: '0',
+      left: '0',
+      width: '100%',
+      padding: '1em',
+      backgroundColor: '#f8d7da',
+      color: '#721c24',
+      fontSize: '0.7rem',
+      textAlign: 'center',
+      zIndex: '9999',
+    });
+    messageElem.textContent = "You are still using the render version. Switch to This version will not be updated until December 1. Only use it to login then go back to legacy.";
+    document.body.appendChild(messageElem);
+  }
+})();
+</script>
