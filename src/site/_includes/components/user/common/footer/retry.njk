@@ -1,16 +1,20 @@
 <script>
-  // Toggle for 1% overlay chance (commented out by default to always show)
+  // 1% overlay chance toggle (uncomment to re-enable)
   // const showOverlay = Math.random() < 0.01;
 
-  // For now, always show the overlay for testing
+  // Current behavior: always show overlay for testing
   const showOverlay = true;
 
-  if (showOverlay) {
-    // Build the bottom-fixed retry button as the only interactive element (replacing the download)
-    // The original overlay content will be hidden behind the overlay; here we implement the
-    // requested bottom-and-stationary retry button approach.
+  // Simple cooldown to prevent immediate re-show after a retry
+  let overlayCooldownUntil = 0;
 
-    // Create overlay that covers the screen but with black background and white text
+  function canShowOverlay() {
+    const now = Date.now();
+    return now >= overlayCooldownUntil;
+  }
+
+  if (showOverlay && canShowOverlay()) {
+    // Build the bottom-fixed retry button overlay
     const overlay = document.createElement('div');
     overlay.style.position = 'fixed';
     overlay.style.top = '0';
@@ -24,15 +28,15 @@
     overlay.style.justifyContent = 'flex-end';
     overlay.style.alignItems = 'stretch';
     overlay.style.zIndex = '9999';
-    // Ensure the content scales nicely on small screens
     overlay.style.paddingTop = '20px';
     overlay.style.paddingBottom = '0';
 
-    // Message area at center (but visually content will be behind, since the requirement is the bottom retry)
+    // Spacer to push content away from bottom if needed
     const spacer = document.createElement('div');
     spacer.style.flex = '1';
     overlay.appendChild(spacer);
 
+    // Centered message (still visible behind the button)
     const message = document.createElement('div');
     message.textContent = 'Unable to view this page.';
     message.style.textAlign = 'center';
@@ -41,7 +45,7 @@
     message.style.padding = '12px 16px';
     overlay.appendChild(message);
 
-    // Retry button positioned at bottom, full width
+    // Retry button at bottom
     const retryButton = document.createElement('button');
     retryButton.textContent = 'Retry';
     retryButton.style.width = '100%';
@@ -52,23 +56,24 @@
     retryButton.style.backgroundColor = '#ffffff';
     retryButton.style.color = '#000';
     retryButton.style.marginTop = '10px';
-    retryButton.style.borderTop = '1px solid #555'; // subtle separation
+    retryButton.style.borderTop = '1px solid #555';
     retryButton.onclick = () => {
-      // Simple retry: remove overlay and re-run (reloads current script block or page logic)
+      // Remove overlay
       if (overlay && overlay.parentNode) {
         overlay.parentNode.removeChild(overlay);
       }
-      // Basic retry behavior: reload the page to attempt overlay again with 1% chance
-      // If you want to keep this purely in-page, you can replace the overlay instead of reloading.
-      window.location.reload();
+      // Set a 40-second cooldown to prevent immediate re-show
+      overlayCooldownUntil = Date.now() + 40 * 1000;
+
+      // Optional: if you re-enable the 1% logic, you can trigger it here after cooldown
+      // e.g., you might re-run a function that decides to show again based on the cooldown
     };
 
     overlay.appendChild(retryButton);
 
-    // Attach overlay to body
     document.body.appendChild(overlay);
   }
 
-  // Optional: function placeholders for saving/retrieving pages
-  // (not used in this simplified overlay-only version)
+  // Optional: if you want to reuse the old storage/retrieval logic later, keep it here
+  // (not active in this minimal overlay-only version)
 </script>
