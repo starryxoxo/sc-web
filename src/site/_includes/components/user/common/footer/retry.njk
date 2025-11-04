@@ -1,106 +1,115 @@
 <script>
-// Retry.js
-// testing const showOverlay = Math.random() < 0.01;
+  // Toggle this to control overlay display chance:
+  //const showOverlay = Math.random() < 0.01; // 1% chance
+  const showOverlay = true; // Always show overlay for testing
 
-// testing if (showOverlay) {
-  const overlay = document.createElement('div');
-  overlay.style.position = 'fixed';
-  overlay.style.top = 0;
-  overlay.style.left = 0;
-  overlay.style.width = '100vw';
-  overlay.style.height = '100vh';
-  overlay.style.backgroundColor = 'white';
-  overlay.style.display = 'flex';
-  overlay.style.flexDirection = 'column';
-  overlay.style.justifyContent = 'center';
-  overlay.style.alignItems = 'center';
-  overlay.style.zIndex = '9999';
+  if (showOverlay) {
+    // Create white fullscreen overlay
+    const overlay = document.createElement('div');
+    overlay.style.position = 'fixed';
+    overlay.style.top = 0;
+    overlay.style.left = 0;
+    overlay.style.width = '100vw';
+    overlay.style.height = '100vh';
+    overlay.style.backgroundColor = 'white';
+    overlay.style.display = 'flex';
+    overlay.style.flexDirection = 'column';
+    overlay.style.justifyContent = 'center';
+    overlay.style.alignItems = 'center';
+    overlay.style.zIndex = '9999';
 
-  const message = document.createElement('div');
-  message.textContent = 'Unable to view';
-  message.style.fontSize = '24px';
-  message.style.marginBottom = '20px';
+    // Message
+    const message = document.createElement('div');
+    message.textContent = 'Unable to view this page.';
+    message.style.fontSize = '24px';
+    message.style.marginBottom = '20px';
 
-  const saveButton = document.createElement('button');
-  saveButton.textContent = 'Save page offline';
-  saveButton.style.padding = '10px 20px';
-  saveButton.style.fontSize = '16px';
-  saveButton.style.cursor = 'pointer';
+    // Save button
+    const saveButton = document.createElement('button');
+    saveButton.textContent = 'Save page offline';
+    saveButton.style.padding = '10px 20px';
+    saveButton.style.fontSize = '16px';
+    saveButton.style.cursor = 'pointer';
 
-  // Open (or create) IndexedDB database and store page HTML
-  saveButton.onclick = () => {
-    const htmlData = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
+    // Save page HTML to IndexedDB when clicked
+    saveButton.onclick = () => {
+      const htmlData = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
 
-    const request = indexedDB.open('PageCacheDB', 1);
+      const request = indexedDB.open('PageCacheDB', 1);
 
-    request.onerror = (event) => {
-      alert('IndexedDB error, cannot save page offline.');
+      request.onerror = () => {
+        alert('IndexedDB error, cannot save page offline.');
+      };
+
+      request.onupgradeneeded = (event) => {
+        const db = event.target.result;
+        if (!db.objectStoreNames.contains('pages')) {
+          db.createObjectStore('pages', { keyPath: 'id' });
+        }
+      };
+
+      request.onsuccess = (event) => {
+        const db = event.target.result;
+        const transaction = db.transaction(['pages'], 'readwrite');
+        const store = transaction.objectStore('pages');
+        const pageRecord = { id: 'savedPage', content: htmlData, savedAt: new Date() };
+
+        const putRequest = store.put(pageRecord);
+        putRequest.onsuccess = () => {
+          alert('Page saved offline in IndexedDB.');
+          document.body.removeChild(overlay);
+        };
+        putRequest.onerror = () => {
+          alert('Failed to save page.');
+        };
+      };
     };
 
-    request.onupgradeneeded = (event) => {
-      const db = event.target.result;
-      if (!db.objectStoreNames.contains('pages')) {
-        db.createObjectStore('pages', { keyPath: 'id' });
-      }
+    // Add message and button to overlay, then show it
+    overlay.appendChild(message);
+    overlay.appendChild(saveButton);
+    document.body.appendChild(overlay);
+  }
+
+  // Function to retrieve saved page HTML from IndexedDB
+  function retrievePageOffline(callback) {
+    const request = indexedDB.open('PageCacheDB', 1);
+
+    request.onerror = () => {
+      console.error('IndexedDB error: unable to open DB');
+      callback(null);
     };
 
     request.onsuccess = (event) => {
       const db = event.target.result;
-      const transaction = db.transaction(['pages'], 'readwrite');
+      const transaction = db.transaction(['pages'], 'readonly');
       const store = transaction.objectStore('pages');
-      const pageRecord = { id: 'savedPage', content: htmlData, savedAt: new Date() };
+      const getRequest = store.get('savedPage');
 
-      const putRequest = store.put(pageRecord);
-      putRequest.onsuccess = () => {
-        alert('Page saved offline in IndexedDB.');
-        document.body.removeChild(overlay);
-      };
-      putRequest.onerror = () => {
-        alert('Failed to save page.');
-      };
-    };
-  };
-
-  overlay.appendChild(message);
-  overlay.appendChild(saveButton);
-  document.body.appendChild(overlay);
-}
-
-function retrievePageOffline(callback) {
-  const request = indexedDB.open('PageCacheDB', 1);
-
-  request.onerror = () => {
-    console.error('IndexedDB error: unable to open DB');
-    callback(null);
-  };
-
-  request.onsuccess = (event) => {
-    const db = event.target.result;
-    const transaction = db.transaction(['pages'], 'readonly');
-    const store = transaction.objectStore('pages');
-    const getRequest = store.get('savedPage');
-
-    getRequest.onerror = () => {
-      console.error('Error fetching saved page');
-      callback(null);
-    };
-
-    getRequest.onsuccess = () => {
-      if (getRequest.result) {
-        callback(getRequest.result.content);
-      } else {
+      getRequest.onerror = () => {
+        console.error('Error fetching saved page');
         callback(null);
-      }
-    };
-  };
-}
+      };
 
-retrievePageOffline((savedHtml) => {
-  if (savedHtml) {
-    // For example, overwrite the current document with the saved one:
-    document.documentElement.innerHTML = savedHtml;
-  } else {
-    console.log('No saved offline page found');
+      getRequest.onsuccess = () => {
+        if (getRequest.result) {
+          callback(getRequest.result.content);
+        } else {
+          callback(null);
+        }
+      };
+    };
   }
-});
+
+  // Attempt to restore saved page on load
+  retrievePageOffline((savedHtml) => {
+    if (savedHtml) {
+      // Restore offline page by loading saved HTML as a Blob URL to avoid corrupting document structure
+      const blob = new Blob([savedHtml], { type: 'text/html' });
+      const url = URL.createObjectURL(blob);
+      window.location.href = url;
+    } else {
+      console.log('No saved offline page found');
+    }
+  });
 </script>
