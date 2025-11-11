@@ -76,7 +76,7 @@ A refreshing way to learn, personalized only for SC.
         const subject = currentEntry.subjects[todayName] || 'No class';
         messageElement.innerHTML = `Today is ${todayName}, at <span>${currentTimeStr}</span> ${subject}`;
       } else {
-        messageElement.innerHTML = `Today is ${todayName}, at <span>${currentTimeStr}</span> - No scheduled subject currently.`;
+        messageElement.innerHTML = `Today is ${todayName}, at <span>${currentTimeStr}</span> - No scheduled subject yet.`;
       }
     }
 
