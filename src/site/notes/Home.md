@@ -21,6 +21,70 @@
 
 A refreshing way to learn, personalized only for SC.
 
+  <div id="scheduleMessage">Loading schedule...</div>
+
+  <script>
+    // Updated detailed schedule structure matching your table
+    const schedule = [
+      { timeRange: "7:20-8:20", subjects: { Monday: "Homeroom", Tuesday: "Math", Wednesday: "ESP", Thursday: "Math", Friday: "ESP" }},
+      { timeRange: "8:20-9:20", subjects: { Monday: "TLE", Tuesday: "Computer", Wednesday: "Math", Thursday: "MAPEH", Friday: "Math" }},
+      { timeRange: "9:40-10:40", subjects: { Monday: "Trigo", Tuesday: "TLE", Wednesday: "TLE", Thursday: "TLE", Friday: "MAPEH" }},
+      { timeRange: "10:40-11:40", subjects: { Monday: "MAPEH", Tuesday: "AP", Wednesday: "English", Thursday: "ESP", Friday: "English" }},
+      { timeRange: "13:00-14:00", subjects: { Monday: "Filipino", Tuesday: "CEP", Wednesday: "Filipino", Thursday: "AP", Friday: "Trigo" }},
+      { timeRange: "14:00-15:00", subjects: { Monday: "English", Tuesday: "Filipino", Wednesday: "AP", Thursday: "Filipino", Friday: "Science" }},
+      { timeRange: "15:20-16:20", subjects: { Monday: "Science", Tuesday: "MAPEH", Wednesday: "Trigo", Thursday: "Science", Friday: "Computer" }},
+      { timeRange: "16:20-17:20", subjects: { Monday: "ESP", Tuesday: "Trigo", Wednesday: "Science", Thursday: "English", Friday: "AP" }}
+    ];
+
+    // Convert HH:mm string to total minutes for comparison
+    function toMinutes(timeStr) {
+      const [h, m] = timeStr.split(':').map(Number);
+      return h * 60 + m;
+    }
+
+    // Check if now is within the time range (e.g. "7:20-8:20")
+    function isNowInRange(rangeStr, now) {
+      const [startStr, endStr] = rangeStr.split('-');
+      const nowMinutes = now.getHours() * 60 + now.getMinutes();
+      return nowMinutes >= toMinutes(startStr) && nowMinutes <= toMinutes(endStr);
+    }
+
+    // Format current time as HH:MM AM/PM
+    function formatTime(date) {
+      let hours = date.getHours();
+      let minutes = date.getMinutes();
+      const ampm = hours >= 12 ? 'PM' : 'AM';
+      hours = hours % 12;
+      hours = hours ? hours : 12; // 0 => 12
+      minutes = minutes < 10 ? '0' + minutes : minutes;
+      return hours + ':' + minutes + ' ' + ampm;
+    }
+
+    // Main update function
+    function updateScheduleMessage() {
+      const now = new Date();
+      const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+      const todayName = dayNames[now.getDay()];
+      const currentTimeStr = formatTime(now);
+      const messageElement = document.getElementById('scheduleMessage');
+
+      // Find the schedule entry that matches current time
+      const currentEntry = schedule.find(entry => isNowInRange(entry.timeRange, now));
+
+      if (currentEntry) {
+        // Get today's subject, default to no class if undefined
+        const subject = currentEntry.subjects[todayName] || 'No class';
+        messageElement.innerHTML = `Today is ${todayName}, at <span>${currentTimeStr}</span> ${subject}`;
+      } else {
+        messageElement.innerHTML = `Today is ${todayName}, at <span>${currentTimeStr}</span> - No scheduled subject currently.`;
+      }
+    }
+
+    // Update every second
+    setInterval(updateScheduleMessage, 1000);
+    updateScheduleMessage(); // Initial call
+  </script>
+
 [[Misc/Bulletin Board\|Bulletin Board]] • [[Class Schedule\|Class Schedule]] • [[Misc/Contributions Center\|Contributions Center]] • [[Maintenance\|Maintenance]]
 
 >[!attention]- This website is currently lacking in terms of written topics for viewing.
