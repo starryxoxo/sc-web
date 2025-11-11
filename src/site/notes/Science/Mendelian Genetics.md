@@ -57,6 +57,28 @@ This law states that an organism has each two alleles, **one from each parent**.
 **Law of Independent Assortment**
 This law says that a trait is passed independently, as long as the genes are on different chromosomes.
 
+---
+
+<div class="flashcard-wrapper">
+  <div class="flashcard-container">
+    <div class="flashcard" tabindex="0">
+      <div class="flashcard-question">What is a trait?</div>
+      <div class="flashcard-answer">A trait is a physical characteristic.</div>
+    </div>
+    <div class="flashcard" tabindex="1">
+      <div class="flashcard-question">What law suggests at least one dominant among the alleles?</div>
+      <div class="flashcard-answer">Law of Dominance</div>
+    </div>
+  </div>
+
+  <div class="flashcard-buttons">
+    <button class="flashcard-prev">&#8592; Prev</button>
+    <button class="flashcard-next">Next &#8594;</button>
+  </div>
+</div>
+
+---
+
 
 | Related                                                                          |
 | :------------------------------------------------------------------------------- |
