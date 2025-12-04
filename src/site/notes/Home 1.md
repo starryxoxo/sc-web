@@ -23,105 +23,67 @@ A refreshing way to learn, personalized only for SC.
 
   <div id="scheduleMessage">Loading schedule...</div>
 
-<script>
-  const schedule = [
-    { timeRange: "7:20-8:20", subjects: { Monday: "Homeroom", Tuesday: "Math", Wednesday: "ESP", Thursday: "Math", Friday: "ESP" }},
-    { timeRange: "8:20-9:20", subjects: { Monday: "TLE", Tuesday: "Computer", Wednesday: "Math", Thursday: "MAPEH", Friday: "Math" }},
-    { timeRange: "9:40-10:40", subjects: { Monday: "Trigo", Tuesday: "TLE", Wednesday: "TLE", Thursday: "TLE", Friday: "MAPEH" }},
-    { timeRange: "10:40-11:40", subjects: { Monday: "MAPEH", Tuesday: "AP", Wednesday: "English", Thursday: "ESP", Friday: "English" }},
-    { timeRange: "13:00-14:00", subjects: { Monday: "Filipino", Tuesday: "CEP", Wednesday: "Filipino", Thursday: "AP", Friday: "Trigo" }},
-    { timeRange: "14:00-15:00", subjects: { Monday: "English", Tuesday: "Filipino", Wednesday: "AP", Thursday: "Filipino", Friday: "Science" }},
-    { timeRange: "15:20-16:20", subjects: { Monday: "Science", Tuesday: "MAPEH", Wednesday: "Trigo", Thursday: "Science", Friday: "Computer" }},
-    { timeRange: "16:20-17:20", subjects: { Monday: "ESP", Tuesday: "Trigo", Wednesday: "Science", Thursday: "English", Friday: "AP" }}
-  ];
+  <script>
+    // Updated detailed schedule structure matching your table
+    const schedule = [
+      { timeRange: "7:20-8:20", subjects: { Monday: "Homeroom", Tuesday: "Math", Wednesday: "ESP", Thursday: "Math", Friday: "ESP" }},
+      { timeRange: "8:20-9:20", subjects: { Monday: "TLE", Tuesday: "Computer", Wednesday: "Math", Thursday: "MAPEH", Friday: "Math" }},
+      { timeRange: "9:40-10:40", subjects: { Monday: "Trigo", Tuesday: "TLE", Wednesday: "TLE", Thursday: "TLE", Friday: "MAPEH" }},
+      { timeRange: "10:40-11:40", subjects: { Monday: "MAPEH", Tuesday: "AP", Wednesday: "English", Thursday: "ESP", Friday: "English" }},
+      { timeRange: "13:00-14:00", subjects: { Monday: "Filipino", Tuesday: "CEP", Wednesday: "Filipino", Thursday: "AP", Friday: "Trigo" }},
+      { timeRange: "14:00-15:00", subjects: { Monday: "English", Tuesday: "Filipino", Wednesday: "AP", Thursday: "Filipino", Friday: "Science" }},
+      { timeRange: "15:20-16:20", subjects: { Monday: "Science", Tuesday: "MAPEH", Wednesday: "Trigo", Thursday: "Science", Friday: "Computer" }},
+      { timeRange: "16:20-17:20", subjects: { Monday: "ESP", Tuesday: "Trigo", Wednesday: "Science", Thursday: "English", Friday: "AP" }}
+    ];
 
-  function toMinutes(timeStr) {
-    const [h, m] = timeStr.split(':').map(Number);
-    return h * 60 + m;
-  }
+    // Convert HH:mm string to total minutes for comparison
+    function toMinutes(timeStr) {
+      const [h, m] = timeStr.split(':').map(Number);
+      return h * 60 + m;
+    }
 
-  function isNowInRange(rangeStr, now) {
-    const [startStr, endStr] = rangeStr.split('-');
-    const nowMinutes = now.getHours() * 60 + now.getMinutes();
-    return nowMinutes >= toMinutes(startStr) && nowMinutes <= toMinutes(endStr);
-  }
+    // Check if now is within the time range (e.g. "7:20-8:20")
+    function isNowInRange(rangeStr, now) {
+      const [startStr, endStr] = rangeStr.split('-');
+      const nowMinutes = now.getHours() * 60 + now.getMinutes();
+      return nowMinutes >= toMinutes(startStr) && nowMinutes <= toMinutes(endStr);
+    }
 
-  function formatTime(date) {
-    let hours = date.getHours();
-    let minutes = date.getMinutes();
-    const ampm = hours >= 12 ? 'PM' : 'AM';
-    hours = hours % 12 || 12;
-    minutes = minutes < 10 ? '0' + minutes : minutes;
-    return hours + ':' + minutes + ' ' + ampm;
-  }
+    // Format current time as HH:MM AM/PM
+    function formatTime(date) {
+      let hours = date.getHours();
+      let minutes = date.getMinutes();
+      const ampm = hours >= 12 ? 'PM' : 'AM';
+      hours = hours % 12;
+      hours = hours ? hours : 12; // 0 => 12
+      minutes = minutes < 10 ? '0' + minutes : minutes;
+      return hours + ':' + minutes + ' ' + ampm;
+    }
 
-  function getNextDayName(dayName) {
-    const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    const index = dayNames.indexOf(dayName);
-    return dayNames[(index + 1) % 7];
-  }
+    // Main update function
+    function updateScheduleMessage() {
+      const now = new Date();
+      const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+      const todayName = dayNames[now.getDay()];
+      const currentTimeStr = formatTime(now);
+      const messageElement = document.getElementById('scheduleMessage');
 
-  function getSubject(entry, day) {
-    return entry.subjects[day] || "No class";
-  }
+      // Find the schedule entry that matches current time
+      const currentEntry = schedule.find(entry => isNowInRange(entry.timeRange, now));
 
-  function updateScheduleMessage() {
-    const now = new Date();
-    const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    const todayName = dayNames[now.getDay()];
-    const nextDayName = getNextDayName(todayName);
-    const currentTimeStr = formatTime(now);
-    const nowMinutes = now.getHours() * 60 + now.getMinutes();
-
-    const dayEndMinutes = toMinutes("17:20");
-    const afterDayEnd = nowMinutes >= dayEndMinutes;
-
-    let titleMessage = "";
-    let subjectsToShow = [];
-
-    if (afterDayEnd) {
-      // Show next day schedule, starting from first subject plus next 3
-      titleMessage = `Today is ${todayName}, at ${currentTimeStr} — No more subjects today! Tomorrow's schedule (${nextDayName}):`;
-      for (let i = 0; i < Math.min(4, schedule.length); i++) {
-        subjectsToShow.push(getSubject(schedule[i], nextDayName));
-      }
-    } else {
-      // Find current schedule index or next upcoming
-      let currentIndex = schedule.findIndex(entry => isNowInRange(entry.timeRange, now));
-      if (currentIndex === -1) {
-        currentIndex = schedule.findIndex(entry => toMinutes(entry.timeRange.split('-')[0]) > nowMinutes);
-      }
-
-      if (currentIndex === -1) {
-        // No more classes today
-        titleMessage = `Today is ${todayName}, at ${currentTimeStr} — No subjects remaining, yay!`;
-        subjectsToShow = [];
+      if (currentEntry) {
+        // Get today's subject, default to no class if undefined
+        const subject = currentEntry.subjects[todayName] || 'No class';
+        messageElement.innerHTML = `Today is ${todayName}, at <span>${currentTimeStr}</span> ${subject}`;
       } else {
-        // Show current + next 3 subjects (max 4 total)
-        titleMessage = `Today is ${todayName}, at ${currentTimeStr} — Current and upcoming subjects:`;
-        for (let i = currentIndex; i < Math.min(currentIndex + 4, schedule.length); i++) {
-          subjectsToShow.push(getSubject(schedule[i], todayName));
-        }
+        messageElement.innerHTML = `Today is ${todayName}, at <span>${currentTimeStr}</span> - No scheduled subject yet.`;
       }
     }
 
-    // Join subjects with space
-    const subjectsRow = subjectsToShow.length > 0 ? subjectsToShow.join(' ') : "(No subjects remaining, yay!)";
-
-    const tableHTML = `
-      <table>
-        <tr><td>${titleMessage}</td></tr>
-        <tr><td>${subjectsRow}</td></tr>
-      </table>
-    `;
-
-    document.getElementById('scheduleMessage').innerHTML = tableHTML;
-  }
-
-  setInterval(updateScheduleMessage, 30000);
-  updateScheduleMessage();
-</script>
-
+    // Update every second
+    setInterval(updateScheduleMessage, 1000);
+    updateScheduleMessage(); // Initial call
+  </script>
 
 [[Misc/Bulletin Board\|Bulletin Board]] • [[Misc/Contributions Center\|Contributions Center]] • [[Maintenance\|Maintenance]]
 

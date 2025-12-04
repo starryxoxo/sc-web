@@ -85,7 +85,7 @@ A refreshing way to learn, personalized only for SC.
     updateScheduleMessage(); // Initial call
   </script>
 
-[[Misc/Bulletin Board\|Bulletin Board]] • [[Class Schedule\|Class Schedule]] • [[Misc/Contributions Center\|Contributions Center]] • [[Maintenance\|Maintenance]]
+[[Misc/Bulletin Board\|Bulletin Board]] • [[Misc/Contributions Center\|Contributions Center]] • [[Maintenance\|Maintenance]]
 
 >[!attention]- This website is currently lacking in terms of written topics for viewing.
 >Contributions are highly welcomed. Kindly send the topic you covered and have finished writing to the class president.

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/we-re-making-some-changes/","tags":["gardenEntry"]}
+{"dg-publish":true,"permalink":"/we-re-making-some-changes/"}
 ---
 
 
