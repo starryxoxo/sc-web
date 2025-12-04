@@ -368,7 +368,7 @@ input.auth-input {
   }
 }
 
-/* .card h2, .card b, .AuthName { background: linear-gradient(90deg, #AEC171, #B6D6BC); background-clip: text; -webkit-background-clip: text;  color: transparent; -webkit-text-fill-color: transparent; text-fill-color: transparent; } */
+.card h2, .card b, .AuthName, b { background: linear-gradient(90deg, #AEC171, #B6D6BC); background-clip: text; -webkit-background-clip: text;  color: transparent; -webkit-text-fill-color: transparent; text-fill-color: transparent; }
 
 p.white-text {
     font-size: 0.8rem;
