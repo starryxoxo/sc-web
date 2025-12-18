@@ -425,3 +425,36 @@ yellow { color: yellow; }
     color: #62B4CF;
   }
 }
+
+img {
+  display: inline-block;
+  max-width: 200px;
+  height: auto;
+  margin: 20px;
+  padding: 15px 15px 40px;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transform: rotate(-2deg);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img::after {
+  content: attr(alt);
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+  right: 15px;
+  font-size: 14px;
+  text-align: center;
+  color: #666;
+}
+
+img:nth-child(even) { transform: rotate(2deg); }
+img:nth-child(3n) { 
+  transform: none; 
+  margin-top: -10px; 
+}
+img:nth-child(5n) { 
+  transform: rotate(5deg); 
+  margin-right: -10px; 
+}
