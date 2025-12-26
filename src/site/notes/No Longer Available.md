@@ -9,3 +9,5 @@
 
 If you saved up topics from earlier versions, you can still try visiting those pages, but this website will no longer be updated.
 
+## ⚠️ Deprecated
+This website is no longer up-to-date and will no longer be updated.
